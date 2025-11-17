@@ -31,10 +31,7 @@ get_header();
 <!-- Complaince component-->
  <?php get_template_part('components/compliance/Compliance'); ?>
 
- <!-- Process Section -->
-<?php get_template_part('components/process/Process'); ?>
-<!-- Team Section -->
-<?php get_template_part('components/team/Team'); ?>
+ 
 
 <!-- Future sections will go here -->
 <!-- Examples:

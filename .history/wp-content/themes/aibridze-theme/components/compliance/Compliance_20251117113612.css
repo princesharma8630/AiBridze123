@@ -40,7 +40,7 @@
         #7649ab 80%,
         #8e5fc5 100%
     );
-   
+    padding-left: ;
     padding: 30px;
     padding-bottom: 0%;
     display: flex;
@@ -288,8 +288,6 @@
     }
     
     .compliance-grid {
-         grid-template-columns: repeat(2, minmax(0, 1fr)); /* ✅ Flexible columns */
-        max-width: 100%; 
         gap: clamp(32px, 4vw, 48px);
     }
     

@@ -33,8 +33,7 @@ get_header();
 
  <!-- Process Section -->
 <?php get_template_part('components/process/Process'); ?>
-<!-- Team Section -->
-<?php get_template_part('components/team/Team'); ?>
+
 
 <!-- Future sections will go here -->
 <!-- Examples:

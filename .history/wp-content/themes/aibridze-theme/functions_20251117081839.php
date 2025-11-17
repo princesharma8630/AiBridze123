@@ -97,13 +97,6 @@ wp_enqueue_style(
     array(),
     '1.0.0'
 );
-// Team Section CSS
-wp_enqueue_style(
-    'team-style',
-    get_template_directory_uri() . '/components/team/Team.css',
-    array(),
-    '1.0.0'
-);
 // AI Accessible Section JavaScript
 wp_enqueue_script(
     'ai-accessible-script',

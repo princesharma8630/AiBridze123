@@ -1,0 +1,330 @@
+/* ==========================================
+   TEAM SECTION - The Minds Behind AIBridze
+   ========================================== */
+
+.team-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.team-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+}
+
+/* ==========================================
+   SECTION HEADING
+   ========================================== */
+
+.team-header {
+    text-align: center;
+    width: 100%;
+}
+
+.team-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   TEAM MEMBERS GRID
+   ========================================== */
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    width: 100%;
+    max-width: 1600px;
+}
+
+/* ==========================================
+   TEAM MEMBER CARD
+   ========================================== */
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-8px);
+}
+
+/* ==========================================
+   MEMBER IMAGE
+   ========================================== */
+
+.member-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(144, 238, 251, 0.1) 0%, rgba(58, 130, 243, 0.1) 100%);
+    position: relative;
+}
+
+.member-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(144, 238, 251, 0.3) 0%, rgba(58, 130, 243, 0.3) 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-image::before {
+    opacity: 1;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   MEMBER INFO
+   ========================================== */
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.member-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.member-role {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ==========================================
+   LINKEDIN ICON
+   ========================================== */
+
+.member-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-top: 4px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.member-linkedin:hover {
+    background-color: rgba(144, 238, 251, 0.1);
+    transform: scale(1.1);
+}
+
+.member-linkedin svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.member-linkedin:hover svg path {
+    fill: #90EEFB;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .team-container {
+        padding: 0 100px;
+    }
+    
+    .team-members {
+        gap: 40px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+    .team-container {
+        padding: 0 80px;
+    }
+    
+    .team-heading {
+        font-size: 44px;
+    }
+    
+    .team-members {
+        gap: 36px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .team-section {
+        padding: 80px 0;
+    }
+    
+    .team-container {
+        padding: 0 60px;
+        gap: 48px;
+    }
+    
+    .team-heading {
+        font-size: 40px;
+    }
+    
+    .team-members {
+        gap: 32px;
+    }
+    
+    .member-name {
+        font-size: 15px;
+    }
+    
+    .member-role {
+        font-size: 13px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .team-section {
+        padding: 70px 0;
+    }
+    
+    .team-container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+    
+    .team-heading {
+        font-size: 36px;
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .team-section {
+        padding: 60px 0;
+    }
+    
+    .team-container {
+        padding: 0 30px;
+    }
+    
+    .team-heading {
+        font-size: 32px;
+    }
+    
+    .team-members {
+        gap: 28px;
+    }
+    
+    .member-image {
+        border-radius: 20px;
+    }
+    
+    .member-name {
+        font-size: 14px;
+    }
+    
+    .member-role {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 600px) {
+    .team-section {
+        padding: 50px 0;
+    }
+    
+    .team-container {
+        padding: 0 20px;
+        gap: 32px;
+    }
+    
+    .team-heading {
+        font-size: 28px;
+    }
+    
+    .team-members {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        max-width: 350px;
+    }
+    
+    .member-image {
+        border-radius: 16px;
+    }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 400px) {
+    .team-heading {
+        font-size: 24px;
+    }
+    
+    .team-members {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,372 @@
+/* ==========================================
+   PROCESS SECTION - Our Process
+   ========================================== */
+
+.process-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.process-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* ==========================================
+   SECTION HEADER
+   ========================================== */
+
+.process-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.process-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #90EEFB;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.process-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* ==========================================
+   PROCESS CARDS CONTAINER
+   ========================================== */
+
+.process-cards {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+    
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(144, 238, 251, 0.3) transparent;
+}
+
+.process-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.process-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.process-cards::-webkit-scrollbar-thumb {
+    background: rgba(144, 238, 251, 0.3);
+    border-radius: 3px;
+}
+
+.process-cards::-webkit-scrollbar-thumb:hover {
+    background: rgba(144, 238, 251, 0.5);
+}
+
+/* ==========================================
+   PROCESS CARD
+   ========================================== */
+
+.process-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 48px 36px;
+    min-width: 380px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Gradient Border Effect on Hover */
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    padding: 1px;
+    background: linear-gradient(135deg, #90EEFB 0%, #3A82F3 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.process-card:hover::before {
+    opacity: 1;
+}
+
+.process-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(144, 238, 251, 0.15);
+}
+
+/* ==========================================
+   CARD ICON
+   ========================================== */
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(58, 130, 243, 0.1);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.process-card:hover .card-icon {
+    background-color: rgba(58, 130, 243, 0.2);
+    transform: scale(1.05);
+}
+
+.card-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   CARD CONTENT
+   ========================================== */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.card-step {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 8%;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+.card-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.process-card:hover .card-heading {
+    color: #90EEFB;
+}
+
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .process-container {
+        padding: 0 100px;
+    }
+    
+    .process-heading {
+        font-size: 48px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+    .process-container {
+        padding: 0 80px;
+    }
+    
+    .process-heading {
+        font-size: 44px;
+    }
+    
+    .card-heading {
+        font-size: 26px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .process-section {
+        padding: 100px 0;
+    }
+    
+    .process-container {
+        padding: 0 60px;
+        gap: 60px;
+    }
+    
+    .process-heading {
+        font-size: 40px;
+    }
+    
+    .process-card {
+        min-width: 340px;
+    }
+    
+    .card-heading {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 15px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .process-section {
+        padding: 80px 0;
+    }
+    
+    .process-container {
+        padding: 0 40px;
+        gap: 48px;
+    }
+    
+    .process-heading {
+        font-size: 36px;
+    }
+    
+    .process-cards {
+        gap: 20px;
+    }
+    
+    .process-card {
+        min-width: 320px;
+        padding: 40px 32px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .process-section {
+        padding: 60px 0;
+    }
+    
+    .process-container {
+        padding: 0 30px;
+        gap: 40px;
+    }
+    
+    .process-heading {
+        font-size: 32px;
+    }
+    
+    .process-cards {
+        flex-direction: column;
+        gap: 20px;
+        overflow-x: visible;
+    }
+    
+    .process-card {
+        min-width: 100%;
+        padding: 36px 28px;
+    }
+    
+    .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .card-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .card-heading {
+        font-size: 22px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .process-section {
+        padding: 50px 0;
+    }
+    
+    .process-container {
+        padding: 0 20px;
+    }
+    
+    .process-label {
+        font-size: 14px;
+    }
+    
+    .process-heading {
+        font-size: 28px;
+    }
+    
+    .process-card {
+        padding: 32px 24px;
+        gap: 28px;
+    }
+    
+    .card-icon {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .card-icon img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .card-heading {
+        font-size: 20px;
+    }
+}
