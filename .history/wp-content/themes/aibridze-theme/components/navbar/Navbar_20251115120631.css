@@ -1,0 +1,380 @@
+/* ============================================
+   Navbar Component Styles - Figma Design
+   components/navbar/Navbar.css
+   ============================================ */
+
+/* Import Plus Jakarta Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* Reset for navbar */
+.navbar * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    z-index: 1000;
+    padding: 16px 48px;
+    height: 50px;
+}
+
+/* Stars Background Effect */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 80%, white, transparent),
+        radial-gradient(1px 1px at 15% 90%, white, transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.navbar-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo Styles */
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #90EEFB;
+    transition: opacity 0.3s ease;
+}
+
+.logo-text:hover {
+    opacity: 0.8;
+}
+
+.navbar-logo img,
+.navbar-logo .custom-logo {
+    height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-logo img:hover,
+.navbar-logo .custom-logo:hover {
+    opacity: 0.8;
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .current-menu-item a {
+    color: #90EEFB;
+    opacity: 0.9;
+}
+
+/* Contact Us Button */
+.navbar-cta {
+    flex-shrink: 0;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 124px;
+    height: 42px;
+    padding: 12px 24px;
+    background: #90EEFB;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(144, 238, 251, 0.3);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 238, 251, 0.5);
+    background: #7DE8F5;
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Mobile Menu Toggle Active State */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .navbar {
+        padding: 16px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        height: auto;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    /* Hide desktop menu */
+    .navbar-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #000000;
+        padding: 30px 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    
+    .navbar-menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(2px 2px at 20% 30%, white, transparent),
+            radial-gradient(2px 2px at 60% 70%, white, transparent),
+            radial-gradient(1px 1px at 50% 50%, white, transparent);
+        background-size: 200% 200%;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+    
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .navbar-cta {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+/* Menu item with plus sign */
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-text {
+    display: inline-block;
+}
+
+.menu-plus {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover .menu-plus {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.nav-links a:hover,
+.nav-links .current-menu-item a {
+    color: #90EEFB;
+    opacity: 0.9;
+}
+
+/* Logo Styles */
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-logo,
+.navbar-logo img,
+.navbar-logo .custom-logo {
+    height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.site-logo:hover,
+.navbar-logo img:hover,
+.navbar-logo .custom-logo:hover {
+    opacity: 0.8;
+}
+
+/* Responsive logo size */
+@media screen and (max-width: 768px) {
+    .site-logo,
+    .navbar-logo img,
+    .navbar-logo .custom-logo {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-logo,
+    .navbar-logo img,
+    .navbar-logo .custom-logo {
+        height: 30px;
+    }
+}

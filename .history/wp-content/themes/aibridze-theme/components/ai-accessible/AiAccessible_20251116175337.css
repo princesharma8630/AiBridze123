@@ -1,0 +1,319 @@
+/* ================================================
+   AI ACCESSIBLE SECTION - Pixel Perfect Match
+   ================================================ */
+
+/* Section Wrapper */
+.ai-accessible-section {
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 30%, #0080FF 60%, #00A3FF 100%);
+    width: 100%;
+    min-height: 650px;
+    padding: 75px 0 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle glow effect in center */
+.ai-accessible-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* Container */
+.ai-accessible-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.ai-accessible-content {
+    width: 896px;
+    max-width: 100%;
+}
+
+/* Main Text */
+.ai-accessible-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Faded Text Effect */
+.text-fade {
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+/* ================================================
+   TICKER SECTION
+   ================================================ */
+
+/* Ticker Wrapper */
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+/* Ticker Content */
+.ticker-content {
+    display: flex;
+    width: fit-content;
+    animation: scroll-ticker 40s linear infinite;
+    will-change: transform;
+}
+
+/* Ticker Text */
+.ticker-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #FFD700;
+    white-space: nowrap;
+    padding-right: 50px;
+}
+
+/* Ticker Animation */
+@keyframes scroll-ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.ticker-wrapper:hover .ticker-content {
+    animation-play-state: paused;
+}
+
+/* ================================================
+   PARTNER LOGOS
+   ================================================ */
+
+/* Logos Container */
+.ai-accessible-logos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Logo Item */
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.logo-item img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Logo Hover Effect */
+.logo-item:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .ai-accessible-container {
+        padding: 0 100px;
+    }
+    
+    .ai-accessible-content {
+        width: 750px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 34px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+    .ai-accessible-container {
+        padding: 0 80px;
+        gap: 45px;
+    }
+    
+    .ai-accessible-content {
+        width: 700px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 32px;
+    }
+    
+    .ticker-text {
+        font-size: 17px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .ai-accessible-section {
+        padding: 60px 0 50px 0;
+        min-height: 550px;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 60px;
+        gap: 40px;
+    }
+    
+    .ai-accessible-content {
+        width: 100%;
+    }
+    
+    .ai-accessible-text {
+        font-size: 28px;
+        line-height: 150%;
+    }
+    
+    .ticker-text {
+        font-size: 16px;
+    }
+    
+    .ai-accessible-logos {
+        gap: 50px;
+    }
+    
+    .logo-item img {
+        height: 45px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .ai-accessible-section {
+        padding: 50px 0 40px 0;
+        min-height: auto;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 40px;
+        gap: 35px;
+        align-items: center;
+    }
+    
+    .ai-accessible-text {
+        font-size: 24px;
+        line-height: 155%;
+        text-align: center;
+    }
+    
+    .ticker-wrapper {
+        margin-top: 10px;
+        padding: 20px 0;
+    }
+    
+    .ticker-text {
+        font-size: 15px;
+    }
+    
+    .ai-accessible-logos {
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .logo-item img {
+        height: 40px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .ai-accessible-section {
+        padding: 40px 0 35px 0;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 30px;
+        gap: 30px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 20px;
+        line-height: 160%;
+    }
+    
+    .ticker-text {
+        font-size: 14px;
+        padding-right: 40px;
+    }
+    
+    .ai-accessible-logos {
+        gap: 35px;
+    }
+    
+    .logo-item img {
+        height: 35px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .ai-accessible-section {
+        padding: 35px 0 30px 0;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 20px;
+        gap: 25px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 18px;
+        line-height: 165%;
+    }
+    
+    .ticker-text {
+        font-size: 13px;
+        padding-right: 30px;
+    }
+    
+    .ai-accessible-logos {
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    .logo-item img {
+        height: 32px;
+    }
+}

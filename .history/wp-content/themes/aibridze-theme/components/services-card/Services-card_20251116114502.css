@@ -1,0 +1,385 @@
+/* ========================================
+   SERVICES CARDS SECTION
+======================================== */
+
+.services-cards {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.services-cards-container {
+    max-width: 1920px;
+    margin: 0 auto;
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ========================================
+   SERVICE CARD - BASE STYLES
+======================================== */
+
+.service-card {
+    border-radius: 20px;
+    padding: 48px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 592px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.card-image {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: ;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ========================================
+   CARD 1 - AI CHATBOT (DARK RED)
+======================================== */
+
+.card-chatbot {
+    background: linear-gradient(135deg, #1A0000 0%, #4D0000 50%, #800000 100%);
+    color: #FFFFFF;
+}
+
+.card-chatbot .card-heading {
+    color: #FFFFFF;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Robot Image */
+.card-chatbot .card-image {
+    margin-top: 40px;
+}
+
+.card-chatbot .card-image img {
+    max-width: 280px;
+}
+
+/* ========================================
+   CARD 2 - AI DASHBOARD (WHITE/LIGHT)
+======================================== */
+
+.card-dashboard {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    color: #000000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-dashboard .card-heading {
+    color: #000000;
+}
+
+.card-dashboard .card-description {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* 3D Shapes Image */
+.card-dashboard .card-image {
+    margin-top: 40px;
+}
+
+.card-dashboard .card-image img {
+    max-width: 100%;
+}
+
+/* ========================================
+   CARD 3 - OPENAI (PURPLE/GREEN)
+======================================== */
+
+.card-openai {
+    background: linear-gradient(135deg, #4A1A4A 0%, #6B2B6B 50%, #2D5A2D 100%);
+    color: #FFFFFF;
+    padding: 40px;
+}
+
+.card-openai .card-heading {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.card-openai .card-heading em {
+    color: #B794F6;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* ChatGPT Interface Image */
+.card-image-full {
+    margin-top: 32px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-full img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* ========================================
+   BUTTON STYLES
+======================================== */
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+/* Light Button (for dark backgrounds) */
+.btn-light {
+    background-color: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-light:hover {
+    background-color: #F0F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Button (for light backgrounds) */
+.btn-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .services-cards-container {
+        padding: 0 150px;
+        gap: 24px;
+    }
+    
+    .service-card {
+        padding: 40px;
+        min-height: 550px;
+    }
+    
+    .card-heading {
+        font-size: 28px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+    .services-cards-container {
+        padding: 0 100px;
+    }
+    
+    .service-card {
+        padding: 36px;
+        min-height: 500px;
+    }
+    
+    .card-heading {
+        font-size: 26px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .services-cards-container {
+        padding: 0 60px;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 32px;
+    }
+    
+    .card-heading {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 15px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .services-cards {
+        padding: 80px 0;
+    }
+    
+    .services-cards-container {
+        padding: 0 40px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .service-card {
+        min-height: auto;
+        padding: 40px;
+    }
+    
+    .card-heading {
+        font-size: 28px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .services-cards {
+        padding: 60px 0;
+    }
+    
+    .services-cards-container {
+        padding: 0 30px;
+        gap: 24px;
+    }
+    
+    .service-card {
+        padding: 32px;
+    }
+    
+    .card-heading {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+    }
+    
+    .card-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+    
+    .social-icon {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .services-cards-container {
+        padding: 0 20px;
+    }
+    
+    .service-card {
+        padding: 24px;
+    }
+    
+    .card-heading {
+        font-size: 22px;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 24px;
+    }
+}
