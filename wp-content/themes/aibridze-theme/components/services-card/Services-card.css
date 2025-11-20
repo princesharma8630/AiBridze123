@@ -167,19 +167,26 @@
 
 /* ========================================
    CARD 3 - OPENAI (PURPLE/GREEN)
+   SPECIAL: No side padding, content has padding instead
 ======================================== */
 
 .card-openai {
     background: linear-gradient(135deg, #4A1A4A 0%, #6B2B6B 50%, #2D5A2D 100%);
     color: #FFFFFF;
-    padding: 40px;
-    padding-bottom: 0; /* CRITICAL: No bottom padding */
+    padding: 0; /* CRITICAL: Remove all padding from card */
+    padding-bottom: 0;
+}
+
+/* Add padding only to content area */
+.card-openai .card-content {
+    padding: 40px; /* Content gets the padding */
+    padding-bottom: 32px;
 }
 
 .card-openai .card-heading {
     color: #FFFFFF;
     font-size: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
 }
 
 .card-openai .card-heading em {
@@ -188,24 +195,25 @@
     font-weight: 700;
 }
 
-/* ChatGPT Interface Image - No bottom space */
+/* ChatGPT Interface Image - FULL WIDTH (No margins needed!) */
 .card-image-full {
-    margin-top: 32px;
-    margin-bottom: 0; /* CRITICAL */
-    border-radius: 12px 12px 0 0; /* Only round top corners */
+    margin: 0; /* CRITICAL: No margins at all */
+    padding: 0; /* CRITICAL: No padding */
+    border-radius: 0 0 20px 20px; /* Round bottom corners to match card */
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    line-height: 0; /* CRITICAL */
+    line-height: 0; /* CRITICAL: Removes inline spacing */
+    width: 100%; /* CRITICAL: Full width */
 }
-
 
 .card-image-full img {
     width: 100%;
     max-width: 100%;
-    border-radius: 12px 12px 0 0; /* Only round top corners */
-    display: block; /* CRITICAL */
-    margin-bottom: 0; /* CRITICAL */
+    border-radius: 0; /* No border radius on image itself */
+    display: block; /* CRITICAL: Prevents inline spacing */
+    margin: 0; /* CRITICAL: No margins */
 }
+
 /* ========================================
    BUTTON STYLES
 ======================================== */
@@ -268,12 +276,18 @@
     
     .service-card {
         padding: 40px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
         min-height: 550px;
     }
     
     .card-heading {
         font-size: 28px;
+    }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 40px;
+        padding-bottom: 32px;
     }
 }
 
@@ -285,12 +299,18 @@
     
     .service-card {
         padding: 36px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
         min-height: 500px;
     }
     
     .card-heading {
         font-size: 26px;
+    }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 36px;
+        padding-bottom: 32px;
     }
 }
 
@@ -303,7 +323,7 @@
     
     .service-card {
         padding: 32px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
     }
     
     .card-heading {
@@ -312,6 +332,12 @@
     
     .card-description {
         font-size: 15px;
+    }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 32px;
+        padding-bottom: 28px;
     }
 }
 
@@ -330,7 +356,7 @@
     .service-card {
         min-height: auto;
         padding: 40px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
     }
     
     .card-heading {
@@ -339,6 +365,12 @@
     
     .social-icons {
         justify-content: flex-start;
+    }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 40px;
+        padding-bottom: 32px;
     }
 }
 
@@ -355,7 +387,7 @@
     
     .service-card {
         padding: 32px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
     }
     
     .card-heading {
@@ -380,6 +412,12 @@
         width: 24px;
         height: 24px;
     }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 32px;
+        padding-bottom: 28px;
+    }
 }
 
 /* Small Mobile */
@@ -390,7 +428,7 @@
     
     .service-card {
         padding: 24px;
-        padding-bottom: 0; /* CRITICAL */
+        padding-bottom: 0;
     }
     
     .card-heading {
@@ -399,5 +437,11 @@
     
     .card-openai .card-heading {
         font-size: 24px;
+    }
+    
+    /* Update OpenAI card content padding */
+    .card-openai .card-content {
+        padding: 24px;
+        padding-bottom: 24px;
     }
 }

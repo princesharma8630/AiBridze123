@@ -1,3 +1,15 @@
+<?php
+/**
+ * Get current page slug for active menu highlighting
+ */
+$current_page = '';
+if (is_front_page()) {
+    $current_page = 'home';
+} elseif (is_page()) {
+    $current_page = get_post_field('post_name', get_post());
+}
+?>
+
 <nav class="navbar">
     <div class="navbar-container">
         <!-- Logo -->
@@ -21,31 +33,31 @@
         <!-- Navigation Menu -->
         <div class="navbar-menu">
             <ul class="nav-links">
-                <li>
+                <li class="<?php echo ($current_page === 'portfolio') ? 'current-menu-item' : ''; ?>">
                     <a href="<?php echo esc_url(home_url('/portfolio')); ?>">
                         <span class="menu-text">Portfolio</span>
                         <span class="menu-plus">+</span>
                     </a>
                 </li>
-                <li>
+                <li class="<?php echo ($current_page === 'services') ? 'current-menu-item' : ''; ?>">
                     <a href="<?php echo esc_url(home_url('/services')); ?>">
                         <span class="menu-text">Services</span>
                         <span class="menu-plus">+</span>
                     </a>
                 </li>
-                <li>
+                <li class="<?php echo ($current_page === 'industries') ? 'current-menu-item' : ''; ?>">
                     <a href="<?php echo esc_url(home_url('/industries')); ?>">
                         <span class="menu-text">Industries</span>
                         <span class="menu-plus">+</span>
                     </a>
                 </li>
-                <li>
+                <li class="<?php echo ($current_page === 'about-us') ? 'current-menu-item' : ''; ?>">
                     <a href="<?php echo esc_url(home_url('/about-us')); ?>">
                         <span class="menu-text">About Us</span>
                         <span class="menu-plus">+</span>
                     </a>
                 </li>
-                <li>
+                <li class="<?php echo ($current_page === 'insights') ? 'current-menu-item' : ''; ?>">
                     <a href="<?php echo esc_url(home_url('/insights')); ?>">
                         <span class="menu-text">Insights</span>
                         <span class="menu-plus">+</span>

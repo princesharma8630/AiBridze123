@@ -1,6 +1,6 @@
 <section class="hero-section">
     <!-- Stars Background (Canvas will be added via JS) -->
-    <canvas id="heroStars" class="hero-stars-canvas"></canvas>
+    <div class="hero-stars-canvas"></div>
     
     <div class="hero-container">
         <!-- Main Heading -->
@@ -52,13 +52,24 @@
                 </div>
             </div>
 
-            <!-- Explorer Button (Right Side) -->
+            <!-- Explorer Button (Right Side) - WITH ROTATING TEXT -->
             <div class="explore-button-container">
                 <a href="<?php echo esc_url(home_url('/solutions')); ?>" class="explore-button">
-                    <span class="explore-text-top">Explore Our</span>
-                    <span class="explore-text-bottom">Solutions</span>
+                    <!-- Rotating Circular Text -->
+                    <svg class="circular-text" viewBox="0 0 200 200" width="200" height="200">
+                        <defs>
+                            <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                        </defs>
+                        <text class="rotating-text">
+                            <textPath href="#circlePath" startOffset="0%">
+                                /Explore Our Solutions / Explore Our Solutions / Explore Our Solutions /
+                            </textPath>
+                        </text>
+                    </svg>
+                    
+                    <!-- Center Icon -->
                     <div class="explore-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="7 13 12 18 17 13"></polyline>
                             <polyline points="7 6 12 11 17 6"></polyline>
                         </svg>
@@ -66,7 +77,7 @@
                 </a>
             </div>
         </div>
-
+      
         <!-- Bottom Right Elements (INSIDE HERO SECTION) -->
         <div class="hero-bottom-right">
             <!-- Clutch Review Badge -->

@@ -16,14 +16,23 @@ function aibridze_enqueue_assets() {
         '1.0.0'
     );
     
+    
     // Hero CSS
     wp_enqueue_style(
         'hero-style',
         get_template_directory_uri() . '/components/hero/Hero.css',
         array(),
+        '1.0.0',
+       
+    );
+    // ===== : Page Styles CSS =====
+
+     wp_enqueue_style(
+        'page-styles',
+        get_template_directory_uri() . '/page-styles.css',
+        array(),
         '1.0.0'
     );
-
     // Partners CSS
     wp_enqueue_style(
         'partners-style',
@@ -47,13 +56,15 @@ function aibridze_enqueue_assets() {
         array(),
         '1.0.0'
     );
-// Services Cards CSS
-wp_enqueue_style(
-    'services-cards-style',
-    get_template_directory_uri() . '/components/services-card/Services-Card.css',
-    array(),
-    '1.0.0'
-);
+    
+    // Services Cards CSS
+    wp_enqueue_style(
+        'services-cards-style',
+        get_template_directory_uri() . '/components/services-card/Services-Card.css',
+        array(),
+        '1.0.0'
+    );
+    
     // Services Grid CSS
     wp_enqueue_style(
         'services-grid-style',
@@ -61,58 +72,155 @@ wp_enqueue_style(
         array(),
         '1.0.0'
     );
+    
     // AI Accessible Section CSS
-wp_enqueue_style(
-    'ai-accessible-style',
-    get_template_directory_uri() . '/components/ai-accessible/AiAccessible.css',
-    array(),
-    '1.0.0'
-);
+    wp_enqueue_style(
+        'ai-accessible-style',
+        get_template_directory_uri() . '/components/ai-accessible/AiAccessible.css',
+        array(),
+        '1.0.0'
+    );
+    
     // Evolution Component CSS
- wp_enqueue_style(
+    wp_enqueue_style(
         'evolution-style',
         get_template_directory_uri() . '/components/evolution/Evolution.css',
         array(),
         '1.0.0'
     );
 
-// AI Services Section CSS
-wp_enqueue_style(
-    'ai-services-style',
-    get_template_directory_uri() . '/components/ai-services/AIServices.css',
-    array(),
-    '1.0.0'
-);
-// Compliance Section CSS
-wp_enqueue_style(
-    'compliance-style',
-    get_template_directory_uri() . '/components/compliance/Compliance.css',
-    array(),
-    '1.0.0'
-);
-// Process Section CSS
-wp_enqueue_style(
-    'process-style',
-    get_template_directory_uri() . '/components/process/Process.css',
-    array(),
-    '1.0.0'
-);
-// Team Section CSS
-wp_enqueue_style(
-    'team-style',
-    get_template_directory_uri() . '/components/team/Team.css',
-    array(),
-    '1.0.0'
-);
-// AI Accessible Section JavaScript
-wp_enqueue_script(
-    'ai-accessible-script',
-    get_template_directory_uri() . '/components/ai-accessible/AiAccessible.js',
-    array(),
-    '1.0.0',
-    true
-);
+    // AI Services Section CSS
+    wp_enqueue_style(
+        'ai-services-style',
+        get_template_directory_uri() . '/components/ai-services/AIServices.css',
+        array(),
+        '1.0.0'
+    );
+    
+    // Compliance Section CSS
+    wp_enqueue_style(
+        'compliance-style',
+        get_template_directory_uri() . '/components/compliance/Compliance.css',
+        array(),
+        '1.0.0'
+    );
+    
+    // Process Section CSS
+    wp_enqueue_style(
+        'process-style',
+        get_template_directory_uri() . '/components/process/Process.css',
+        array(),
+        '1.0.0'
+    );
+    
+    // Team Section CSS
+    wp_enqueue_style(
+        'team-style',
+        get_template_directory_uri() . '/components/team/Team.css',
+        array(),
+        '1.0.0'
+    );
+    // Articles Section CSS
+    wp_enqueue_style(
+        'articles-style',
+        get_template_directory_uri() . '/components/articles/Articles.css',
+        array(),
+        '1.0.0'
+    );
+    // faq section css
+    wp_enqueue_style(
+        'faq-style',
+        get_template_directory_uri() . '/components/faq/Faq.css',
+        array(),
+        '1.0.0'
+    );                 
 
+    // ===== NEW: Footer CSS =====
+    wp_enqueue_style(
+        'footer-style',
+        get_template_directory_uri() . '/components/footer/Footer.css',
+        array(),
+        '1.0.0'
+    );
+
+    // Services Hero CSS
+    wp_enqueue_style(
+    'services-hero-style',
+    get_template_directory_uri() . '/services-components/hero/ServicesHero.css',
+    array(),
+    '1.0.0'
+    );
+
+    // Services Partner CSS
+    wp_enqueue_style(
+        'services-partner-style',
+        get_template_directory_uri() . '/services-components/partner/ServicesPartner.css',
+        array(),
+        '1.0.0'
+    );
+    // Key Value Section CSS
+    wp_enqueue_style(  
+        'key-value-style',
+        get_template_directory_uri() . '/services-components/key-value/KeyValue.css',
+        array(),
+        '1.0.0'
+    );
+    // why-now section css
+    wp_enqueue_style(
+        'why-now-style',
+        get_template_directory_uri() . '/services-components/why-now/WhyNow.css',
+        array(),
+        '1.0.0'
+    );
+    // engagement Journey CSS
+    wp_enqueue_style(       
+        'engagement-journey-style',
+        get_template_directory_uri() . '/services-components/engagementjourney/EngagementJourney.css',
+        array(),
+        '1.0.0'
+    );
+
+    // keytechnologies css
+    wp_enqueue_style(
+        'key-technologies-style',
+        get_template_directory_uri() . '/services-components/key-technologies/KeyTechnologies.css',
+        array(),
+        '1.0.0'
+    );
+
+    // integrations css
+    wp_enqueue_style(    
+        'integrations-style',
+        get_template_directory_uri() . '/services-components/integrations/Integrations.css',
+        array(),
+        '1.0.0'
+    );
+     // ai-services css
+    wp_enqueue_style(    
+        'ai-services-style',
+        get_template_directory_uri() . 'services-components/ai-services/AiServices.css',
+        array(),
+        '1.0.0'
+    );
+    //==============================portfolio Banner JS====================//
+  
+     wp_enqueue_style(
+        'portfolio-hero-style',
+        get_template_directory_uri() . '/components/portfolio-hero/PortfolioHero.css',
+        array(),
+        '1.0.0'
+    );
+        
+    //============================ JS Files ===================//
+    
+    // AI Accessible Section JavaScript
+    wp_enqueue_script(
+        'ai-accessible-script',
+        get_template_directory_uri() . '/components/ai-accessible/AiAccessible.js',
+        array(),
+        '1.0.0',
+        true
+    );
     
     // Navbar JavaScript
     wp_enqueue_script(
@@ -122,11 +230,38 @@ wp_enqueue_script(
         '1.0.0',
         true
     );
-
+    
     // Hero JavaScript
     wp_enqueue_script(
         'hero-script',
         get_template_directory_uri() . '/components/hero/Hero.js',
+        array('jquery'),
+        '1.0.0',
+        true
+    );
+
+    // Portfolio Banner JavaScript
+    wp_enqueue_script(
+        'portfolio-banner-script',
+        get_template_directory_uri() . '/components/portfolio-banner/PortfolioBanner.js',
+        array(),
+        '1.0.0',
+        true
+    );
+
+
+    //========portfolio Hero JS==================//
+     wp_enqueue_script(
+        'portfolio-hero-script',
+        get_template_directory_uri() . '/components/portfolio-hero/PortfolioHero.js',
+        array(),
+        '1.0.0',
+        true
+    );
+    //========== engagement Journey JS==================//
+     wp_enqueue_script(
+        'engagement-journey-script',
+        get_template_directory_uri() . '/services-components/engagementjourney/EngagementJourney.js',
         array(),
         '1.0.0',
         true

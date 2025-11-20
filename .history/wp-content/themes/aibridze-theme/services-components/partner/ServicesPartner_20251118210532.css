@@ -1,0 +1,319 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Services Partners Section */
+.services-partners-section {
+    background: #000000;
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+/* Partners Container */
+.services-partners-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Marquee Wrapper */
+.partners-marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Partners Marquee */
+.partners-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Partners Track (Animated Container) */
+.partners-track {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+/* Pause animation on hover */
+.partners-marquee:hover .partners-track {
+    animation-play-state: paused;
+}
+
+/* Partner Item - Base: 1920px (Figma Design) */
+.partner-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    width: 300px;
+    height: 120px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.partner-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.partner-item img {
+    max-width: 200px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+}
+
+.partner-item:hover img {
+    filter: brightness(1.5);
+}
+
+/* Scroll Animation - Left to Right */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design - Proportionally scaled from 1920px base */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+    .services-partners-section {
+        padding: 67px 0;
+    }
+    
+    .partners-track {
+        gap: 20px;
+    }
+    
+    .partner-item {
+        width: 250px;
+        height: 100px;
+        border-radius: 13px;
+    }
+    
+    .partner-item img {
+        max-width: 167px;
+        max-height: 67px;
+    }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+    .services-partners-section {
+        padding: 58px 0;
+    }
+    
+    .partners-track {
+        gap: 17px;
+        animation: scroll 28s linear infinite;
+    }
+    
+    .partner-item {
+        width: 219px;
+        height: 88px;
+        border-radius: 12px;
+    }
+    
+    .partner-item img {
+        max-width: 146px;
+        max-height: 58px;
+    }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+    .services-partners-section {
+        padding: 50px 0;
+    }
+    
+    .partners-track {
+        gap: 15px;
+        animation: scroll 25s linear infinite;
+    }
+    
+    .partner-item {
+        width: 188px;
+        height: 75px;
+        border-radius: 10px;
+    }
+    
+    .partner-item img {
+        max-width: 125px;
+        max-height: 50px;
+    }
+}
+
+/* 1024px - Scale: 0.533 */
+@media screen and (max-width: 1024px) {
+    .services-partners-section {
+        padding: 43px 0;
+    }
+    
+    .partners-track {
+        gap: 13px;
+        animation: scroll 23s linear infinite;
+    }
+    
+    .partner-item {
+        width: 160px;
+        height: 64px;
+        border-radius: 9px;
+    }
+    
+    .partner-item img {
+        max-width: 107px;
+        max-height: 43px;
+    }
+}
+
+/* 900px - Scale: 0.469 */
+@media screen and (max-width: 900px) {
+    .services-partners-section {
+        padding: 38px 0;
+    }
+    
+    .partners-track {
+        gap: 11px;
+        animation: scroll 20s linear infinite;
+    }
+    
+    .partner-item {
+        width: 141px;
+        height: 56px;
+        border-radius: 8px;
+    }
+    
+    .partner-item img {
+        max-width: 94px;
+        max-height: 38px;
+    }
+}
+
+/* 768px - Scale: 0.4 */
+@media screen and (max-width: 768px) {
+    .services-partners-section {
+        padding: 32px 0;
+    }
+    
+    .partners-track {
+        gap: 10px;
+        animation: scroll 18s linear infinite;
+    }
+    
+    .partner-item {
+        width: 120px;
+        height: 48px;
+        border-radius: 6px;
+    }
+    
+    .partner-item img {
+        max-width: 80px;
+        max-height: 32px;
+    }
+}
+
+/* 640px - Scale: 0.333 */
+@media screen and (max-width: 640px) {
+    .services-partners-section {
+        padding: 27px 0;
+    }
+    
+    .partners-track {
+        gap: 8px;
+        animation: scroll 16s linear infinite;
+    }
+    
+    .partner-item {
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    
+    .partner-item img {
+        max-width: 67px;
+        max-height: 27px;
+    }
+}
+
+/* 480px - Scale: 0.25 */
+@media screen and (max-width: 480px) {
+    .services-partners-section {
+        padding: 20px 0;
+    }
+    
+    .partners-track {
+        gap: 6px;
+        animation: scroll 14s linear infinite;
+    }
+    
+    .partner-item {
+        width: 75px;
+        height: 30px;
+        border-radius: 4px;
+    }
+    
+    .partner-item img {
+        max-width: 50px;
+        max-height: 20px;
+    }
+}
+
+/* 375px - Scale: 0.195 */
+@media screen and (max-width: 375px) {
+    .services-partners-section {
+        padding: 16px 0;
+    }
+    
+    .partners-track {
+        gap: 5px;
+        animation: scroll 12s linear infinite;
+    }
+    
+    .partner-item {
+        width: 59px;
+        height: 24px;
+        border-radius: 3px;
+    }
+    
+    .partner-item img {
+        max-width: 39px;
+        max-height: 16px;
+    }
+}
+
+/* 320px - Scale: 0.167 */
+@media screen and (max-width: 320px) {
+    .services-partners-section {
+        padding: 13px 0;
+    }
+    
+    .partners-track {
+        gap: 4px;
+        animation: scroll 10s linear infinite;
+    }
+    
+    .partner-item {
+        width: 50px;
+        height: 20px;
+        border-radius: 3px;
+    }
+    
+    .partner-item img {
+        max-width: 33px;
+        max-height: 13px;
+    }
+}

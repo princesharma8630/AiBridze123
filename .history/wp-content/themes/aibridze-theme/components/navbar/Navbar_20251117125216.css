@@ -1,0 +1,493 @@
+/* ============================================
+   Navbar Component Styles - Figma Design
+   components/navbar/Navbar.css
+   ============================================ */
+
+/* Import Plus Jakarta Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* Reset for navbar */
+.navbar * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    z-index: 1000;
+    padding: 16px 48px;
+    height: 74px;
+    /* Animation properties */
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDown 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Keyframe for navbar entrance animation */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll state for navbar */
+.navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(144, 238, 251, 0.15);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.95);
+}
+
+/* Stars Background Effect */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 80%, white, transparent),
+        radial-gradient(1px 1px at 15% 90%, white, transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: starTwinkle 20s ease-in-out infinite;
+}
+
+/* Stars twinkling animation */
+@keyframes starTwinkle {
+    0%, 100% {
+        background-position: 0% 0%;
+        opacity: 0.4;
+    }
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.6;
+    }
+}
+
+.navbar-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo Styles with animation */
+.navbar-logo {
+    flex-shrink: 0;
+    opacity: 0;
+    animation: fadeInLeft 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #90EEFB;
+    transition: opacity 0.3s ease;
+}
+
+.logo-text:hover {
+    opacity: 0.8;
+}
+
+.site-logo,
+.navbar-logo img,
+.navbar-logo .custom-logo {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.site-logo:hover,
+.navbar-logo img:hover,
+.navbar-logo .custom-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Navigation Menu with staggered animation */
+.navbar-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Staggered animation for each menu item */
+.nav-links li:nth-child(1) { animation-delay: 0.5s; }
+.nav-links li:nth-child(2) { animation-delay: 0.6s; }
+.nav-links li:nth-child(3) { animation-delay: 0.7s; }
+.nav-links li:nth-child(4) { animation-delay: 0.8s; }
+.nav-links li:nth-child(5) { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #90EEFB;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-text {
+    display: inline-block;
+}
+
+.menu-plus {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover .menu-plus {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.nav-links a:hover,
+.nav-links .current-menu-item a {
+    color: #90EEFB;
+    opacity: 0.9;
+}
+
+/* Contact Us Button with animation */
+.navbar-cta {
+    flex-shrink: 0;
+    opacity: 0;
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 124px;
+    height: 42px;
+    padding: 12px 24px;
+    background: #90EEFB;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(144, 238, 251, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button shine effect */
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-btn:hover::before {
+    left: 100%;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 238, 251, 0.5);
+    background: #7DE8F5;
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Mobile Menu Toggle Active State */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .navbar {
+        padding: 16px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        height: auto;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    /* Reset animations for mobile */
+    .navbar-logo,
+    .navbar-cta {
+        animation: fadeInUp 0.5s ease-out forwards;
+        animation-delay: 0.4s;
+    }
+    
+    /* Hide desktop menu */
+    .navbar-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #000000;
+        padding: 30px 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    
+    .navbar-menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(2px 2px at 20% 30%, white, transparent),
+            radial-gradient(2px 2px at 60% 70%, white, transparent),
+            radial-gradient(1px 1px at 50% 50%, white, transparent);
+        background-size: 200% 200%;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+    
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    /* Mobile menu item animation */
+    .navbar-menu.active .nav-links li {
+        animation: fadeInUp 0.4s ease-out forwards;
+    }
+    
+    .navbar-menu.active .nav-links li:nth-child(1) { animation-delay: 0.1s; }
+    .navbar-menu.active .nav-links li:nth-child(2) { animation-delay: 0.15s; }
+    .navbar-menu.active .nav-links li:nth-child(3) { animation-delay: 0.2s; }
+    .navbar-menu.active .nav-links li:nth-child(4) { animation-delay: 0.25s; }
+    .navbar-menu.active .nav-links li:nth-child(5) { animation-delay: 0.3s; }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .nav-links a::after {
+        display: none;
+    }
+    
+    .navbar-cta {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        opacity: 0;
+        animation: fadeInRight 0.5s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .site-logo,
+    .navbar-logo img,
+    .navbar-logo .custom-logo {
+        height: 30px;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .navbar-logo,
+    .navbar-cta,
+    .nav-links li,
+    .mobile-menu-toggle {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .navbar::before {
+        animation: none;
+    }
+}

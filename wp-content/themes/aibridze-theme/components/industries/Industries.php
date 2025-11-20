@@ -2,7 +2,7 @@
 
     <div class="industries-container">
         <div class="left">
-            Our Portfolio Highlights
+            (Our Portfolio Highlights)
         </div>
         <!-- Main Heading -->
          <div class="content-container">

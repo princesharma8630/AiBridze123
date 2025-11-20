@@ -1,0 +1,570 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* 
+ * AI SERVICES COMPONENT
+ * 
+ * Figma Base (1920px):
+ * - Background: Linear gradient (#000000 to #0063FF)
+ * - Border: 1px solid white
+ * - Padding: 75px (top/bottom), 115px (left/right)
+ * - Gap: 10px
+ * - Layout: 2 columns (Left: Title, Right: Services Grid)
+ */
+
+/* AI Services Section */
+.ai-services-section {
+    background: #000000;
+    padding: 100px 48px;
+    overflow: hidden;
+}
+
+/* Container */
+.ai-services-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #000000 0%, #0063FF 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 75px 115px;
+    display: flex;
+    gap: 80px;
+    position: relative;
+}
+
+/* ========================================
+   LEFT SIDE - TITLE & DESCRIPTION
+   ======================================== */
+
+.ai-services-left {
+    flex: 0 0 auto;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Main Title */
+.ai-services-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.title-brand {
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+/* Description */
+.ai-services-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Navigation Arrows */
+.services-navigation {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.nav-arrow {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.nav-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ========================================
+   RIGHT SIDE - SERVICES GRID
+   ======================================== */
+
+.ai-services-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 99, 255, 0.3);
+}
+
+/* Service Number */
+.service-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Service Title */
+.service-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Service Description */
+.service-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MATHEMATICAL SCALING
+   (Desktop to Tablet)
+   ======================================== */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+    .ai-services-section {
+        padding: 83px 40px;
+    }
+    
+    .ai-services-container {
+        padding: 63px 96px;
+        gap: 67px;
+        border-radius: 20px;
+    }
+    
+    .ai-services-left {
+        width: 350px;
+        gap: 27px;
+    }
+    
+    .ai-services-title {
+        font-size: 40px;
+    }
+    
+    .ai-services-description {
+        font-size: 15px;
+    }
+    
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .ai-services-right {
+        gap: 17px;
+    }
+    
+    .service-card {
+        padding: 27px 20px;
+        border-radius: 13px;
+        gap: 10px;
+    }
+    
+    .service-number {
+        font-size: 12px;
+    }
+    
+    .service-title {
+        font-size: 17px;
+    }
+    
+    .service-description {
+        font-size: 12px;
+    }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+    .ai-services-section {
+        padding: 73px 35px;
+    }
+    
+    .ai-services-container {
+        padding: 55px 84px;
+        gap: 58px;
+        border-radius: 17px;
+    }
+    
+    .ai-services-left {
+        width: 306px;
+        gap: 23px;
+    }
+    
+    .ai-services-title {
+        font-size: 35px;
+    }
+    
+    .ai-services-description {
+        font-size: 13px;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .ai-services-right {
+        gap: 15px;
+    }
+    
+    .service-card {
+        padding: 23px 17px;
+        border-radius: 12px;
+        gap: 9px;
+    }
+    
+    .service-number {
+        font-size: 10px;
+    }
+    
+    .service-title {
+        font-size: 15px;
+    }
+    
+    .service-description {
+        font-size: 10px;
+    }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+    .ai-services-section {
+        padding: 63px 30px;
+    }
+    
+    .ai-services-container {
+        padding: 47px 72px;
+        gap: 50px;
+        border-radius: 15px;
+    }
+    
+    .ai-services-left {
+        width: 263px;
+        gap: 20px;
+    }
+    
+    .ai-services-title {
+        font-size: 30px;
+    }
+    
+    .ai-services-description {
+        font-size: 11px;
+    }
+    
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nav-arrow svg {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .ai-services-right {
+        gap: 13px;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+        border-radius: 10px;
+        gap: 8px;
+    }
+    
+    .service-number {
+        font-size: 9px;
+    }
+    
+    .service-title {
+        font-size: 13px;
+    }
+    
+    .service-description {
+        font-size: 9px;
+    }
+}
+
+/* ========================================
+   OPTIMIZED RESPONSIVE DESIGN
+   (Tablet to Mobile) - Better UX
+   ======================================== */
+
+/* 1024px - Stack layout starts */
+@media screen and (max-width: 1024px) {
+    .ai-services-section {
+        padding: 50px 24px;
+    }
+    
+    .ai-services-container {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+    }
+    
+    .ai-services-left {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .ai-services-title {
+        font-size: 32px;
+    }
+    
+    .ai-services-description {
+        font-size: 16px;
+    }
+    
+    .services-navigation {
+        justify-content: center;
+    }
+    
+    .ai-services-right {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* 900px - Tablet */
+@media screen and (max-width: 900px) {
+    .ai-services-section {
+        padding: 45px 20px;
+    }
+    
+    .ai-services-container {
+        padding: 35px;
+        gap: 35px;
+    }
+    
+    .ai-services-title {
+        font-size: 28px;
+    }
+    
+    .ai-services-description {
+        font-size: 15px;
+    }
+    
+    .service-card {
+        padding: 28px 24px;
+    }
+    
+    .service-title {
+        font-size: 18px;
+    }
+    
+    .service-description {
+        font-size: 14px;
+    }
+}
+
+/* 768px - Mobile Landscape */
+@media screen and (max-width: 768px) {
+    .ai-services-section {
+        padding: 40px 20px;
+    }
+    
+    .ai-services-container {
+        padding: 30px 24px;
+        gap: 30px;
+        border-radius: 16px;
+    }
+    
+    .ai-services-left {
+        gap: 20px;
+    }
+    
+    .ai-services-title {
+        font-size: 26px;
+    }
+    
+    .ai-services-description {
+        font-size: 14px;
+    }
+    
+    .nav-arrow {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .service-card {
+        padding: 24px 20px;
+    }
+    
+    .service-title {
+        font-size: 17px;
+    }
+    
+    .service-description {
+        font-size: 13px;
+    }
+}
+
+/* 640px - Mobile Portrait */
+@media screen and (max-width: 640px) {
+    .ai-services-section {
+        padding: 35px 16px;
+    }
+    
+    .ai-services-container {
+        padding: 24px 20px;
+        gap: 28px;
+    }
+    
+    .ai-services-left {
+        gap: 18px;
+    }
+    
+    .ai-services-title {
+        font-size: 24px;
+    }
+    
+    .ai-services-description {
+        font-size: 13px;
+    }
+    
+    .service-card {
+        padding: 20px 18px;
+        gap: 10px;
+    }
+    
+    .service-number {
+        font-size: 12px;
+    }
+    
+    .service-title {
+        font-size: 16px;
+    }
+    
+    .service-description {
+        font-size: 12px;
+    }
+}
+
+/* 480px - Small Mobile */
+@media screen and (max-width: 480px) {
+    .ai-services-section {
+        padding: 30px 16px;
+    }
+    
+    .ai-services-container {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+    
+    .ai-services-title {
+        font-size: 22px;
+    }
+    
+    .ai-services-description {
+        font-size: 12px;
+    }
+    
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .service-card {
+        padding: 20px 16px;
+    }
+    
+    .service-title {
+        font-size: 15px;
+    }
+    
+    .service-description {
+        font-size: 11px;
+    }
+}
+
+/* 375px - iPhone Standard */
+@media screen and (max-width: 375px) {
+    .ai-services-container {
+        padding: 20px 16px;
+    }
+    
+    .ai-services-title {
+        font-size: 20px;
+    }
+    
+    .service-card {
+        padding: 18px 14px;
+    }
+    
+    .service-title {
+        font-size: 14px;
+    }
+    
+    .service-description {
+        font-size: 10px;
+    }
+}
+
+/* ========================================
+   EXTRA OPTIMIZATIONS
+   ======================================== */
+
+/* Smooth animations */
+.service-card,
+.nav-arrow {
+    transition: all 0.3s ease;
+}
+
+/* Performance optimization */
+.service-card,
+.nav-arrow {
+    will-change: transform;
+}

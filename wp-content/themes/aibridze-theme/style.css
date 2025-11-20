@@ -1,7 +1,7 @@
 /*
 Theme Name: AIBridze Theme
 Theme URI: https://yourwebsite.com
-Author: Prince Sharma
+Author: Your Name
 Author URI: https://yourwebsite.com
 Description: Custom WordPress theme for AIBridze
 Version: 1.0.0
@@ -10,6 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: aibridze-theme
 */
 
+/* Import Plus Jakarta Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -17,249 +20,170 @@ Text Domain: aibridze-theme
     box-sizing: border-box;
 }
 
-/* Prevent Horizontal Scroll - Critical Fix */
+/* HTML & Body - Black Background Theme */
 html {
-    overflow-x: hidden;
-    max-width: 100%;
+    height: 100%;
+    background: #000000;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #FFFFFF; /* White text for dark theme */
+    background: #000000; /* Black background */
+    padding-top: 74px; /* Space for fixed navbar */
+    margin: 0;
     overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
+    min-height: 100vh;
+}
+
+/* WordPress Admin Bar Fix */
+body.admin-bar {
+    padding-top: 106px; /* 74px navbar + 32px admin bar */
+}
+
+html.admin-bar {
+    margin-top: 0 !important;
+}
+
+/* Main Content Area */
+.site-main,
+#main-content,
+main {
+    background: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page-specific backgrounds */
+.home-page,
+.portfolio-page,
+.services-page,
+.industries-page,
+.about-page,
+.insights-page,
+.contact-page {
+    background: #000000;
     width: 100%;
 }
 
-/* Responsive Media Elements */
-img, 
-video, 
-iframe,
-embed,
-object {
+/* Ensure no blue bleeding through */
+body::after,
+html::after,
+body::before,
+html::before {
+    display: none !important;
+}
+
+/* Links */
+a {
+    color: #90EEFB;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #7DE8F5;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+/* Paragraphs */
+p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Remove any default WordPress margins */
+.wp-site-blocks {
+    padding: 0 !important;
+}
+
+/* Accessibility */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* Selection color */
+::selection {
+    background: #90EEFB;
+    color: #000000;
+}
+
+::-moz-selection {
+    background: #90EEFB;
+    color: #000000;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #90EEFB;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7DE8F5;
+}
+
+/* Responsive Images */
+img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Responsive Containers */
-.container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+/* Button Reset */
+button {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
 }
 
-/* Prevent Text Overflow */
-h1, h2, h3, h4, h5, h6, p, span, div {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
+/* Input Reset */
+input,
+textarea,
+select {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Body Padding for Fixed Header */
+/* Ensure footer stays at bottom */
 body {
-    padding-top: 74px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
+.site-main,
+#main-content {
+    flex: 1;
 }
 
-/* Responsive Wrapper - Ensures Nothing Exceeds Viewport */
-#page,
-#content,
-.site,
-.site-content,
-main {
-    max-width: 100vw;
-    overflow-x: hidden;
+/* Remove any extra spacing */
+.site-footer {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
-
-/* Flexible Box Fix */
-.row,
-.flex-container,
-[class*="flex"],
-[class*="grid"] {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Table Responsiveness */
-table {
-    max-width: 100%;
-    overflow-x: auto;
-    display: block;
-}
-
-/* Pre and Code Blocks */
-pre,
-code {
-    max-width: 100%;
-    overflow-x: auto;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-}
-
-/* WordPress Core Alignment Classes */
-.alignfull {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-}
-
-.alignwide {
-    max-width: 100%;
-}
-
-.aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-/* Responsive Utility Classes */
-.full-width {
-    width: 100%;
-    max-width: 100%;
-}
-
-.no-overflow {
-    overflow: hidden;
-}
-
-/* Mobile First Responsive Breakpoints */
-
-/* Extra Small Devices (phones, less than 576px) */
-@media screen and (max-width: 575px) {
-    .container {
-        padding: 15px;
-    }
-    
-    body {
-        font-size: 14px;
-    }
-}
-
-/* Small Devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-/* Medium Devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-/* Large Devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-/* Extra Large Devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-/* Ultra Large Devices (extra large desktops, 1400px and up) */
-@media screen and (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-}
-
-/* Additional Mobile Optimizations */
-@media screen and (max-width: 768px) {
-    /* Ensure all sections are mobile friendly */
-    section,
-    article,
-    aside,
-    header,
-    footer,
-    nav {
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-    
-    /* Mobile Typography */
-    h1 {
-        font-size: 1.75rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.25rem;
-    }
-    
-    h4 {
-        font-size: 1.1rem;
-    }
-    
-    h5, h6 {
-        font-size: 1rem;
-    }
-    
-    /* Mobile Padding Adjustments */
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-/* Accessibility */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 2px solid #007bff;
-    outline-offset: 2px;
-}
-
-/* Skip to Content Link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Print Styles */
-@media print {
-    body {
-        overflow-x: visible;
-        max-width: none;
-    }
-    
-    .no-print {
-        display: none !important;
-    }
-}
-
-/* You can add more global styles here */

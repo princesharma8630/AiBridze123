@@ -1,0 +1,230 @@
+/* Page Styles - Common for all page templates */
+
+/* Page Container */
+.portfolio-page,
+.services-page,
+.industries-page,
+.about-page,
+.insights-page,
+.contact-page {
+    background-color: #000000;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Page Main Content */
+#main-content {
+    width: 100%;
+}
+
+/* General Page Title Section (if needed for other pages) */
+.page-title-section {
+    background-color: #000000;
+    padding: 120px 0 80px;
+    width: 100%;
+    position: relative;
+}
+
+.page-title-section .section-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 254px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0 0 24px 0;
+}
+
+.page-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+    background-color: #000000;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.contact-form-section .section-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 254px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    color: #FFFFFF;
+}
+
+.contact-info h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.contact-info p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 12px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #90EEFB;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-primary {
+    background-color: #90EEFB;
+    color: #000000;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(144, 238, 251, 0.3);
+    align-self: flex-start;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 238, 251, 0.5);
+    background-color: #7DE8F5;
+}
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 150px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page-title {
+        font-size: 48px;
+    }
+    .page-description {
+        font-size: 16px;
+    }
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 60px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .page-title-section {
+        padding: 100px 0 60px;
+    }
+    .page-title {
+        font-size: 40px;
+    }
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 40px;
+    }
+    .contact-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-title-section {
+        padding: 80px 0 40px;
+    }
+    .page-title {
+        font-size: 32px;
+    }
+    .page-description {
+        font-size: 14px;
+    }
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-title {
+        font-size: 26px;
+    }
+    .page-title-section .section-container,
+    .contact-form-section .section-container {
+        padding: 0 20px;
+    }
+}

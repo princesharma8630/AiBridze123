@@ -35,7 +35,12 @@ get_header();
 <?php get_template_part('components/process/Process'); ?>
 <!-- Team Section -->
 <?php get_template_part('components/team/Team'); ?>
-
+<!-- Articles Section -->   
+<?php get_template_part('components/articles/Articles'); ?>
+<!-- faq section-->
+ <?php get_template_part('components/faq/Faq'); ?>
+ <!--  Footer section-->
+<?php get_template_part('components/footer/Footer'); ?>
 <!-- Future sections will go here -->
 <!-- Examples:
 <?php // get_template_part('components/services/Services'); ?>
@@ -43,6 +48,4 @@ get_header();
 <?php // get_template_part('components/testimonials/Testimonials'); ?>
 -->
 
-<?php 
-get_footer();
-?>
+<?php get_footer();?>

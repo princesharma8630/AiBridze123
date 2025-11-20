@@ -1,0 +1,809 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* 
+ * WHY NOW COMPONENT
+ * 
+ * Figma Base (1920px):
+ * - Container: Full width with rounded corners
+ * - Background: Dark with gradient
+ * - Layout: 2 columns (Left: Content, Right: Promise)
+ * - Special: Glowing logo effect and slider
+ */
+
+/* Why Now Section */
+.why-now-section {
+    background: #000000;
+    padding: 100px 48px;
+    overflow: hidden;
+}
+
+/* Container */
+.why-now-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-radius: 32px;
+    padding: 80px;
+    display: flex;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+.why-now-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(144, 238, 251, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ========================================
+   LEFT SIDE - CONTENT
+   ======================================== */
+
+.why-now-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtitle */
+.why-now-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #90EEFB;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Title */
+.why-now-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Description */
+.why-now-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: 600px;
+}
+
+/* Cards Grid */
+.why-now-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+}
+
+/* Card */
+.why-now-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.why-now-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(144, 238, 251, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Card Number */
+.card-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Card Text */
+.card-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* ========================================
+   RIGHT SIDE - PROMISE
+   ======================================== */
+
+.why-now-right {
+    flex: 0 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Glow - Behind Everything */
+.right-background-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+    z-index: 0;
+    opacity: 0.9;
+    animation: glowPulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.85;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+}
+
+/* Content Container - Above Background */
+.right-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+/* Logo Wrapper */
+.promise-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 129px;
+    height: 121px;
+}
+
+/* Logo Image */
+.logo-image {
+    width: 129px;
+    height: 121px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+/* Promise Heading */
+.promise-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+    max-width: 400px;
+}
+
+/* Slider */
+.promise-slider {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.slider-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+}
+
+/* Slider Text */
+.slider-text {
+    font-weight: 600;
+    padding: 30px;
+    background-color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+    
+}
+
+.slider-text.left {
+    text-align: right;
+}
+
+.slider-text.right {
+    text-align: left;
+}
+
+.quote-mark {
+    font-size: 24px;
+    color: #f7f7f7;
+    font-weight: 700;
+}
+
+/* Slider Button */
+.slider-button {
+    width: 60px;
+    height: 60px;
+    background: #90EEFB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(144, 238, 251, 0.4);
+    flex-shrink: 0;
+}
+
+.slider-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(144, 238, 251, 0.6);
+}
+
+.slider-button svg {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MATHEMATICAL SCALING
+   (Desktop to Tablet)
+   ======================================== */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+    .why-now-section {
+        padding: 83px 40px;
+    }
+    
+    .why-now-container {
+        padding: 67px;
+        gap: 67px;
+        border-radius: 27px;
+    }
+    
+    .why-now-left {
+        gap: 27px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 20px;
+    }
+    
+    .why-now-title {
+        font-size: 40px;
+    }
+    
+    .why-now-description {
+        font-size: 15px;
+    }
+    
+    .why-now-cards {
+        gap: 20px;
+    }
+    
+    .why-now-card {
+        padding: 27px 20px;
+        border-radius: 13px;
+    }
+    
+    .card-text {
+        font-size: 13px;
+    }
+    
+    .why-now-right {
+        width: 417px;
+    }
+    
+    .right-content {
+        gap: 27px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 107px;
+        height: 101px;
+    }
+    
+    .logo-image {
+        width: 107px;
+        height: 101px;
+    }
+    
+    .promise-heading {
+        font-size: 20px;
+    }
+    
+    .slider-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+    .why-now-section {
+        padding: 73px 35px;
+    }
+    
+    .why-now-container {
+        padding: 58px;
+        gap: 58px;
+        border-radius: 23px;
+    }
+    
+    .why-now-left {
+        gap: 23px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 17px;
+    }
+    
+    .why-now-title {
+        font-size: 35px;
+    }
+    
+    .why-now-description {
+        font-size: 13px;
+    }
+    
+    .why-now-cards {
+        gap: 17px;
+    }
+    
+    .why-now-card {
+        padding: 23px 17px;
+        border-radius: 12px;
+    }
+    
+    .card-text {
+        font-size: 12px;
+    }
+    
+    .why-now-right {
+        width: 365px;
+    }
+    
+    .right-content {
+        gap: 23px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 94px;
+        height: 88px;
+    }
+    
+    .logo-image {
+        width: 94px;
+        height: 88px;
+    }
+    
+    .promise-heading {
+        font-size: 17px;
+    }
+    
+    .slider-text {
+        font-size: 13px;
+    }
+    
+    .slider-button {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+    .why-now-section {
+        padding: 63px 30px;
+    }
+    
+    .why-now-container {
+        padding: 50px;
+        gap: 50px;
+        border-radius: 20px;
+    }
+    
+    .why-now-left {
+        gap: 20px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 15px;
+    }
+    
+    .why-now-title {
+        font-size: 30px;
+    }
+    
+    .why-now-description {
+        font-size: 11px;
+    }
+    
+    .why-now-cards {
+        gap: 15px;
+    }
+    
+    .why-now-card {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+    
+    .card-text {
+        font-size: 10px;
+    }
+    
+    .why-now-right {
+        width: 313px;
+    }
+    
+    .right-content {
+        gap: 20px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 81px;
+        height: 76px;
+    }
+    
+    .logo-image {
+        width: 81px;
+        height: 76px;
+    }
+    
+    .promise-heading {
+        font-size: 15px;
+    }
+    
+    .slider-text {
+        font-size: 11px;
+    }
+    
+    .slider-button {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* ========================================
+   OPTIMIZED RESPONSIVE DESIGN
+   (Tablet to Mobile) - Better UX
+   ======================================== */
+
+/* 1024px - Stack layout starts */
+@media screen and (max-width: 1024px) {
+    .why-now-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        gap: 50px;
+    }
+    
+    .why-now-left {
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    .why-now-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .why-now-right {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .right-content {
+        gap: 30px;
+    }
+}
+
+/* 900px - Tablet */
+@media screen and (max-width: 900px) {
+    .why-now-section {
+        padding: 50px 24px;
+    }
+    
+    .why-now-container {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 18px;
+    }
+    
+    .why-now-title {
+        font-size: 32px;
+    }
+    
+    .why-now-description {
+        font-size: 15px;
+    }
+    
+    .card-text {
+        font-size: 14px;
+    }
+    
+    .right-content {
+        gap: 24px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 103px;
+        height: 97px;
+    }
+    
+    .logo-image {
+        width: 103px;
+        height: 97px;
+    }
+    
+    .promise-heading {
+        font-size: 20px;
+    }
+    
+    .slider-text {
+        font-size: 14px;
+    }
+}
+
+/* 768px - Mobile Landscape */
+@media screen and (max-width: 768px) {
+    .why-now-section {
+        padding: 40px 20px;
+    }
+    
+    .why-now-container {
+        padding: 30px 24px;
+        gap: 35px;
+        border-radius: 16px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 16px;
+    }
+    
+    .why-now-title {
+        font-size: 28px;
+    }
+    
+    .why-now-description {
+        font-size: 14px;
+    }
+    
+    .why-now-card {
+        padding: 24px 20px;
+    }
+    
+    .card-text {
+        font-size: 14px;
+    }
+    
+    .right-content {
+        gap: 20px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 90px;
+        height: 84px;
+    }
+    
+    .logo-image {
+        width: 90px;
+        height: 84px;
+    }
+    
+    .promise-heading {
+        font-size: 18px;
+    }
+    
+    .slider-button {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* 640px - Mobile Portrait */
+@media screen and (max-width: 640px) {
+    .why-now-section {
+        padding: 35px 16px;
+    }
+    
+    .why-now-container {
+        padding: 25px 20px;
+        gap: 30px;
+    }
+    
+    .why-now-left {
+        gap: 20px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 14px;
+    }
+    
+    .why-now-title {
+        font-size: 24px;
+    }
+    
+    .why-now-description {
+        font-size: 13px;
+    }
+    
+    .why-now-cards {
+        gap: 14px;
+    }
+    
+    .right-content {
+        gap: 18px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 77px;
+        height: 72px;
+    }
+    
+    .logo-image {
+        width: 77px;
+        height: 72px;
+    }
+    
+    .promise-heading {
+        font-size: 16px;
+    }
+    
+    .slider-text {
+        font-size: 12px;
+    }
+}
+
+/* 480px - Small Mobile */
+@media screen and (max-width: 480px) {
+    .why-now-section {
+        padding: 30px 16px;
+    }
+    
+    .why-now-container {
+        padding: 24px 16px;
+        gap: 28px;
+    }
+    
+    .why-now-subtitle {
+        font-size: 13px;
+    }
+    
+    .why-now-title {
+        font-size: 22px;
+    }
+    
+    .why-now-description {
+        font-size: 12px;
+    }
+    
+    .why-now-card {
+        padding: 20px 16px;
+    }
+    
+    .card-number {
+        font-size: 14px;
+    }
+    
+    .card-text {
+        font-size: 13px;
+    }
+    
+    .right-content {
+        gap: 16px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 65px;
+        height: 61px;
+    }
+    
+    .logo-image {
+        width: 65px;
+        height: 61px;
+    }
+    
+    .promise-heading {
+        font-size: 14px;
+    }
+    
+    .slider-track {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .slider-text {
+        text-align: center !important;
+    }
+    
+    .slider-button {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* 375px - iPhone Standard */
+@media screen and (max-width: 375px) {
+    .why-now-container {
+        padding: 20px 16px;
+    }
+    
+    .why-now-title {
+        font-size: 20px;
+    }
+    
+    .right-content {
+        gap: 14px;
+    }
+    
+    .promise-logo-wrapper {
+        width: 58px;
+        height: 54px;
+    }
+    
+    .logo-image {
+        width: 58px;
+        height: 54px;
+    }
+}
+
+/* ========================================
+   EXTRA OPTIMIZATIONS
+   ======================================== */
+
+/* Smooth animations */
+.why-now-card,
+.slider-button {
+    transition: all 0.3s ease;
+}
+
+/* Performance optimization */
+.right-background-glow {
+    will-change: transform, opacity;
+}
+
+.slider-button {
+    will-change: transform;
+}

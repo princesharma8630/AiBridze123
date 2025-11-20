@@ -1,0 +1,244 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Services Hero Section */
+.services-hero-section {
+    position: relative;
+    background: #0A1B4D; /* Fallback color */
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -74px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+/* Background Image */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assests/images/services/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Dark Overlay (optional - adjust opacity for text readability) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 27, 77, 0.3); /* Adjust opacity: 0.0 to 1.0 */
+    z-index: 2;
+}
+
+/* Services Hero Container */
+.services-hero-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Content (Centered) */
+.services-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Main Heading */
+.services-hero-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 110%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3); /* Add shadow for better readability */
+}
+
+/* Subheading */
+.services-hero-subheading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    max-width: 900px;
+    margin: 0;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3); /* Add shadow for better readability */
+}
+
+/* CTA Button */
+.services-cta-btn {
+    background-color: #90EEFB;
+    color: #000000;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(144, 238, 251, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    display: inline-block;
+}
+
+.services-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(144, 238, 251, 0.6);
+    background-color: #7DE8F5;
+}
+
+/* Responsive Design */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .services-hero-container {
+        padding: 0 150px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .services-hero-container {
+        padding: 0 100px;
+    }
+    
+    .services-hero-heading {
+        font-size: 64px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .services-hero-section {
+        padding-top: 180px;
+        padding-bottom: 80px;
+    }
+    
+    .services-hero-container {
+        padding: 0 80px;
+    }
+    
+    .services-hero-heading {
+        font-size: 56px;
+    }
+    
+    .services-hero-subheading {
+        font-size: 16px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .services-hero-section {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    
+    .services-hero-container {
+        padding: 0 40px;
+    }
+    
+    .services-hero-heading {
+        font-size: 48px;
+    }
+    
+    .services-hero-subheading {
+        font-size: 15px;
+    }
+    
+    .services-cta-btn {
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .services-hero-section {
+        padding-top: 140px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+    
+    .services-hero-container {
+        padding: 0 24px;
+    }
+    
+    .services-hero-heading {
+        font-size: 36px;
+        line-height: 120%;
+    }
+    
+    .services-hero-subheading {
+        font-size: 14px;
+    }
+    
+    .services-cta-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+    
+    /* Adjust background for mobile */
+    .hero-bg-image {
+        background-position: center center;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .services-hero-heading {
+        font-size: 32px;
+    }
+    
+    .services-hero-subheading {
+        font-size: 13px;
+    }
+    
+    .services-hero-container {
+        padding: 0 16px;
+    }
+}
+```
+
+---
+
+## 📂 Folder Structure Summary
+```
+📦 aibridze-theme/
+ ┣ 📂 assests/
+ ┃ ┗ 📂 images/
+ ┃   ┣ 📂 services/              ← CREATE THIS
+ ┃   ┃ ┗ 📜 hero-bg.jpg          ← PUT YOUR IMAGE HERE
+ ┃   ┣ 📂 partners/
+ ┃   ┣ 📂 team/
+ ┃   ┗ ... (other folders)
+ ┃
+ ┗ 📂 services-components/
+   ┗ 📂 hero/
+     ┣ 📜 ServicesHero.php       ← Updated (no shapes)
+     ┗ 📜 ServicesHero.css       ← Updated (uses bg image)

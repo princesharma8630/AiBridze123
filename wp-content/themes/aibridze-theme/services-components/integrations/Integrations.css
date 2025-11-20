@@ -1,0 +1,377 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* 
+ * INTEGRATIONS COMPONENT
+ * 
+ * Figma Base (1920px):
+ * - Container: Full width
+ * - Padding: 75px (top/bottom)
+ * - Gap: 48px (between title and grid)
+ * - Grid: 6 columns
+ * - Background: Black
+ */
+
+/* Integrations Section */
+.integrations-section {
+    background: #000000;
+    padding: 75px 164px;
+    overflow: hidden;
+}
+
+/* Container */
+.integrations-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* Section Title */
+.integrations-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Integrations Grid */
+.integrations-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+
+/* Single Integration Item */
+.integration-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Logo Container */
+.integration-logo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.integration-logo:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(144, 238, 251, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(144, 238, 251, 0.2);
+}
+
+.integration-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Integration Name */
+.integration-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MATHEMATICAL SCALING
+   (Desktop to Tablet)
+   ======================================== */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+    .integrations-section {
+        padding: 63px 137px;
+    }
+    
+    .integrations-container {
+        gap: 40px;
+    }
+    
+    .integrations-title {
+        font-size: 40px;
+    }
+    
+    .integrations-grid {
+        gap: 20px;
+    }
+    
+    .integration-item {
+        gap: 13px;
+    }
+    
+    .integration-logo {
+        border-radius: 13px;
+        padding: 20px;
+    }
+    
+    .integration-name {
+        font-size: 13px;
+    }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+    .integrations-section {
+        padding: 55px 120px;
+    }
+    
+    .integrations-container {
+        gap: 35px;
+    }
+    
+    .integrations-title {
+        font-size: 35px;
+    }
+    
+    .integrations-grid {
+        gap: 17px;
+    }
+    
+    .integration-item {
+        gap: 12px;
+    }
+    
+    .integration-logo {
+        border-radius: 12px;
+        padding: 17px;
+    }
+    
+    .integration-name {
+        font-size: 12px;
+    }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+    .integrations-section {
+        padding: 47px 103px;
+    }
+    
+    .integrations-container {
+        gap: 30px;
+    }
+    
+    .integrations-title {
+        font-size: 30px;
+    }
+    
+    .integrations-grid {
+        gap: 15px;
+    }
+    
+    .integration-item {
+        gap: 10px;
+    }
+    
+    .integration-logo {
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .integration-name {
+        font-size: 10px;
+    }
+}
+
+/* ========================================
+   OPTIMIZED RESPONSIVE DESIGN
+   (Tablet to Mobile) - Better UX
+   ======================================== */
+
+/* 1024px - 4 columns */
+@media screen and (max-width: 1024px) {
+    .integrations-section {
+        padding: 50px 40px;
+    }
+    
+    .integrations-container {
+        gap: 35px;
+    }
+    
+    .integrations-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .integrations-title {
+        font-size: 32px;
+    }
+}
+
+/* 900px - Tablet */
+@media screen and (max-width: 900px) {
+    .integrations-section {
+        padding: 45px 32px;
+    }
+    
+    .integrations-container {
+        gap: 32px;
+    }
+    
+    .integrations-title {
+        font-size: 28px;
+    }
+    
+    .integrations-grid {
+        gap: 18px;
+    }
+    
+    .integration-logo {
+        padding: 20px;
+    }
+    
+    .integration-name {
+        font-size: 14px;
+    }
+}
+
+/* 768px - 3 columns */
+@media screen and (max-width: 768px) {
+    .integrations-section {
+        padding: 40px 24px;
+    }
+    
+    .integrations-container {
+        gap: 30px;
+    }
+    
+    .integrations-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+    .integrations-title {
+        font-size: 26px;
+    }
+    
+    .integration-logo {
+        padding: 18px;
+        border-radius: 12px;
+    }
+    
+    .integration-name {
+        font-size: 13px;
+    }
+}
+
+/* 640px - 2 columns */
+@media screen and (max-width: 640px) {
+    .integrations-section {
+        padding: 35px 20px;
+    }
+    
+    .integrations-container {
+        gap: 28px;
+    }
+    
+    .integrations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .integrations-title {
+        font-size: 24px;
+    }
+    
+    .integration-item {
+        gap: 12px;
+    }
+    
+    .integration-logo {
+        padding: 20px;
+    }
+    
+    .integration-name {
+        font-size: 12px;
+    }
+}
+
+/* 480px - 2 columns (smaller) */
+@media screen and (max-width: 480px) {
+    .integrations-section {
+        padding: 30px 16px;
+    }
+    
+    .integrations-container {
+        gap: 24px;
+    }
+    
+    .integrations-grid {
+        gap: 14px;
+    }
+    
+    .integrations-title {
+        font-size: 22px;
+    }
+    
+    .integration-item {
+        gap: 10px;
+    }
+    
+    .integration-logo {
+        padding: 16px;
+        border-radius: 10px;
+    }
+    
+    .integration-name {
+        font-size: 11px;
+    }
+}
+
+/* 375px - iPhone Standard */
+@media screen and (max-width: 375px) {
+    .integrations-section {
+        padding: 28px 16px;
+    }
+    
+    .integrations-title {
+        font-size: 20px;
+    }
+    
+    .integrations-grid {
+        gap: 12px;
+    }
+    
+    .integration-logo {
+        padding: 14px;
+    }
+    
+    .integration-name {
+        font-size: 10px;
+    }
+}
+
+/* ========================================
+   EXTRA OPTIMIZATIONS
+   ======================================== */
+
+/* Smooth animations */
+.integration-logo {
+    transition: all 0.3s ease;
+}
+
+/* Performance optimization */
+.integration-logo {
+    will-change: transform;
+}

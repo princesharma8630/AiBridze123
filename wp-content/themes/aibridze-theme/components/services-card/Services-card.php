@@ -54,7 +54,7 @@
             </div>
             
             <!-- 3D Shapes Image -->
-            <div class="card-image">
+            <div class="card-image" class="card-image-3">
                 <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/abstract-shapes.png" alt="AI Dashboard Visualization" />
             </div>
         </div>

@@ -1,0 +1,1104 @@
+/* ============================================
+   HERO SECTION - COMPLETE CSS
+   With Fixed Animated Starfield Background
+   ============================================ */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Timun Font Fallback */
+@font-face {
+    font-family: 'Timun';
+    src: local('Arial'), local('Helvetica');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: #000000;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -74px;
+    padding-top: 265px;
+    padding-bottom: 100px;
+}
+
+/* ============================================
+   ANIMATED STARS CANVAS BACKGROUND - FIXED
+   ============================================ */
+
+.hero-stars-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.hero-stars-canvas canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    background: transparent !important;
+}
+
+/* Fallback gradient if canvas fails */
+.hero-stars-canvas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(144, 238, 251, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Hero Container */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Main Heading */
+.hero-heading {
+    font-family: 'Timun', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    width: 100%;
+    max-width: 1411px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #90EEFB 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Subheading */
+.hero-subheading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    max-width: 900px;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+}
+
+/* Statistics and Explorer Wrapper */
+.stats-explorer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    width: 100%;
+    max-width: 1411px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 80px;
+    flex: 1;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.stat-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Explorer Button Container */
+.explore-button-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Explorer Button */
+.explore-button {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #90EEFB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(144, 238, 251, 0.3);
+    padding: 20px;
+    z-index: 3;
+}
+
+.explore-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(144, 238, 251, 0.5);
+}
+
+/* Explorer Text */
+.explore-text-top,
+.explore-text-bottom {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.explore-text-top {
+    margin-bottom: 2px;
+}
+
+.explore-text-bottom {
+    margin-bottom: 12px;
+}
+
+/* Explorer Icon */
+.explore-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.explore-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: #000000;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* Bottom Right Elements */
+.hero-bottom-right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 16px;
+    width: 100%;
+    max-width: 1411px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Clutch Badge */
+.clutch-badge {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 240px;
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.clutch-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.clutch-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clutch-header {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.clutch-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    line-height: 1;
+}
+
+.clutch-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.clutch-stars {
+    color: #FF3D00;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.clutch-reviews {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+/* Contact Icons */
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    background: #90EEFB;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(144, 238, 251, 0.4);
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.calendar-icon {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Extra Large Desktop - 1920px+ */
+@media screen and (min-width: 1921px) {
+    .hero-container {
+        padding: 0 calc((100vw - 1920px) / 2 + 254px);
+    }
+}
+
+/* Large Desktop - 1600px */
+@media screen and (max-width: 1800px) {
+    .hero-container {
+        padding: 0 200px;
+    }
+    
+    .hero-heading {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .hero-container {
+        padding: 0 150px;
+    }
+    
+    .hero-heading {
+        font-size: 56px;
+    }
+    
+    .stats-explorer-wrapper {
+        gap: 70px;
+    }
+    
+    .stats-grid {
+        gap: 55px 70px;
+    }
+}
+
+/* Desktop - 1400px */
+@media screen and (max-width: 1400px) {
+    .hero-container {
+        padding: 0 100px;
+        gap: 55px;
+    }
+
+    .hero-heading {
+        font-size: 52px;
+    }
+
+    .stats-explorer-wrapper {
+        gap: 60px;
+        margin-top: 35px;
+    }
+
+    .stats-grid {
+        gap: 50px 60px;
+    }
+    
+    .stat-number {
+        font-size: 44px;
+    }
+    
+    .explore-button {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+/* Laptop - 1200px */
+@media screen and (max-width: 1200px) {
+    .hero-section {
+        padding-top: 200px;
+        padding-bottom: 80px;
+        margin-top: -60px;
+    }
+
+    .hero-container {
+        padding: 0 80px;
+        gap: 50px;
+    }
+
+    .hero-heading {
+        font-size: 48px;
+        letter-spacing: 0.08em;
+    }
+    
+    .hero-subheading {
+        font-size: 17px;
+        max-width: 800px;
+    }
+
+    .stats-explorer-wrapper {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    .stats-grid {
+        gap: 40px 50px;
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+    
+    .stat-label {
+        font-size: 15px;
+    }
+
+    .explore-button {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-bottom-right {
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .clutch-badge {
+        width: 220px;
+        height: 130px;
+        padding: 14px 18px;
+    }
+
+    .clutch-logo {
+        font-size: 28px;
+    }
+    
+    .clutch-stars {
+        font-size: 16px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contact-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Tablet Landscape - 1024px */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        padding-top: 180px;
+        padding-bottom: 70px;
+        margin-top: -50px;
+    }
+
+    .hero-container {
+        padding: 0 60px;
+        gap: 45px;
+    }
+
+    .hero-heading {
+        font-size: 44px;
+        letter-spacing: 0.06em;
+    }
+    
+    .hero-subheading {
+        font-size: 16px;
+        max-width: 700px;
+    }
+
+    .stats-grid {
+        gap: 35px 45px;
+    }
+
+    .stat-number {
+        font-size: 38px;
+    }
+
+    .explore-button {
+        width: 135px;
+        height: 135px;
+    }
+    
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 13px;
+    }
+}
+
+/* Tablet Portrait / Mobile Landscape - 900px */
+@media screen and (max-width: 900px) {
+    .hero-section {
+        padding-top: 150px;
+        padding-bottom: 60px;
+        margin-top: -40px;
+    }
+
+    .hero-container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+
+    .hero-heading {
+        font-size: 40px;
+        letter-spacing: 0.05em;
+    }
+
+    .hero-subheading {
+        font-size: 16px;
+        max-width: 600px;
+    }
+
+    .stats-explorer-wrapper {
+        gap: 40px;
+        margin-top: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .explore-button {
+        width: 130px;
+        height: 130px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 12px;
+    }
+    
+    .explore-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .hero-bottom-right {
+        margin-top: 35px;
+        gap: 12px;
+    }
+    
+    .clutch-badge {
+        width: 200px;
+        height: 120px;
+        padding: 12px 16px;
+    }
+    
+    .clutch-logo {
+        font-size: 26px;
+    }
+    
+    .clutch-header {
+        font-size: 8px;
+    }
+    
+    .clutch-stars {
+        font-size: 15px;
+    }
+    
+    .clutch-reviews {
+        font-size: 9px;
+    }
+}
+
+/* Mobile Landscape / Small Tablet - 768px */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        padding-top: 140px;
+        padding-bottom: 200px;
+        min-height: auto;
+        margin-top: -30px;
+    }
+
+    .hero-container {
+        padding: 0 32px;
+        gap: 35px;
+    }
+
+    .hero-heading {
+        font-size: 36px;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-subheading {
+        font-size: 15px;
+        max-width: 500px;
+    }
+
+    .stats-explorer-wrapper {
+        gap: 35px;
+        margin-top: 20px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .explore-button {
+        width: 120px;
+        height: 120px;
+        padding: 16px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 11px;
+    }
+
+    .explore-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-bottom-right {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .clutch-badge {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        padding: 16px;
+    }
+    
+    .clutch-content {
+        gap: 12px;
+    }
+
+    .contact-icons {
+        justify-content: center;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .contact-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Mobile Portrait - 640px */
+@media screen and (max-width: 640px) {
+    .hero-section {
+        padding-top: 130px;
+        padding-bottom: 190px;
+    }
+
+    .hero-container {
+        padding: 0 28px;
+        gap: 32px;
+    }
+
+    .hero-heading {
+        font-size: 32px;
+        letter-spacing: 0.03em;
+    }
+
+    .hero-subheading {
+        font-size: 14.5px;
+        line-height: 1.55;
+    }
+
+    .stats-grid {
+        gap: 35px 25px;
+    }
+
+    .stat-number {
+        font-size: 30px;
+    }
+
+    .stat-label {
+        font-size: 13.5px;
+    }
+
+    .explore-button {
+        width: 115px;
+        height: 115px;
+        padding: 14px;
+    }
+
+    .hero-bottom-right {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        gap: 10px;
+    }
+
+    .clutch-badge {
+        max-width: 300px;
+        padding: 14px;
+    }
+
+    .contact-icons {
+        max-width: 300px;
+        gap: 7px;
+    }
+}
+
+/* Small Mobile - 480px */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 180px;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .hero-heading {
+        font-size: 28px;
+        letter-spacing: 0.02em;
+    }
+
+    .hero-subheading {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .stats-explorer-wrapper {
+        gap: 30px;
+        margin-top: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .explore-button {
+        width: 110px;
+        height: 110px;
+        padding: 12px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 10px;
+    }
+
+    .explore-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-bottom-right {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .clutch-badge {
+        max-width: 280px;
+        padding: 12px;
+    }
+    
+    .clutch-logo {
+        font-size: 24px;
+    }
+    
+    .clutch-header {
+        font-size: 7.5px;
+    }
+    
+    .clutch-stars {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+    
+    .clutch-reviews {
+        font-size: 8.5px;
+    }
+
+    .contact-icons {
+        max-width: 280px;
+        gap: 6px;
+    }
+
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .calendar-icon {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Mobile - 375px */
+@media screen and (max-width: 375px) {
+    .hero-section {
+        padding-top: 110px;
+        padding-bottom: 170px;
+    }
+
+    .hero-container {
+        padding: 0 16px;
+        gap: 28px;
+    }
+
+    .hero-heading {
+        font-size: 26px;
+        letter-spacing: 0.015em;
+    }
+
+    .hero-subheading {
+        font-size: 13.5px;
+    }
+
+    .stats-grid {
+        gap: 28px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .stat-label {
+        font-size: 12.5px;
+    }
+
+    .explore-button {
+        width: 105px;
+        height: 105px;
+        padding: 10px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 9.5px;
+    }
+
+    .explore-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .clutch-badge {
+        max-width: 260px;
+        padding: 10px;
+    }
+    
+    .clutch-logo {
+        font-size: 22px;
+    }
+
+    .contact-icons {
+        max-width: 260px;
+    }
+
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .contact-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .calendar-icon {
+        font-size: 11px;
+    }
+}
+
+/* Ultra Small Mobile - 320px */
+@media screen and (max-width: 320px) {
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 160px;
+    }
+
+    .hero-container {
+        padding: 0 12px;
+        gap: 25px;
+    }
+
+    .hero-heading {
+        font-size: 24px;
+        letter-spacing: 0.01em;
+    }
+
+    .hero-subheading {
+        font-size: 13px;
+    }
+
+    .stats-grid {
+        gap: 25px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .explore-button {
+        width: 100px;
+        height: 100px;
+        padding: 8px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 9px;
+    }
+
+    .explore-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero-bottom-right {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .clutch-badge {
+        max-width: 240px;
+        padding: 10px;
+    }
+    
+    .clutch-logo {
+        font-size: 20px;
+    }
+    
+    .clutch-header {
+        font-size: 7px;
+    }
+    
+    .clutch-stars {
+        font-size: 13px;
+    }
+    
+    .clutch-reviews {
+        font-size: 8px;
+    }
+
+    .contact-icons {
+        max-width: 240px;
+        gap: 5px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .contact-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .calendar-icon {
+        font-size: 10px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+
+    .hero-container {
+        gap: 25px;
+    }
+
+    .hero-heading {
+        font-size: 28px;
+    }
+
+    .stats-explorer-wrapper {
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 30px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .explore-button {
+        width: 90px;
+        height: 90px;
+    }
+
+    .explore-text-top,
+    .explore-text-bottom {
+        font-size: 9px;
+    }
+
+    .explore-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}

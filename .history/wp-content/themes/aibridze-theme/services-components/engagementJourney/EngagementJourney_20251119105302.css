@@ -1,0 +1,624 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* 
+ * ENGAGEMENT JOURNEY COMPONENT
+ * 
+ * Figma Base (1920px):
+ * - Vertical timeline with 4 steps
+ * - Active step highlighted in blue
+ * - Slide-up animations on scroll
+ * - Staggered appearance
+ */
+
+/* ========================================
+   MAIN SECTION
+   ======================================== */
+
+.engagement-journey-section {
+    background: #000000;
+    padding: 120px 48px;
+    overflow: hidden;
+}
+
+.engagement-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+/* ========================================
+   SECTION HEADER
+   ======================================== */
+
+.journey-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.journey-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.view-deliverables {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #90EEFB;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 1px solid #90EEFB;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.view-deliverables:hover {
+    background: #90EEFB;
+    color: #000000;
+}
+
+/* ========================================
+   JOURNEY STEPS - VERTICAL TIMELINE
+   ======================================== */
+
+.journey-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+/* Individual Step */
+.journey-step {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 48px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Animation trigger class (added by JavaScript) */
+.journey-step.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.journey-step[data-step="01"].animate-in {
+    transition-delay: 0.1s;
+}
+
+.journey-step[data-step="02"].animate-in {
+    transition-delay: 0.2s;
+}
+
+.journey-step[data-step="03"].animate-in {
+    transition-delay: 0.3s;
+}
+
+.journey-step[data-step="04"].animate-in {
+    transition-delay: 0.4s;
+}
+
+/* Hover Effect */
+.journey-step:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(144, 238, 251, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Active Step (Step 03 - Highlighted in Blue) */
+.journey-step.active {
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+    border-color: #0066FF;
+    box-shadow: 0 20px 60px rgba(0, 102, 255, 0.3);
+}
+
+.journey-step.active:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 70px rgba(0, 102, 255, 0.4);
+}
+
+/* ========================================
+   STEP NUMBER
+   ======================================== */
+
+.step-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    min-width: 120px;
+}
+
+.journey-step.active .step-number {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   STEP CONTENT
+   ======================================== */
+
+.step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.step-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    max-width: 700px;
+}
+
+.journey-step.active .step-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   STEP CTA BUTTON (Shows only on active step)
+   ======================================== */
+
+.step-cta {
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0066FF;
+    background: #FFFFFF;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    margin-top: 8px;
+    align-self: flex-start;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
+
+/* Show button only on active step */
+.journey-step.active .step-cta {
+    display: inline-flex;
+}
+
+.step-cta:hover {
+    background: #F0F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MATHEMATICAL SCALING
+   ======================================== */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+    .engagement-journey-section {
+        padding: 100px 40px;
+    }
+    
+    .engagement-container {
+        padding: 0 83px;
+    }
+    
+    .journey-header {
+        margin-bottom: 67px;
+    }
+    
+    .journey-title {
+        font-size: 47px;
+    }
+    
+    .view-deliverables {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+    
+    .journey-steps {
+        gap: 27px;
+    }
+    
+    .journey-step {
+        padding: 40px;
+        gap: 33px;
+        border-radius: 17px;
+    }
+    
+    .step-number {
+        font-size: 67px;
+        min-width: 100px;
+    }
+    
+    .step-title {
+        font-size: 27px;
+    }
+    
+    .step-description {
+        font-size: 15px;
+    }
+    
+    .step-cta {
+        font-size: 13px;
+        padding: 12px 27px;
+    }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+    .engagement-journey-section {
+        padding: 87px 35px;
+    }
+    
+    .engagement-container {
+        padding: 0 73px;
+    }
+    
+    .journey-header {
+        margin-bottom: 58px;
+    }
+    
+    .journey-title {
+        font-size: 41px;
+    }
+    
+    .view-deliverables {
+        font-size: 12px;
+        padding: 9px 17px;
+    }
+    
+    .journey-steps {
+        gap: 23px;
+    }
+    
+    .journey-step {
+        padding: 35px;
+        gap: 29px;
+        border-radius: 15px;
+    }
+    
+    .step-number {
+        font-size: 58px;
+        min-width: 87px;
+    }
+    
+    .step-title {
+        font-size: 23px;
+    }
+    
+    .step-description {
+        font-size: 13px;
+    }
+    
+    .step-cta {
+        font-size: 12px;
+        padding: 10px 23px;
+    }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+    .engagement-journey-section {
+        padding: 75px 30px;
+    }
+    
+    .engagement-container {
+        padding: 0 63px;
+    }
+    
+    .journey-header {
+        margin-bottom: 50px;
+    }
+    
+    .journey-title {
+        font-size: 35px;
+    }
+    
+    .view-deliverables {
+        font-size: 10px;
+        padding: 8px 15px;
+    }
+    
+    .journey-steps {
+        gap: 20px;
+    }
+    
+    .journey-step {
+        padding: 30px;
+        gap: 25px;
+        border-radius: 13px;
+    }
+    
+    .step-number {
+        font-size: 50px;
+        min-width: 75px;
+    }
+    
+    .step-title {
+        font-size: 20px;
+    }
+    
+    .step-description {
+        font-size: 11px;
+    }
+    
+    .step-cta {
+        font-size: 10px;
+        padding: 9px 20px;
+    }
+}
+
+/* 1024px - Layout changes */
+@media screen and (max-width: 1024px) {
+    .engagement-container {
+        padding: 0 40px;
+    }
+    
+    .journey-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
+
+/* 900px - Tablet */
+@media screen and (max-width: 900px) {
+    .engagement-journey-section {
+        padding: 60px 24px;
+    }
+    
+    .engagement-container {
+        padding: 0 30px;
+    }
+    
+    .journey-header {
+        margin-bottom: 40px;
+    }
+    
+    .journey-title {
+        font-size: 32px;
+    }
+    
+    .view-deliverables {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    .journey-step {
+        padding: 32px;
+        gap: 24px;
+    }
+    
+    .step-number {
+        font-size: 64px;
+        min-width: 80px;
+    }
+    
+    .step-title {
+        font-size: 24px;
+    }
+    
+    .step-description {
+        font-size: 15px;
+    }
+    
+    .step-cta {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}
+
+/* 768px - Mobile Landscape */
+@media screen and (max-width: 768px) {
+    .engagement-journey-section {
+        padding: 50px 20px;
+    }
+    
+    .engagement-container {
+        padding: 0 24px;
+    }
+    
+    .journey-header {
+        margin-bottom: 35px;
+    }
+    
+    .journey-title {
+        font-size: 28px;
+    }
+    
+    .view-deliverables {
+        font-size: 13px;
+    }
+    
+    .journey-step {
+        flex-direction: column;
+        padding: 28px 24px;
+        gap: 20px;
+    }
+    
+    .step-number {
+        font-size: 56px;
+        min-width: auto;
+    }
+    
+    .step-title {
+        font-size: 22px;
+    }
+    
+    .step-description {
+        font-size: 14px;
+    }
+}
+
+/* 640px - Mobile Portrait */
+@media screen and (max-width: 640px) {
+    .engagement-journey-section {
+        padding: 40px 16px;
+    }
+    
+    .engagement-container {
+        padding: 0 20px;
+    }
+    
+    .journey-header {
+        margin-bottom: 30px;
+    }
+    
+    .journey-title {
+        font-size: 24px;
+    }
+    
+    .view-deliverables {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+    .journey-steps {
+        gap: 16px;
+    }
+    
+    .journey-step {
+        padding: 24px 20px;
+    }
+    
+    .step-number {
+        font-size: 48px;
+    }
+    
+    .step-title {
+        font-size: 20px;
+    }
+    
+    .step-description {
+        font-size: 13px;
+    }
+    
+    .step-cta {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+/* 480px - Small Mobile */
+@media screen and (max-width: 480px) {
+    .engagement-journey-section {
+        padding: 35px 16px;
+    }
+    
+    .engagement-container {
+        padding: 0 16px;
+    }
+    
+    .journey-header {
+        margin-bottom: 24px;
+    }
+    
+    .journey-title {
+        font-size: 22px;
+    }
+    
+    .view-deliverables {
+        font-size: 11px;
+        padding: 8px 14px;
+    }
+    
+    .journey-steps {
+        gap: 14px;
+    }
+    
+    .journey-step {
+        padding: 20px 16px;
+    }
+    
+    .step-number {
+        font-size: 40px;
+    }
+    
+    .step-title {
+        font-size: 18px;
+    }
+    
+    .step-description {
+        font-size: 12px;
+    }
+    
+    .step-cta {
+        font-size: 12px;
+        padding: 9px 18px;
+    }
+}
+
+/* 375px - iPhone Standard */
+@media screen and (max-width: 375px) {
+    .journey-title {
+        font-size: 20px;
+    }
+    
+    .step-number {
+        font-size: 36px;
+    }
+    
+    .step-title {
+        font-size: 16px;
+    }
+    
+    .step-description {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   ANIMATIONS & PERFORMANCE
+   ======================================== */
+
+/* Smooth transitions */
+.journey-step,
+.step-cta,
+.view-deliverables {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Performance optimization */
+.journey-step {
+    will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .journey-step {
+        animation: none;
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,21 +1,32 @@
 <section class="portfolio-banner-section">
 
-<div class="heading-subtitle">
-    OUR WORK
-</div>
-
-
-
+    <div class="heading-subtitle">
+        OUR WORK
+    </div>
 
     <div class="portfolio-banner-container">
         
         <!-- Left Content -->
         <div class="portfolio-banner-content">
+            
+            <!-- Large Number -->
+            <div class="portfolio-number">01</div>
+            
+            <!-- Service List -->
+            <div class="portfolio-service-list">
+                <div class="service-item">Service Galaxy</div>
+                <div class="service-item">Simplesocial CRM</div>
+                <div class="service-item">Enhance AI</div>
+            </div>
+            
+            <!-- Heading -->
             <h2 class="portfolio-banner-heading">
-                Transform Your Vision Into Reality
+                Service Galaxy
             </h2>
+            
+            <!-- Description -->
             <p class="portfolio-banner-description">
-                Discover how we've helped businesses across industries achieve digital excellence through innovative solutions and cutting-edge technology.
+                Service Galaxy is an advanced home services software developed with rapid-from experience and business owners to meet growth needs.
             </p>
             
             <!-- Buttons -->

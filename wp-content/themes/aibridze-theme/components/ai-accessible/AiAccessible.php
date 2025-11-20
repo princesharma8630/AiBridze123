@@ -16,43 +16,48 @@
             </p>
         </div>
 
-        <!-- Partner Logos (Bottom) -->
+        <!-- Partner Logos (Bottom) - WITH MARQUEE -->
         <div class="ai-accessible-logos">
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
-            </div>
-            <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+            <div class="ai-accessible-logos-inner">
+                <!-- FIRST SET OF LOGOS -->
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+                </div>
+                
+                <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
+                </div>
+                <div class="logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+                </div>
             </div>
         </div>
 

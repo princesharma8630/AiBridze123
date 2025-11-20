@@ -91,19 +91,42 @@
 }
 
 /* ================================================
-   PARTNER LOGOS (Bottom)
+   PARTNER LOGOS (Bottom) - INFINITE MARQUEE
    ================================================ */
 
-/* Logos Container */
+/* Logos Container - Overflow Hidden for Marquee */
 .ai-accessible-logos {
     position: absolute;
     top: 600px;
-    left: -116px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+}
+
+/* Inner wrapper for animation */
+.ai-accessible-logos-inner {
+    display: flex;
+    align-items: center;
     gap: 20px;
+    animation: marqueeScroll 40s linear infinite;
+    will-change: transform;
+}
+
+/* Pause on hover */
+.ai-accessible-logos:hover .ai-accessible-logos-inner {
+    animation-play-state: paused;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Logo Item */
@@ -162,9 +185,7 @@
         font-size: 19px;
     }
     
-    .ai-accessible-logos {
-        left: 100px;
-        right: 100px;
+    .ai-accessible-logos-inner {
         gap: 18px;
     }
     
@@ -195,9 +216,7 @@
         font-size: 18px;
     }
     
-    .ai-accessible-logos {
-        left: 80px;
-        right: 80px;
+    .ai-accessible-logos-inner {
         gap: 16px;
     }
     
@@ -246,8 +265,9 @@
     
     .ai-accessible-logos {
         top: 550px;
-        left: 60px;
-        right: 60px;
+    }
+    
+    .ai-accessible-logos-inner {
         gap: 15px;
     }
     
@@ -294,8 +314,9 @@
     
     .ai-accessible-logos {
         top: 520px;
-        left: 50px;
-        right: 50px;
+    }
+    
+    .ai-accessible-logos-inner {
         gap: 12px;
     }
     
@@ -362,14 +383,14 @@
         top: auto;
         left: auto;
         right: auto;
-        justify-content: center;
-        flex-wrap: wrap;
+    }
+    
+    .ai-accessible-logos-inner {
         gap: 20px;
     }
     
     .logo-item {
-        width: calc(50% - 10px);
-        max-width: 220px;
+        width: 220px;
         height: 85px;
     }
     
@@ -399,13 +420,13 @@
         line-height: 165%;
     }
     
-    .ai-accessible-logos {
+    .ai-accessible-logos-inner {
         gap: 18px;
+        animation: marqueeScroll 30s linear infinite;
     }
     
     .logo-item {
-        width: calc(50% - 9px);
-        max-width: 200px;
+        width: 200px;
         height: 80px;
     }
     
@@ -440,15 +461,13 @@
         line-height: 170%;
     }
     
-    .ai-accessible-logos {
+    .ai-accessible-logos-inner {
         gap: 15px;
-        flex-direction: column;
-        flex-wrap: nowrap;
+        animation: marqueeScroll 25s linear infinite;
     }
     
     .logo-item {
-        width: 100%;
-        max-width: 280px;
+        width: 180px;
         height: 75px;
     }
     
@@ -468,7 +487,7 @@
     }
     
     .logo-item {
-        max-width: 100%;
+        width: 160px;
         height: 70px;
     }
     
