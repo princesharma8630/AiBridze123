@@ -3,7 +3,7 @@
     <!-- Video Background -->
     <div class="hero-video-bg">
         <video autoplay muted loop playsinline>
-            <source src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/hero/background-with-blue-rounded-plasma-reflection-3-2025-10-17-00-08-40-utc.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/hero/background-with-blue-rounded-plasma-reflection-3-2025-10-17-00-08-40-utc.mp4" type="video/mp4">
         </video>
     </div>
     

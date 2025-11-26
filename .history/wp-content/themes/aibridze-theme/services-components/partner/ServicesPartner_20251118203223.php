@@ -10,39 +10,39 @@
                     
                     <!-- First Set of Logos -->
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/quo-legal.png" alt="Quo Legal Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/quo-legal.png" alt="Quo Legal Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/mnmize.png" alt="Mnmize Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/mnmize.png" alt="Mnmize Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/nordaus.png" alt="Nordaus Dynamics Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/nordaus.png" alt="Nordaus Dynamics Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/metriks.png" alt="Metriks Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/metriks.png" alt="Metriks Partner">
                     </div>
 
                     <!-- Duplicate Set for Seamless Loop (IMPORTANT!) -->
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/quo-legal.png" alt="Quo Legal Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/quo-legal.png" alt="Quo Legal Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/mnmize.png" alt="Mnmize Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/mnmize.png" alt="Mnmize Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/nordaus.png" alt="Nordaus Dynamics Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/nordaus.png" alt="Nordaus Dynamics Partner">
                     </div>
 
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/metriks.png" alt="Metriks Partner">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/metriks.png" alt="Metriks Partner">
                     </div>
                     <div class="partner-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/partners/i-5
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/partners/i-5
                         .png" alt="Metriks Partner">
                     </div>
 

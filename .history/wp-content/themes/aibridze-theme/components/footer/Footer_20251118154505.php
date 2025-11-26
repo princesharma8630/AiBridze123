@@ -3,7 +3,7 @@
     <!-- Video Background -->
     <div class="footer-video-bg">
         <video autoplay muted loop playsinline>
-            <source src="<?php echo get_template_directory_uri(); ?>/assests/Video/footer-background.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/Video/footer-background.mp4" type="video/mp4">
         </video>
     </div>
     

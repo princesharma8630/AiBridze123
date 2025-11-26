@@ -2,14 +2,14 @@
 <div class="why-now-right">
     
     <!-- Background Glow Container (behind everything) -->
-    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/why-now/glow-container.png" alt="" class="right-background-glow">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/why-now/glow-container.png" alt="" class="right-background-glow">
     
     <!-- Content (above background) -->
     <div class="right-content">
         
         <!-- AIBridze Logo -->
         <div class="promise-logo-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/why-now/aibridze-logo.png" alt="AIBridze Logo" class="logo-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/why-now/aibridze-logo.png" alt="AIBridze Logo" class="logo-image">
         </div>
         
         <!-- Promise Text -->

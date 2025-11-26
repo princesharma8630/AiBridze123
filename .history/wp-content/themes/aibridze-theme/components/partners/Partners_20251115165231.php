@@ -127,7 +127,7 @@ OpenAI
 Questions:
 
 Do you have these logo files already in your theme folder?
-What folder should I save them in? (e.g., assests/images/partners/)
+What folder should I save them in? (e.g., assets/images/partners/)
 Are they PNG or SVG files?
 Should logos be grayscale or colored?
 Any hover effect on logos? (e.g., opacity change, scale up?)
@@ -254,7 +254,7 @@ Spacing:
 Gap between logos: 48px? 60px? 80px?
 Section padding top/bottom: 75px (as per your earlier specs)?
 📁 Folder Structure I'll Create:
-assests/images/partners/
+assets/images/partners/
 ├── google-cloud.png
 ├── azure.png
 ├── aws.png
@@ -373,7 +373,7 @@ wp-content/themes/aibridze-theme/
 │   └── partners/
 │       ├── Partners.php  ✅
 │       └── Partners.css  ✅
-└── assests/images/partners/  👈 CREATE THIS FOLDER
+└── assets/images/partners/  👈 CREATE THIS FOLDER
     ├── google-cloud.png  (Add logo here)
     ├── azure.png
     ├── aws.png
@@ -400,7 +400,7 @@ Step 1: Create Folders
 bash
 # In your theme directory
 mkdir -p components/partners
-mkdir -p assests/images/partners
+mkdir -p assets/images/partners
 Step 2: Add Files
 Copy Partners.php to components/partners/
 Copy Partners.css to components/partners/
@@ -418,7 +418,7 @@ Shopify
 HubSpot
 Stripe
 OpenAI
-Save them in assests/images/partners/ with exact names:
+Save them in assets/images/partners/ with exact names:
 
 google-cloud.png
 azure.png
@@ -488,11 +488,11 @@ Your Partners Section is now complete and ready to display!
 
 Want to add more logos later? Just:
 
-Add the PNG file to assests/images/partners/
+Add the PNG file to assets/images/partners/
 Add this code block in Partners.php:
 php
 <div class="partner-logo">
-    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/YOUR-LOGO.png" alt="Company Name" />
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/YOUR-LOGO.png" alt="Company Name" />
 </div>
 Ready for the next section? Share the Figma details and let's keep building! 🎨✨
 
@@ -511,19 +511,19 @@ Ready for the next section? Share the Figma details and let's keep building! �
         <!-- Logos Container -->
         <div class="partners-logos">
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/googleCloud.png" alt="Google Cloud" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/googleCloud.png" alt="Google Cloud" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/azure.png" alt="Microsoft Azure" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/azure.png" alt="Microsoft Azure" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/aws.png" alt="AWS" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/aws.png" alt="AWS" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nvidia.png" alt="NVIDIA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nvidia.png" alt="NVIDIA" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/twilio.png" alt="Twilio" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/twilio.png" alt="Twilio" />
             </div>
         </div>
     </div>

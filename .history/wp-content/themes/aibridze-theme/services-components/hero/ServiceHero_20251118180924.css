@@ -23,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../assests/images/services/hero-bg.jpg');
+    background-image: url('../../assets/images/services/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -230,7 +230,7 @@
 ## 📂 Folder Structure Summary
 ```
 📦 aibridze-theme/
- ┣ 📂 assests/
+ ┣ 📂 assets/
  ┃ ┗ 📂 images/
  ┃   ┣ 📂 services/              ← CREATE THIS
  ┃   ┃ ┗ 📜 hero-bg.jpg          ← PUT YOUR IMAGE HERE

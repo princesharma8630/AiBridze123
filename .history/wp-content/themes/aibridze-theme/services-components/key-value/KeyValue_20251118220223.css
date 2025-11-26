@@ -5,7 +5,7 @@
         
         <!-- Left Side - Image -->
         <div class="key-value-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/key-value/ai-head.png" alt="AI Technology">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/key-value/ai-head.png" alt="AI Technology">
         </div>
 
         <!-- Right Side - Content -->

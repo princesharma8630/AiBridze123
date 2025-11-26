@@ -1,0 +1,308 @@
+/* ========================================
+   SERVICES GRID SECTION
+======================================== */
+
+.services-grid {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.services-grid-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 254px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: start;
+}
+
+/* ========================================
+   LEFT COLUMN - CONTENT
+======================================== */
+
+.services-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 40px;
+}
+
+.services-main-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.services-main-heading .highlight-text {
+    font-style: italic;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.services-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.btn-explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background-color: #90EEFB;
+    color: #000000;
+    border-radius: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(144, 238, 251, 0.3);
+    transition: all 0.3s ease;
+    width: fit-content;
+   
+
+.btn-explore:hover {
+    background-color: #7DE8F5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 238, 251, 0.5);
+}
+
+.btn-explore svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-explore:hover svg {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   RIGHT COLUMN - SERVICES LIST
+======================================== */
+
+.services-right {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.service-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateX(8px);
+}
+
+/* Service Icon */
+.service-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    /* Blue/Cyan tint for icons */
+    filter: brightness(0) saturate(100%) invert(70%) sepia(80%) saturate(500%) hue-rotate(170deg) brightness(110%) contrast(100%);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon img {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(50%) saturate(1000%) hue-rotate(160deg) brightness(110%) contrast(100%);
+    transform: scale(1.1);
+}
+
+/* Service Content */
+.service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-title {
+    color: #90EEFB;
+}
+
+.service-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Large Desktop */
+@media screen and (max-width: 1600px) {
+    .services-grid-container {
+        padding: 0 150px;
+        gap: 100px;
+    }
+    
+    .services-main-heading {
+        font-size: 44px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+    .services-grid-container {
+        padding: 0 100px;
+        gap: 80px;
+    }
+    
+    .services-main-heading {
+        font-size: 40px;
+    }
+}
+
+/* Laptop */
+@media screen and (max-width: 1200px) {
+    .services-grid {
+        padding: 80px 0;
+    }
+    
+    .services-grid-container {
+        padding: 0 60px;
+        gap: 60px;
+    }
+    
+    .services-main-heading {
+        font-size: 36px;
+    }
+    
+    .services-description {
+        font-size: 15px;
+    }
+    
+    .services-right {
+        gap: 40px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .services-grid {
+        padding: 60px 0;
+    }
+    
+    .services-grid-container {
+        padding: 0 40px;
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+    
+    .services-left {
+        padding-top: 0;
+    }
+    
+    .services-main-heading {
+        font-size: 32px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .services-grid-container {
+        padding: 0 30px;
+        gap: 48px;
+    }
+    
+    .services-main-heading {
+        font-size: 28px;
+    }
+    
+    .services-description {
+        font-size: 14px;
+    }
+    
+    .btn-explore {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+    
+    .services-right {
+        gap: 36px;
+    }
+    
+    .service-item {
+        gap: 20px;
+    }
+    
+    .service-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .service-icon img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .service-title {
+        font-size: 13px;
+    }
+    
+    .service-text {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .services-grid-container {
+        padding: 0 20px;
+    }
+    
+    .services-main-heading {
+        font-size: 24px;
+    }
+    
+    .services-right {
+        gap: 32px;
+    }
+    
+    .service-item {
+        gap: 16px;
+    }
+}

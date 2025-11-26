@@ -1,0 +1,763 @@
+/* ============================================
+   COMPLIANCE & CERTIFICATIONS SECTION
+   LEFT HEIGHT FIXED TO MATCH RIGHT COLUMN
+   ============================================ */
+
+/* Section Wrapper */
+.compliance-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 0px 0px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 1000px;
+}
+
+/* Container */
+.compliance-container {
+    max-width: 1920px;
+    margin: 0 96px;
+}
+
+/* Two Column Grid */
+.compliance-grid {
+    display: grid;
+    grid-template-columns: 912px 912px;
+    gap: 0px;
+    align-items: stretch; /* This makes both columns same height */
+    justify-content: center;
+}
+
+/* ============================================
+   LEFT COLUMN - Main Content + Image
+   ✅ FIXED: Height now matches right column
+   ============================================ */
+
+.compliance-left {
+    background: linear-gradient(135deg, 
+        #1a0d2e 0%,
+        #2d1b4e 20%,
+        #472a70 40%,
+        #5d3a8f 60%,
+        #7649ab 80%,
+        #8e5fc5 100%
+    );
+    padding: 30px;
+    padding-right: 0px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    min-width: 0; /* Allow flex items to shrink below content size */
+    
+    /* ✅ FIXED: These lines make left match right height */
+    height: 100%; /* Match right column height */
+    min-height: 100%; /* Ensure it fills the grid cell */
+}
+
+/* Main Heading */
+.compliance-main-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+/* Description */
+.compliance-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 48px 0;
+}
+
+/* 3D Lock Image */
+.compliance-image {
+    margin-top: auto; /* This pushes image to bottom */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.compliance-image img {
+    width: 100%;
+    max-width: 764px;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   RIGHT COLUMN - DARK BACKGROUND PANEL
+   ============================================ */
+
+.compliance-right {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 24px;
+    padding: 56px 40px;
+    height: 100%;
+}
+
+/* Section Title (Uppercase) */
+.section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 147%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 40px 0;
+}
+
+/* Section Description */
+.section-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 40px 0;
+}
+
+/* ============================================
+   CERTIFICATIONS CARDS
+   ============================================ */
+
+.certifications-block {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.cert-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cert-card {
+    width: 220px;
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.cert-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.cert-logo {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cert-logo img {
+    max-width: 220px;
+    max-height: 100px;
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.cert-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ============================================
+   REGULATORY COMPLIANCE LIST
+   ============================================ */
+
+.regulatory-block {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.compliance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.compliance-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.compliance-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-top: 2px;
+    background: rgba(144, 238, 251, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.compliance-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.compliance-text {
+    min-width: 0; /* Allow text to wrap */
+    flex: 1;
+}
+
+.compliance-text h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+    word-wrap: break-word;
+}
+
+.compliance-text p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    word-wrap: break-word;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Extra Large Desktop - 1920px and above */
+@media screen and (min-width: 1921px) {
+    .compliance-container {
+        padding: 0 calc((100vw - 1920px) / 2 + 254px);
+    }
+}
+
+/* Large Desktop - 1600px */
+@media screen and (max-width: 1600px) {
+    .compliance-container {
+        padding: 0 clamp(80px, 8vw, 150px);
+    }
+    
+    .compliance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .compliance-main-heading {
+        font-size: clamp(36px, 4vw, 42px);
+    }
+    
+    .compliance-description {
+        font-size: clamp(16px, 1.5vw, 18px);
+    }
+    
+    .compliance-right {
+        padding: clamp(40px, 4vw, 56px) clamp(32px, 3vw, 40px);
+    }
+    
+    .cert-card {
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .cert-logo img {
+        max-width: 180px;
+    }
+}
+
+/* Desktop - 1400px */
+@media screen and (max-width: 1400px) {
+    .compliance-container {
+        padding: 0 clamp(60px, 6vw, 100px);
+    }
+    
+    .compliance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .compliance-main-heading {
+        font-size: clamp(32px, 3.5vw, 38px);
+    }
+    
+    .compliance-grid {
+        gap: clamp(32px, 4vw, 48px);
+    }
+    
+    .compliance-right {
+        padding: clamp(36px, 4vw, 48px) clamp(28px, 3vw, 36px);
+        gap: clamp(48px, 5vw, 56px);
+    }
+    
+    .cert-card {
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .cert-cards {
+        gap: clamp(12px, 1.5vw, 16px);
+    }
+    
+    .cert-logo img {
+        max-width: 160px;
+    }
+}
+
+/* Laptop - 1200px */
+@media screen and (max-width: 1200px) {
+    .compliance-container {
+        padding: 0 clamp(40px, 5vw, 60px);
+    }
+    
+    .compliance-main-heading {
+        font-size: clamp(28px, 3vw, 36px);
+    }
+    
+    .compliance-left {
+        padding: clamp(24px, 2.5vw, 30px);
+        padding-bottom: 0;
+    }
+    
+    .cert-card {
+        padding: clamp(20px, 2.5vw, 28px) clamp(12px, 1.5vw, 16px);
+        gap: clamp(12px, 1.5vw, 20px);
+    }
+    
+    .cert-logo {
+        height: clamp(40px, 4vw, 48px);
+    }
+    
+    .cert-logo img {
+        max-height: clamp(40px, 4vw, 48px);
+    }
+    
+    .compliance-right {
+        padding: clamp(32px, 3.5vw, 40px) clamp(24px, 2.5vw, 32px);
+        gap: clamp(40px, 4.5vw, 56px);
+    }
+}
+
+/* Tablet - 1024px */
+@media screen and (max-width: 1024px) {
+    .compliance-container {
+        padding: 0 30px;
+    }
+    
+    .compliance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+    
+    .compliance-description {
+        font-size: 15px;
+        margin: 0 0 32px 0;
+    }
+    
+    .section-description {
+        font-size: 14px;
+    }
+    
+    .cert-title {
+        font-size: 13px;
+    }
+    
+    .cert-logo img {
+        max-width: 110px;
+    }
+}
+
+/* Tablet - 900px */
+@media screen and (max-width: 900px) {
+    .compliance-container {
+        padding: 0 24px;
+        max-width: 100%;
+    }
+    
+    .compliance-section {
+        padding: 60px 0;
+    }
+    
+    /* Single Column Layout */
+    .compliance-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        align-items: start;
+    }
+    
+    .compliance-left {
+        border-radius: 24px;
+        max-width: 100%;
+        height: auto; /* Reset height for mobile */
+        min-height: auto; /* Reset min-height for mobile */
+    }
+    
+    .compliance-main-heading {
+        font-size: 28px;
+    }
+    
+    .compliance-right {
+        gap: 36px;
+        padding: 36px 24px;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    /* Three columns for cert cards */
+    .cert-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .cert-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+    
+    .cert-logo {
+        height: 40px;
+        width: 100%;
+    }
+    
+    .cert-logo img {
+        max-width: 100%;
+        max-height: 40px;
+        margin-bottom: 12px;
+    }
+    
+    .cert-title {
+        font-size: 12px;
+    }
+    
+    .compliance-list {
+        gap: 24px;
+    }
+    
+    .compliance-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .compliance-image img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Mobile - 768px */
+@media screen and (max-width: 768px) {
+    .compliance-container {
+        padding: 0 20px;
+    }
+    
+    .compliance-section {
+        padding: 50px 0;
+    }
+    
+    .compliance-main-heading {
+        font-size: 24px;
+        line-height: 125%;
+    }
+    
+    .compliance-description {
+        font-size: 14px;
+        margin: 0 0 24px 0;
+    }
+    
+    .section-description {
+        font-size: 13px;
+        margin: 0 0 24px 0;
+    }
+    
+    .compliance-right {
+        padding: 32px 20px;
+        gap: 32px;
+        border-radius: 16px;
+    }
+    
+    .section-title {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+    
+    /* Two columns for cert cards */
+    .cert-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .cert-card {
+        width: auto;
+        padding: 16px 12px;
+        gap: 12px;
+    }
+    
+    .cert-logo {
+        width: 100%;
+        height: 36px;
+    }
+    
+    .cert-logo img {
+        max-width: 100%;
+        max-height: 36px;
+        margin-bottom: 12px;
+    }
+    
+    .cert-title {
+        font-size: 12px;
+    }
+    
+    .compliance-item {
+        gap: 10px;
+    }
+    
+    .compliance-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .compliance-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .compliance-text h4 {
+        font-size: 15px;
+    }
+    
+    .compliance-text p {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile - 640px */
+@media screen and (max-width: 640px) {
+    .compliance-container {
+        padding: 0 16px;
+    }
+    
+    .compliance-section {
+        padding: 40px 0;
+    }
+    
+    .compliance-left {
+        padding: 20px;
+        padding-bottom: 0;
+        gap: 16px;
+        border-radius: 20px;
+    }
+    
+    .compliance-main-heading {
+        font-size: 22px;
+        line-height: 130%;
+        margin: 0 0 12px 0;
+    }
+    
+    .compliance-description {
+        font-size: 14px;
+        margin: 0 0 20px 0;
+    }
+    
+    .compliance-right {
+        gap: 28px;
+        padding: 28px 18px;
+        border-radius: 16px;
+    }
+    
+    .section-title {
+        font-size: 12px;
+        margin: 0 0 16px 0;
+    }
+    
+    .section-description {
+        font-size: 13px;
+        margin: 0 0 20px 0;
+    }
+    
+    /* Single column for cert cards */
+    .cert-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .cert-card {
+        width: 100%;
+        padding: 20px 16px;
+        gap: 12px;
+    }
+    
+    .cert-logo {
+        width: 100%;
+        height: 40px;
+    }
+    
+    .cert-logo img {
+        max-width: 100px;
+        max-height: 40px;
+        margin-bottom: 12px;
+    }
+    
+    .cert-title {
+        font-size: 13px;
+    }
+    
+    .compliance-text h4 {
+        font-size: 15px;
+        margin: 0 0 6px 0;
+    }
+    
+    .compliance-text p {
+        font-size: 13px;
+        line-height: 155%;
+    }
+    
+    .compliance-list {
+        gap: 20px;
+    }
+}
+
+/* Extra Small Mobile - 480px */
+@media screen and (max-width: 480px) {
+    .compliance-container {
+        padding: 0 14px;
+    }
+    
+    .compliance-section {
+        padding: 32px 0;
+    }
+    
+    .compliance-grid {
+        gap: 24px;
+    }
+    
+    .compliance-left {
+        padding: 16px;
+        padding-bottom: 0;
+        border-radius: 16px;
+    }
+    
+    .compliance-main-heading {
+        font-size: 20px;
+    }
+}
+
+/* Ultra Small Mobile - 360px */
+@media screen and (max-width: 360px) {
+    .compliance-container {
+        padding: 0 12px;
+    }
+    
+    .compliance-section {
+        padding: 28px 0;
+    }
+    
+    .compliance-left {
+        padding: 14px;
+        padding-bottom: 0;
+    }
+    
+    .compliance-main-heading {
+        font-size: 18px;
+        line-height: 135%;
+    }
+    
+    .compliance-description {
+        font-size: 12px;
+        margin: 0 0 16px 0;
+    }
+    
+    .compliance-right {
+        padding: 24px 16px;
+        gap: 24px;
+    }
+    
+    .section-title {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+    
+    .section-description {
+        font-size: 11px;
+        margin: 0 0 16px 0;
+    }
+    
+    .cert-card {
+        padding: 16px 12px;
+        gap: 10px;
+    }
+    
+    .cert-logo {
+        height: 32px;
+    }
+    
+    .cert-logo img {
+        max-width: 80px;
+        max-height: 32px;
+    }
+    
+    .cert-title {
+        font-size: 11px;
+    }
+    
+    .compliance-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .compliance-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .compliance-text h4 {
+        font-size: 13px;
+    }
+    
+    .compliance-text p {
+        font-size: 11px;
+    }
+    
+    .compliance-list {
+        gap: 16px;
+    }
+}

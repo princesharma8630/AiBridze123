@@ -1,0 +1,313 @@
+/* ============================================
+   AI SERVICES CARDS SECTION
+   ============================================ */
+
+/* Section Wrapper */
+.ai-services-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Container */
+.ai-services-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 96px;
+}
+
+/* Cards Grid */
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+/* Service Card Base */
+.service-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 48px;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Card 1 - Marketing (Orange/Yellow Gradient) */
+.card-marketing {
+    background: linear-gradient(135deg, 
+        #1a0f00 0%,
+        #2d1a00 15%,
+        #4a2800 30%,
+        #6b3a00 45%,
+        #8f4d00 60%,
+        #b86200 75%,
+        #e07b00 90%,
+        #ff9500 100%
+    );
+}
+
+/* Card 2 - Integration (Blue Gradient) */
+.card-integration {
+    background: linear-gradient(135deg, 
+        #000814 0%,
+        #001233 15%,
+        #001d4d 30%,
+        #002966 45%,
+        #003680 60%,
+        #0047ab 75%,
+        #0059d6 90%,
+        #3d7ef9 100%
+    );
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Card Title */
+.card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Features List */
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 147%;
+    color: #FFFFFF;
+}
+
+.check-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+/* Card Description (for Card 2) */
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Card Image */
+.card-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    max-width: 60%;
+    pointer-events: none;
+}
+
+.card-marketing .card-image {
+    right: 20px;
+    bottom: 0;
+}
+
+.card-integration .card-image {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+    max-width: 70%;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Desktop - 1600px */
+@media screen and (max-width: 1600px) {
+    .ai-services-container {
+        padding: 0 150px;
+    }
+    
+    .card-title {
+        font-size: 28px;
+    }
+}
+
+/* Desktop - 1400px */
+@media screen and (max-width: 1400px) {
+    .ai-services-container {
+        padding: 0 100px;
+    }
+    
+    .service-card {
+        padding: 40px;
+        min-height: 550px;
+    }
+    
+    .card-title {
+        font-size: 26px;
+    }
+    
+    .card-features li,
+    .card-description {
+        font-size: 16px;
+    }
+}
+
+/* Laptop - 1200px */
+@media screen and (max-width: 1200px) {
+    .ai-services-container {
+        padding: 0 60px;
+    }
+    
+    .service-card {
+        min-height: 500px;
+    }
+    
+    .card-title {
+        font-size: 24px;
+    }
+}
+
+/* Tablet - 900px */
+@media screen and (max-width: 900px) {
+    .ai-services-container {
+        padding: 0 40px;
+    }
+    
+    .ai-services-section {
+        padding: 80px 0;
+    }
+    
+    /* Single Column on Tablet */
+    .services-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .service-card {
+        padding: 32px;
+        min-height: 450px;
+    }
+    
+    .card-title {
+        font-size: 22px;
+    }
+    
+    .card-image {
+        max-width: 50%;
+    }
+    
+    .card-integration .card-image {
+        max-width: 60%;
+    }
+}
+
+/* Mobile - 768px */
+@media screen and (max-width: 768px) {
+    .ai-services-container {
+        padding: 0 30px;
+    }
+    
+    .ai-services-section {
+        padding: 60px 0;
+    }
+    
+    .service-card {
+        padding: 28px;
+        min-height: 400px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-features li,
+    .card-description {
+        font-size: 15px;
+    }
+    
+    .card-features {
+        gap: 16px;
+    }
+    
+    .check-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small Mobile - 480px */
+@media screen and (max-width: 480px) {
+    .ai-services-container {
+        padding: 0 20px;
+    }
+    
+    .service-card {
+        padding: 24px;
+        min-height: 380px;
+    }
+    
+    .card-title {
+        font-size: 18px;
+        line-height: 130%;
+    }
+    
+    .card-content {
+        gap: 24px;
+    }
+    
+    .card-features li,
+    .card-description {
+        font-size: 14px;
+    }
+    
+    .card-image {
+        max-width: 45%;
+    }
+    
+    .card-integration .card-image {
+        max-width: 55%;
+    }
+}

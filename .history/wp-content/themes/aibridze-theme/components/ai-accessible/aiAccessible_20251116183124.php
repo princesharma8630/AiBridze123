@@ -19,22 +19,22 @@
         <!-- Partner Logos (Bottom) -->
         <div class="ai-accessible-logos">
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/metriks.png" alt="Metriks Data Center" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners2/metriks.png" alt="Metriks Data Center" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners2/quo-legal.png" alt="QUO Legal Firm" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners2/mnmize.png" alt="M'N'MIZE Interior" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners2/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/metriks.png" alt="Metriks Data Center" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/metriks.png" alt="Metriks Data Center" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/quo-legal.png" alt="QUO Legal Firm" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/quo-legal.png" alt="QUO Legal Firm" />
             </div>
         </div>
 

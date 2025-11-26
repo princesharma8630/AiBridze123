@@ -6,7 +6,7 @@
                 <?php if (has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
                 <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/logo.png" alt="<?php bloginfo('name'); ?>" class="site-logo" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>" class="site-logo" />
                 <?php endif; ?>
             </a>
         </div>

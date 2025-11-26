@@ -206,7 +206,7 @@ Verify HTML has:
 ### Check 4: Image Path
 Make sure image exists and loads:
 ```php
-<?php echo get_template_directory_uri(); ?>/assests/images/services/chatgpt-interface.png
+<?php echo get_template_directory_uri(); ?>/assets/images/services/chatgpt-interface.png
 ```
 
 ---

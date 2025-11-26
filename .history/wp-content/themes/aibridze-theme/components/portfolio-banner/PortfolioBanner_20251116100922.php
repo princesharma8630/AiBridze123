@@ -26,7 +26,7 @@
 
         <!-- Right Image -->
         <div class="portfolio-banner-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assests/images/laptop-portfolio.png" alt="Creative Design Portfolio" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/laptop-portfolio.png" alt="Creative Design Portfolio" />
         </div>
 
     </div>

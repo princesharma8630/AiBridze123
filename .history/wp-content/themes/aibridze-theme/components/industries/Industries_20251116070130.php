@@ -13,7 +13,7 @@
             <!-- Financial Services Box -->
             <div class="industry-box">
                 <div class="industry-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/industrial/financial.png" alt="Financial Services Icon" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industrial/financial.png" alt="Financial Services Icon" />
                 </div>
                 <h3 class="industry-title">FINANCIAL SERVICES</h3>
                 <p class="industry-description">
@@ -24,7 +24,7 @@
             <!-- Manufacturing Box -->
             <div class="industry-box">
                 <div class="industry-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/industrial/manufacturing.png" alt="Manufacturing Icon" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industrial/manufacturing.png" alt="Manufacturing Icon" />
                 </div>
                 <h3 class="industry-title">MANUFACTURING</h3>
                 <p class="industry-description">
@@ -35,7 +35,7 @@
             <!-- Retail & E-Commerce Box -->
             <div class="industry-box">
                 <div class="industry-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/industrial/ecommers.png" alt="Retail & E-Commerce Icon" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industrial/ecommers.png" alt="Retail & E-Commerce Icon" />
                 </div>
                 <h3 class="industry-title">RETAIL & E-COMMERCE</h3>
                 <p class="industry-description">
@@ -46,7 +46,7 @@
             <!-- Technology & Ops Box -->
             <div class="industry-box">
                 <div class="industry-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/industrial/ops.png" alt="Technology & Ops Icon" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industrial/ops.png" alt="Technology & Ops Icon" />
                 </div>
                 <h3 class="industry-title">TECHNOLOGY & OPS</h3>
                 <p class="industry-description">

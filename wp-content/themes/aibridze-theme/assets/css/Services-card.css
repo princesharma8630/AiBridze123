@@ -1,0 +1,555 @@
+/* ========================================
+   SERVICES CARDS SECTION - SCOPED
+======================================== */
+
+/* 1. SECTION CONTAINER */
+.sc-services-cards {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.sc-services-cards-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 96px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* 2. BASE CARD STYLES */
+.sc-service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    max-height: 592px;
+    max-width: 592;
+    padding: 24px;
+    padding-bottom: 0;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sc-service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* 3. CARD CONTENT & TYPOGRAPHY */
+.sc-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+.sc-card-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.sc-card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    letter-spacing: 0%;
+    margin: 0;
+    flex: 1;
+}
+
+/* 4. CARD IMAGES */
+.sc-card-image {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 0;
+}
+
+.sc-card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.sc-card-image-full {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.sc-card-image-full img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* 5. CARD 1 - AI CHATBOT (DARK RED) */
+.sc-card-chatbot {
+    background: linear-gradient(135deg, #1A0000 0%, #4D0000 50%, #800000 100%);
+    color: #FFFFFF;
+}
+
+.sc-card-chatbot .sc-card-heading {
+    color: #FFFFFF;
+}
+
+.sc-card-chatbot .sc-card-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sc-card-chatbot .sc-card-image {
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.sc-card-chatbot .sc-card-image img {
+    max-width: 280px;
+    margin-bottom: 0;
+}
+
+.sc-social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.sc-social-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.sc-social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.sc-social-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* 6. CARD 2 - AI DASHBOARD (WHITE/LIGHT) */
+.sc-card-dashboard {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    color: #000000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.sc-card-dashboard .sc-card-heading {
+    color: #000000;
+}
+
+.sc-card-dashboard .sc-card-description {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.sc-card-dashboard .sc-card-image {
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.sc-card-dashboard .sc-card-image img {
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* 7. CARD 3 - OPENAI (DARK GREEN/PURPLE) */
+.sc-card-openai {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: #FFFFFF;
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 592px;
+    width: 592;
+    height: 592px;
+}
+
+.sc-card-openai .sc-card-content {
+    background-color: #12351F;
+    height:fit-content;
+    min-height: 240px;
+    padding: 48px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.sc-card-heading-openai {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin: 0;
+    color: #E68BF6;
+    font-style: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.sc-card-openai .sc-card-heading em {
+    color: #E68BF6;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.sc-card-openai .sc-card-image-full {
+    flex: 1;
+    min-height: 300px;
+    width: 592px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.sc-card-openai .sc-card-image-full img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 8. BUTTON STYLES */
+.sc-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 14px 28px;
+    margin-top: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.sc-card-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.sc-btn-light {
+    background-color: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.sc-btn-light:hover {
+    background-color: #F0F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.sc-btn-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sc-btn-dark:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 9. RESPONSIVE DESIGN */
+@media screen and (max-width: 1600px) {
+    .sc-services-cards-container {
+        padding: 0 150px;
+        gap: 24px;
+    }
+    
+    .sc-service-card {
+        padding: 44px;
+        padding-bottom: 0;
+        min-height: 560px;
+    }
+    
+    .sc-card-heading {
+        font-size: 28px;
+    }
+    
+    .sc-card-openai {
+        height: 560px;
+        min-height: 560px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 44px;
+        padding-bottom: 28px;
+        min-height: 224px;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .sc-services-cards-container {
+        padding: 0 100px;
+    }
+    
+    .sc-service-card {
+        padding: 40px;
+        padding-bottom: 0;
+        min-height: 520px;
+    }
+    
+    .sc-card-heading {
+        font-size: 26px;
+    }
+    
+    .sc-card-openai {
+        height: 520px;
+        min-height: 520px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 40px;
+        padding-bottom: 24px;
+        min-height: 208px;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .sc-services-cards-container {
+        padding: 0 60px;
+        gap: 20px;
+    }
+    
+    .sc-service-card {
+        padding: 36px;
+        padding-bottom: 0;
+        min-height: 480px;
+    }
+    
+    .sc-card-heading {
+        font-size: 24px;
+    }
+    
+    .sc-card-description {
+        font-size: 15px;
+    }
+    
+    .sc-card-openai {
+        height: 480px;
+        min-height: 480px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 36px;
+        padding-bottom: 20px;
+        min-height: 192px;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sc-services-cards {
+        padding: 80px 0;
+    }
+    
+    .sc-services-cards-container {
+        padding: 0 40px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .sc-service-card {
+        min-height: auto;
+        padding: 40px;
+        padding-bottom: 0;
+    }
+    
+    .sc-card-heading {
+        font-size: 28px;
+    }
+    
+    .sc-social-icons {
+        justify-content: flex-start;
+    }
+    
+    .sc-card-openai {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 40px;
+        padding-bottom: 24px;
+        flex: 0 0 auto;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 38px;
+    }
+    
+    .sc-card-openai .sc-card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sc-services-cards {
+        padding: 60px 0;
+    }
+    
+    .sc-services-cards-container {
+        padding: 0 30px;
+        gap: 24px;
+    }
+    
+    .sc-service-card {
+        padding: 32px;
+        padding-bottom: 0;
+    }
+    
+    .sc-card-heading {
+        font-size: 24px;
+    }
+    
+    .sc-card-description {
+        font-size: 14px;
+    }
+    
+    .sc-card-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+    
+    .sc-social-icon {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .sc-social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .sc-card-openai {
+        height: auto;
+        min-height: 450px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 32px;
+        padding-bottom: 20px;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 32px;
+    }
+    
+    .sc-card-openai .sc-card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sc-services-cards-container {
+        padding: 0 20px;
+    }
+    
+    .sc-service-card {
+        padding: 24px;
+        padding-bottom: 0;
+    }
+    
+    .sc-card-heading {
+        font-size: 22px;
+    }
+    
+    .sc-card-openai {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .sc-card-openai .sc-card-content {
+        padding: 24px;
+        padding-bottom: 16px;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+    
+    .sc-card-openai .sc-card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 220px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .sc-card-openai .sc-card-content {
+        padding: 20px;
+        padding-bottom: 16px;
+    }
+    
+    .sc-card-heading-openai {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+}

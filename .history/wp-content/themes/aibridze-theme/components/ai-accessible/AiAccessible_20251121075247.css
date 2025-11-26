@@ -1,0 +1,497 @@
+/* ================================================
+   AI ACCESSIBLE SECTION - Exact Figma Match
+   ================================================ */
+
+/* Section Wrapper */
+.ai-accessible-section {
+    background: linear-gradient(135deg, #0066FF 0%, #0052CC 30%, #0080FF 60%, #00A3FF 100%);
+    max-width: 1592px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    min-height: 800px;
+}
+
+/* Add subtle glow effect in center */
+.ai-accessible-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Container */
+.ai-accessible-container {
+    max-width: 1592px;
+
+    padding: 0;
+    z-index: 1;
+    min-height: 650px;
+}
+
+/* Content Wrapper (Exact Position from Figma) */
+.ai-accessible-content {
+    position: absolute;
+    top: 75px;
+    left: 116px;
+    width: 896px;
+    max-width: calc(100% - 232px);
+}
+
+/* Main Text */
+.ai-accessible-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Faded Text Effect */
+.text-fade {
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+/* ================================================
+   STATIC TEXT (Exact Position from Figma)
+   ================================================ */
+
+/* Static Text Wrapper - EXACT FIGMA POSITION */
+.static-text-wrapper {
+    position: absolute;
+    top: 335px;
+    left: 925px;
+    width: 784px;
+    height: 116px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 64px;
+}
+
+/* Static Text */
+.static-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+    opacity: 1;
+}
+
+/* ================================================
+   PARTNER LOGOS (Bottom) - INFINITE MARQUEE
+   ================================================ */
+
+/* Logos Container - Overflow Hidden for Marquee */
+.ai-accessible-logos {
+    position: absolute;
+    top: 600px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Inner wrapper for animation */
+.ai-accessible-logos-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: marqueeScroll 40s linear infinite;
+    will-change: transform;
+}
+
+/* Pause on hover */
+.ai-accessible-logos:hover .ai-accessible-logos-inner {
+    animation-play-state: paused;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Logo Item */
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    width: 244.7px;
+    height: 100px;
+    border-radius: 12.12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.logo-item img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Logo Hover Effect */
+.logo-item:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1920px) */
+@media screen and (max-width: 1600px) {
+    .ai-accessible-content {
+        left: 100px;
+        width: 750px;
+        max-width: calc(45% - 100px);
+    }
+    
+    .ai-accessible-text {
+        font-size: 34px;
+    }
+    
+    .static-text-wrapper {
+        left: 870px;
+        width: 650px;
+        right: auto;
+    }
+    
+    .static-text {
+        font-size: 19px;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 18px;
+    }
+    
+    .logo-item {
+        width: 220px;
+    }
+}
+
+/* Desktop (1400px - 1600px) */
+@media screen and (max-width: 1400px) {
+    .ai-accessible-content {
+        left: 80px;
+        width: 650px;
+        max-width: calc(48% - 80px);
+    }
+    
+    .ai-accessible-text {
+        font-size: 32px;
+    }
+    
+    .static-text-wrapper {
+        top: 320px;
+        left: 750px;
+        width: 580px;
+    }
+    
+    .static-text {
+        font-size: 18px;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 16px;
+    }
+    
+    .logo-item {
+        width: 200px;
+        height: 90px;
+    }
+    
+    .logo-item img {
+        height: 45px;
+    }
+}
+
+/* Laptop (1200px - 1400px) - MAINTAINED AS REQUESTED */
+@media screen and (max-width: 1200px) {
+    .ai-accessible-section {
+        min-height: 700px;
+    }
+    
+    .ai-accessible-container {
+        min-height: 600px;
+    }
+    
+    .ai-accessible-content {
+        left: 60px;
+        width: 550px;
+        max-width: calc(50% - 60px);
+    }
+    
+    .ai-accessible-text {
+        font-size: 28px;
+        line-height: 150%;
+    }
+    
+    .static-text-wrapper {
+        top: 300px;
+        left: 630px;
+        width: 500px;
+        height: auto;
+    }
+    
+    .static-text {
+        font-size: 17px;
+        line-height: 155%;
+    }
+    
+    .ai-accessible-logos {
+        top: 550px;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 15px;
+    }
+    
+    .logo-item {
+        width: 180px;
+        height: 85px;
+        padding: 15px;
+    }
+    
+    .logo-item img {
+        height: 42px;
+    }
+}
+
+/* Small Laptop (1024px - 1200px) */
+@media screen and (max-width: 1024px) {
+    .ai-accessible-section {
+        min-height: 650px;
+    }
+    
+    .ai-accessible-container {
+        min-height: 550px;
+    }
+    
+    .ai-accessible-content {
+        left: 50px;
+        width: 480px;
+        max-width: calc(52% - 50px);
+    }
+    
+    .ai-accessible-text {
+        font-size: 26px;
+    }
+    
+    .static-text-wrapper {
+        top: 280px;
+        left: 550px;
+        width: 420px;
+    }
+    
+    .static-text {
+        font-size: 16px;
+    }
+    
+    .ai-accessible-logos {
+        top: 520px;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 12px;
+    }
+    
+    .logo-item {
+        width: 160px;
+        height: 80px;
+    }
+    
+    .logo-item img {
+        height: 38px;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 900px) {
+    .ai-accessible-section {
+        min-height: auto;
+        padding: 60px 0 50px 0;
+    }
+    
+    .ai-accessible-section::before {
+        left: 50%;
+        width: 800px;
+        height: 800px;
+    }
+    
+    .ai-accessible-container {
+        min-height: auto;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    
+    .ai-accessible-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .ai-accessible-text {
+        font-size: 26px;
+        line-height: 155%;
+    }
+    
+    .static-text-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+    }
+    
+    .static-text {
+        font-size: 17px;
+        line-height: 160%;
+    }
+    
+    .ai-accessible-logos {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 20px;
+    }
+    
+    .logo-item {
+        width: 220px;
+        height: 85px;
+    }
+    
+    .logo-item img {
+        height: 40px;
+    }
+}
+
+/* Mobile (480px - 768px) */
+@media screen and (max-width: 768px) {
+    .ai-accessible-section {
+        padding: 50px 0 40px 0;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 30px;
+        gap: 30px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 22px;
+        line-height: 160%;
+    }
+    
+    .static-text {
+        font-size: 16px;
+        line-height: 165%;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 18px;
+        animation: marqueeScroll 30s linear infinite;
+    }
+    
+    .logo-item {
+        width: 200px;
+        height: 80px;
+    }
+    
+    .logo-item img {
+        height: 36px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .ai-accessible-section {
+        padding: 40px 0 35px 0;
+    }
+    
+    .ai-accessible-section::before {
+        width: 600px;
+        height: 600px;
+    }
+    
+    .ai-accessible-container {
+        padding: 0 20px;
+        gap: 25px;
+    }
+    
+    .ai-accessible-text {
+        font-size: 20px;
+        line-height: 165%;
+    }
+    
+    .static-text {
+        font-size: 15px;
+        line-height: 170%;
+    }
+    
+    .ai-accessible-logos-inner {
+        gap: 15px;
+        animation: marqueeScroll 25s linear infinite;
+    }
+    
+    .logo-item {
+        width: 180px;
+        height: 75px;
+    }
+    
+    .logo-item img {
+        height: 34px;
+    }
+}
+
+/* Extra Small Mobile (< 375px) */
+@media screen and (max-width: 375px) {
+    .ai-accessible-text {
+        font-size: 18px;
+    }
+    
+    .static-text {
+        font-size: 14px;
+    }
+    
+    .logo-item {
+        width: 160px;
+        height: 70px;
+    }
+    
+    .logo-item img {
+        height: 32px;
+    }
+}

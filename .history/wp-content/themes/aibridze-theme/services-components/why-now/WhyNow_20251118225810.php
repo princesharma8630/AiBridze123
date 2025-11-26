@@ -52,10 +52,10 @@
             <!-- Glowing Container with Logo -->
             <div class="promise-container">
                 <!-- Background Glow Image -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/why-now/glow-container.png" alt="" class="glow-background">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/why-now/glow-container.png" alt="" class="glow-background">
                 
                 <!-- AIBridze Logo -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/why-now/aibridze-logo.png" alt="AIBridze Logo" class="logo-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/why-now/aibridze-logo.png" alt="AIBridze Logo" class="logo-image">
             </div>
             
             <!-- Promise Text -->

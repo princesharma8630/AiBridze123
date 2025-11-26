@@ -12,7 +12,7 @@
             <!-- Team Member 1 -->
             <div class="team-member">
                 <div class="member-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/team/member-1.jpg" alt="Sitaram Sharma" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/member-1.jpg" alt="Sitaram Sharma" />
                 </div>
                 <div class="member-info">
                     <h3 class="member-name">SITARAM SHARMA</h3>
@@ -28,7 +28,7 @@
             <!-- Team Member 2 -->
             <div class="team-member">
                 <div class="member-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/team/member-2.jpg" alt="Abhish Chauhan" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/member-2.jpg" alt="Abhish Chauhan" />
                 </div>
                 <div class="member-info">
                     <h3 class="member-name">ABHISH CHAUHAN</h3>
@@ -44,7 +44,7 @@
             <!-- Team Member 3 -->
             <div class="team-member">
                 <div class="member-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/team/member-3.jpg" alt="Anand Prakash" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/member-3.jpg" alt="Anand Prakash" />
                 </div>
                 <div class="member-info">
                     <h3 class="member-name">ANAND PRAKASH</h3>
@@ -60,7 +60,7 @@
             <!-- Team Member 4 -->
             <div class="team-member">
                 <div class="member-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/team/member-4.jpg" alt="Dinu Mehrotra" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/team/member-4.jpg" alt="Dinu Mehrotra" />
                 </div>
                 <div class="member-info">
                     <h3 class="member-name">DINU MEHROTRA</h3>

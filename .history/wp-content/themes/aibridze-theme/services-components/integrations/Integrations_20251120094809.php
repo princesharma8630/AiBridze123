@@ -12,7 +12,7 @@
             <!-- Integration 1 - Duolingo -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/i1.png" alt="Duolingo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/i1.png" alt="Duolingo">
                 </div>
                 <p class="integration-name">Duolingo</p>
             </div>
@@ -20,7 +20,7 @@
             <!-- Integration 2 - Slack -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/i2.png" alt="Slack">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/i2.png" alt="Slack">
                 </div>
                 <p class="integration-name">Slack</p>
             </div>
@@ -28,7 +28,7 @@
             <!-- Integration 3 - Messenger -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/messenger.png" alt="Messenger">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/messenger.png" alt="Messenger">
                 </div>
                 <p class="integration-name">Messenger</p>
             </div>
@@ -36,7 +36,7 @@
             <!-- Integration 4 - Skype -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/skype.png" alt="Skype">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/skype.png" alt="Skype">
                 </div>
                 <p class="integration-name">Skype</p>
             </div>
@@ -44,7 +44,7 @@
             <!-- Integration 5 - Telegram -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/telegram.png" alt="Telegram">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/telegram.png" alt="Telegram">
                 </div>
                 <p class="integration-name">Telegram</p>
             </div>
@@ -52,7 +52,7 @@
             <!-- Integration 6 - Discord -->
             <div class="integration-item">
                 <div class="integration-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/integrations/discord.png" alt="Discord">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/integrations/discord.png" alt="Discord">
                 </div>
                 <p class="integration-name">Discord</p>
             </div>

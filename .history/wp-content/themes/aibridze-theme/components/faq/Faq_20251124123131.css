@@ -1,0 +1,336 @@
+/* ===========================
+   FAQ SECTION STYLES
+   =========================== */
+
+.faq-section {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* ===========================
+   HEADING
+   =========================== */
+
+.faq-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+/* ===========================
+   FAQ GRID
+   =========================== */
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+/* ===========================
+   FAQ ITEM
+   =========================== */
+
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(144, 238, 251, 0.3);
+    box-shadow: 0 8px 24px rgba(144, 238, 251, 0.1);
+}
+
+/* FAQ Question Container */
+.faq-question {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.faq-question h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 160%;
+    color: #FFFFFF;
+    margin: 0;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+.faq-item:hover .faq-question h3 {
+    color: #90EEFB;
+}
+
+/* FAQ Toggle Button */
+.faq-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(144, 238, 251, 0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-toggle:hover {
+    background-color: rgba(144, 238, 251, 0.2);
+    transform: scale(1.1);
+}
+
+.faq-icon {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #90EEFB;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* FAQ Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 32px 28px 32px;
+}
+
+.faq-answer p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 170%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Large Desktop (1600px and below) */
+@media screen and (max-width: 1600px) {
+    .faq-container {
+        padding: 0 150px;
+    }
+}
+
+/* Desktop (1400px and below) */
+@media screen and (max-width: 1400px) {
+    .faq-container {
+        padding: 0 100px;
+    }
+    
+    .faq-heading {
+        font-size: 42px;
+    }
+}
+
+/* Laptop (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .faq-container {
+        padding: 0 60px;
+        gap: 48px;
+    }
+    
+    .faq-section {
+        padding: 80px 0;
+    }
+    
+    .faq-heading {
+        font-size: 36px;
+    }
+    
+    .faq-grid {
+        gap: 24px;
+    }
+    
+    .faq-question {
+        padding: 24px 28px;
+    }
+    
+    .faq-question h3 {
+        font-size: 17px;
+    }
+    
+    .faq-answer p {
+        font-size: 15px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 28px 24px 28px;
+    }
+}
+
+/* Tablet (900px and below) */
+@media screen and (max-width: 900px) {
+    .faq-container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+    
+    .faq-heading {
+        font-size: 32px;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .faq-question {
+        padding: 22px 24px;
+        gap: 16px;
+    }
+    
+    .faq-question h3 {
+        font-size: 16px;
+    }
+    
+    .faq-toggle {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .faq-icon {
+        font-size: 20px;
+    }
+    
+    .faq-answer p {
+        font-size: 14px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 24px 22px 24px;
+    }
+}
+
+/* Mobile (768px and below) */
+@media screen and (max-width: 768px) {
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .faq-container {
+        padding: 0 30px;
+        gap: 32px;
+    }
+    
+    .faq-heading {
+        font-size: 28px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .faq-question h3 {
+        font-size: 15px;
+        line-height: 150%;
+    }
+    
+    .faq-answer p {
+        font-size: 13px;
+        line-height: 160%;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+        max-height: 600px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .faq-section {
+        padding: 50px 0;
+    }
+    
+    .faq-container {
+        padding: 0 20px;
+        gap: 28px;
+    }
+    
+    .faq-heading {
+        font-size: 24px;
+        line-height: 140%;
+    }
+    
+    .faq-grid {
+        gap: 16px;
+    }
+    
+    .faq-question {
+        padding: 18px;
+        gap: 12px;
+    }
+    
+    .faq-question h3 {
+        font-size: 14px;
+        line-height: 145%;
+    }
+    
+    .faq-toggle {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .faq-icon {
+        font-size: 18px;
+    }
+    
+    .faq-answer p {
+        font-size: 12px;
+        line-height: 155%;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 18px 18px 18px;
+        max-height: 700px;
+    }
+}

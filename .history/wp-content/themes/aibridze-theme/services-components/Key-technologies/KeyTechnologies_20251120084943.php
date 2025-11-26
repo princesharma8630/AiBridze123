@@ -60,7 +60,7 @@
         
         <!-- Right Side - Image -->
         <div class="key-tech-right">
-            <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/key.jpg" alt="AI Technology" class="tech-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/key.jpg" alt="AI Technology" class="tech-image">
         </div>
         
     </div>

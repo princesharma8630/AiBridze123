@@ -9,16 +9,16 @@
                 <!-- Social Icons -->
                 <div class="social-icons">
                     <div class="social-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/messenger-icon.png" alt="Messenger" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/messenger-icon.png" alt="Messenger" />
                     </div>
                     <div class="social-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/skype-icon.png" alt="Skype" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/skype-icon.png" alt="Skype" />
                     </div>
                     <div class="social-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/telegram-icon.png" alt="Telegram" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/telegram-icon.png" alt="Telegram" />
                     </div>
                     <div class="social-icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/discord-icon.png" alt="Discord" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/discord-icon.png" alt="Discord" />
                     </div>
                 </div>
                 
@@ -33,7 +33,7 @@
             
             <!-- Robot Image -->
             <div class="card-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/robot-chatbot.png" alt="AI Chatbot Robot" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/robot-chatbot.png" alt="AI Chatbot Robot" />
             </div>
         </div>
 
@@ -55,7 +55,7 @@
             
             <!-- 3D Shapes Image -->
             <div class="card-image" class="card-image-medium">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/abstract-shapes.png" alt="AI Dashboard Visualization" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/abstract-shapes.png" alt="AI Dashboard Visualization" />
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             
             <!-- ChatGPT Interface Image -->
             <div class="card-image card-image-full">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/chatgpt-interface.png" alt="ChatGPT Interface" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/chatgpt-interface.png" alt="ChatGPT Interface" />
             </div>
         </div>
 

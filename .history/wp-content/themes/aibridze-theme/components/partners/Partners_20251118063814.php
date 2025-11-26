@@ -7,70 +7,70 @@
         <div class="partners-logos">
             <!-- First Set -->
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/googleCloud.png" alt="Google Cloud" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/googleCloud.png" alt="Google Cloud" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/azure.png" alt="Microsoft Azure" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/azure.png" alt="Microsoft Azure" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/awsfull.png" alt="AWS" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/awsfull.png" alt="AWS" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nvidia.png" alt="NVIDIA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nvidia.png" alt="NVIDIA" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/twilio.png" alt="Twilio" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/twilio.png" alt="Twilio" />
             </div>
             
             <!-- Second Set -->
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/googleCloud.png" alt="Google Cloud" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/googleCloud.png" alt="Google Cloud" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/azure.png" alt="Microsoft Azure" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/azure.png" alt="Microsoft Azure" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/awsfull.png" alt="AWS" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/awsfull.png" alt="AWS" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nvidia.png" alt="NVIDIA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nvidia.png" alt="NVIDIA" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/twilio.png" alt="Twilio" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/twilio.png" alt="Twilio" />
             </div>
 
             <!-- Third Set -->
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/googleCloud.png" alt="Google Cloud" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/googleCloud.png" alt="Google Cloud" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/azure.png" alt="Microsoft Azure" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/azure.png" alt="Microsoft Azure" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/awsfull.png" alt="AWS" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/awsfull.png" alt="AWS" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nvidia.png" alt="NVIDIA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nvidia.png" alt="NVIDIA" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/twilio.png" alt="Twilio" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/twilio.png" alt="Twilio" />
             </div>
 
             <!-- Fourth Set -->
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/googleCloud.png" alt="Google Cloud" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/googleCloud.png" alt="Google Cloud" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/azure.png" alt="Microsoft Azure" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/azure.png" alt="Microsoft Azure" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/awsfull.png" alt="AWS" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/awsfull.png" alt="AWS" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nvidia.png" alt="NVIDIA" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nvidia.png" alt="NVIDIA" />
             </div>
             <div class="partner-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/twilio.png" alt="Twilio" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/twilio.png" alt="Twilio" />
             </div>
             
         </div>

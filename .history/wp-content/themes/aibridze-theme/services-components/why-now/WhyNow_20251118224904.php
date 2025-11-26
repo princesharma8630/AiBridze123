@@ -52,7 +52,7 @@
             <!-- Logo with Glow -->
             <div class="promise-logo">
                 <div class="logo-glow"></div>
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/service-page-image/why-now/aibridze-logo-glow.png" alt="AIBridze Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/service-page-image/why-now/aibridze-logo-glow.png" alt="AIBridze Logo">
             </div>
             
             <!-- Promise Text -->

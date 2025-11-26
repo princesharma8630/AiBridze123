@@ -1,0 +1,91 @@
+/* ========================================
+   7. CARD 3 - OPENAI (DARK GREEN/PURPLE)
+======================================== */
+
+.card-openai {
+    /* Two-section card layout */
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: #FFFFFF;
+    
+    /* Remove default padding */
+    padding: 0;
+    padding-bottom: 0;
+    
+    /* Rounded corners */
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* OpenAI Content Area - TOP SECTION (40% height, Dark Green) */
+.card-openai .card-content {
+    /* Dimensions: 40% of card height */
+    min-height: 237px; /* 40% of 592px base height */
+    
+    /* Dark green solid background */
+    background-color: #12351F;
+    
+    /* Padding: 6-8% of card dimensions */
+    padding: 48px;
+    padding-bottom: 24px;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 0 0 auto; /* Don't grow/shrink */
+}
+
+/* OpenAI Heading - Large 3-line text */
+.card-openai .card-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    margin: 0;
+    color: #E68BF6; /* Light magenta/pink */
+    font-style: normal;
+}
+
+/* Italic text within OpenAI heading - "OpenAI integration" */
+.card-openai .card-heading em {
+    color: #E68BF6; /* Same magenta color */
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* OpenAI Description - Hidden or minimal */
+.card-openai .card-description {
+    display: none; /* Not shown in this design */
+}
+
+/* OpenAI Image Area - BOTTOM SECTION (60% height, Purple Gradient) */
+.card-openai .card-image-full {
+    /* Dimensions: 60% of card height */
+    min-height: 355px; /* 60% of 592px base height */
+    flex: 1; /* Takes remaining space */
+    
+    /* Purple gradient background */
+    background: linear-gradient(180deg, #6A1B9A 0%, #B66BFC 100%);
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Styling */
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.card-openai .card-image-full img {
+    max-height: 100%;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+}

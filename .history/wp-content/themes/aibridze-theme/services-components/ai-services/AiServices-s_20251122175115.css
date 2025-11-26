@@ -1,0 +1,552 @@
+/* ================================================
+   AI SERVICES SECTION - FINAL (EXACT FIGMA MATCH)
+   Container: 1824px × 714px | Border: 1px #0063FF
+   Layout: Left 567px + Right 785px (2×2 cards grid)
+   ================================================ */
+
+/* Section Wrapper */
+.ai-services-section {
+    background: #000000;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container - EXACT FIGMA SPECS */
+.ai-services-container {
+    width: 1824px;
+    max-width: calc(100% - 96px);
+    min-height: 714px;
+    
+    /* Border - CRITICAL */
+    border: 1px solid #0063FF;
+    border-radius: 16px;
+    
+    /* Background Gradient */
+    background: linear-gradient(135deg, #001529 0%, #003366 30%, #0052CC 70%, #0066FF 100%);
+    
+    /* Padding - EXACT FROM FIGMA */
+    padding: 75px 115px;
+    
+    /* Layout */
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle glow overlay */
+.ai-services-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ================================================
+   TOP ICONS ROW
+   ================================================ */
+
+.ai-services-icons {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 2;
+}
+
+.service-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-icon-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.service-icon-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* ================================================
+   LEFT COLUMN - 567px Fixed Width
+   ================================================ */
+
+.ai-services-left {
+    width: 567px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 188px; /* EXACT GAP FROM FIGMA */
+    position: relative;
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.ai-services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Main Heading */
+.ai-services-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+   
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Company Name Highlight */
+.company-highlight {
+    color: #90EEFB;
+    font-style: italic;
+}
+
+/* Subheading */
+.ai-services-subheading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* Navigation Arrows */
+.ai-services-nav {
+    display: flex;
+    gap: 16px;
+    align-self: flex-start;
+}
+
+.nav-arrow {
+    width: 56px;
+    height: 56px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+}
+
+.nav-arrow:hover {
+    border-color: #90EEFB;
+    background: rgba(144, 238, 251, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-arrow.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ================================================
+   RIGHT COLUMN - 785px Fixed Width
+   2×2 GRID LAYOUT (Top-aligned)
+   ================================================ */
+
+.ai-services-right {
+    width: 785px;
+    flex-shrink: 0;
+    
+    /* 2×2 GRID LAYOUT */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto);    /* 2 rows */
+    gap: 32px 24px; /* Row gap: 32px, Column gap: 24px */
+    
+    position: relative;
+    z-index: 1;
+    align-content: start; /* Align to top */
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    
+    /* Vertical layout inside card */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+/* Card hover effect overlay */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(144, 238, 251, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover {
+    border-color: rgba(144, 238, 251, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Number */
+.service-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+/* Card Title */
+.service-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Highlight text in title */
+.title-highlight {
+    color: #90EEFB;
+}
+
+/* Card Description */
+.service-card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Stagger delays for 2×2 grid */
+.service-card:nth-child(1) { animation-delay: 0.1s; } /* Top-left */
+.service-card:nth-child(2) { animation-delay: 0.2s; } /* Top-right */
+.service-card:nth-child(3) { animation-delay: 0.3s; } /* Bottom-left */
+.service-card:nth-child(4) { animation-delay: 0.4s; } /* Bottom-right */
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1800px - 1920px) */
+@media screen and (max-width: 1920px) {
+    .ai-services-container {
+        max-width: calc(100% - 96px);
+    }
+}
+
+/* Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .ai-services-container {
+        width: 1600px;
+        padding: 70px 100px;
+    }
+    
+    .ai-services-left {
+        width: 500px;
+        gap: 160px;
+    }
+    
+    .ai-services-right {
+        width: 700px;
+        gap: 28px 20px;
+    }
+    
+    .ai-services-heading {
+        font-size: 44px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .ai-services-container {
+        width: 1400px;
+        padding: 60px 80px;
+    }
+    
+    .ai-services-left {
+        width: 450px;
+        gap: 140px;
+    }
+    
+    .ai-services-right {
+        width: 650px;
+        gap: 24px 16px;
+    }
+    
+    .ai-services-heading {
+        font-size: 40px;
+    }
+    
+    .ai-services-subheading {
+        font-size: 15px;
+    }
+    
+    .service-card {
+        padding: 24px;
+        min-height: 180px;
+    }
+    
+    .service-card-title {
+        font-size: 18px;
+    }
+    
+    .service-card-description {
+        font-size: 13px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .ai-services-section {
+        padding: 80px 0;
+    }
+    
+    .ai-services-container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 60px;
+        flex-direction: column;
+        gap: 48px;
+    }
+    
+    .ai-services-icons {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-bottom: 32px;
+    }
+    
+    .ai-services-left {
+        width: 100%;
+        gap: 40px;
+    }
+    
+    .ai-services-right {
+        width: 100%;
+        gap: 24px 20px;
+    }
+}
+
+/* Tablet (900px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .ai-services-container {
+        max-width: calc(100% - 64px);
+        padding: 50px 40px;
+    }
+    
+    .ai-services-heading {
+        font-size: 36px;
+    }
+    
+    .ai-services-icons {
+        gap: 16px;
+    }
+    
+    .service-icon-item img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ai-services-right {
+        gap: 20px 16px;
+    }
+}
+
+/* Mobile Landscape (768px - 900px) */
+@media screen and (max-width: 900px) {
+    .ai-services-section {
+        padding: 60px 0;
+    }
+    
+    .ai-services-container {
+        padding: 40px 32px;
+        border-radius: 12px;
+    }
+    
+    .ai-services-heading {
+        font-size: 32px;
+    }
+    
+    .ai-services-subheading {
+        font-size: 14px;
+    }
+    
+    /* Stack cards vertically on mobile */
+    .ai-services-right {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        min-height: auto;
+    }
+    
+    .ai-services-icons {
+        display: none;
+    }
+}
+
+/* Mobile Portrait (below 768px) */
+@media screen and (max-width: 768px) {
+    .ai-services-section {
+        padding: 50px 0;
+    }
+    
+    .ai-services-container {
+        max-width: calc(100% - 32px);
+        padding: 32px 24px;
+        min-height: auto;
+    }
+    
+    .ai-services-left {
+        gap: 32px;
+    }
+    
+    .ai-services-heading {
+        font-size: 28px;
+        line-height: 125%;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .service-card-title {
+        font-size: 17px;
+    }
+    
+    .service-card-description {
+        font-size: 13px;
+        line-height: 170%;
+    }
+    
+    .nav-arrow {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .ai-services-container {
+        padding: 28px 20px;
+        max-width: calc(100% - 16px);
+    }
+    
+    .ai-services-heading {
+        font-size: 24px;
+    }
+    
+    .ai-services-subheading {
+        font-size: 13px;
+    }
+    
+    .service-card {
+        padding: 18px;
+    }
+    
+    .service-card-title {
+        font-size: 16px;
+    }
+    
+    .service-card-description {
+        font-size: 12px;
+    }
+    
+    .nav-arrow {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .nav-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra Small Mobile (below 375px) */
+@media screen and (max-width: 375px) {
+    .ai-services-heading {
+        font-size: 22px;
+    }
+    
+    .service-card-title {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,649 @@
+/* ========================================
+   SERVICES CARDS SECTION
+   
+   Table of Contents:
+   1. Section Container
+   2. Base Card Styles
+   3. Card Content & Typography
+   4. Card Images
+   5. Card 1 - AI Chatbot (Dark Red)
+   6. Card 2 - AI Dashboard (White/Light)
+   7. Card 3 - OpenAI (Dark Green/Purple)
+   8. Button Styles
+   9. Responsive Design
+======================================== */
+
+/* ========================================
+   1. SECTION CONTAINER
+======================================== */
+
+.services-cards {
+    background-color: #000000;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.services-cards-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 254px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ========================================
+   2. BASE CARD STYLES
+======================================== */
+
+.service-card {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    
+    /* Dimensions */
+    max-height: 592px;
+    max-width: 592;
+    padding: 48px;
+    padding-bottom: 0;
+    
+    /* Visual */
+    border-radius: 20px;
+    
+    /* Animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ========================================
+   3. CARD CONTENT & TYPOGRAPHY
+======================================== */
+
+.card-content {
+    /* Layout */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+}
+
+/* Card Heading */
+.card-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+/* Card Description */
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 147%;
+    letter-spacing: 0%;
+    margin: 0;
+    flex: 1; /* Takes available space, pushes image to bottom */
+}
+
+/* ========================================
+   4. CARD IMAGES
+======================================== */
+
+/* Standard Card Image */
+.card-image {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 0; /* Removes inline spacing */
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block; /* Prevents inline spacing */
+    margin: 0 auto;
+}
+
+/* Full Width Card Image (for Card 3) */
+.card-image-full {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.card-image-full img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* ========================================
+   5. CARD 1 - AI CHATBOT (DARK RED)
+======================================== */
+
+.card-chatbot {
+    background: linear-gradient(135deg, #1A0000 0%, #4D0000 50%, #800000 100%);
+    color: #FFFFFF;
+}
+
+.card-chatbot .card-heading {
+    color: #FFFFFF;
+}
+
+.card-chatbot .card-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Chatbot Card Image */
+.card-chatbot .card-image {
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.card-chatbot .card-image img {
+    max-width: 280px;
+    margin-bottom: 0;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+/* Individual Social Icon */
+.social-icon {
+    /* Dimensions */
+    width: 48px;
+    height: 48px;
+    
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Visual */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    
+    /* Animation */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ========================================
+   6. CARD 2 - AI DASHBOARD (WHITE/LIGHT)
+======================================== */
+
+.card-dashboard {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    color: #000000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-dashboard .card-heading {
+    color: #000000;
+}
+
+.card-dashboard .card-description {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dashboard Card Image */
+.card-dashboard .card-image {
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.card-dashboard .card-image img {
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   7. CARD 3 - OPENAI (DARK GREEN/PURPLE)
+======================================== */
+
+.card-openai {
+    /* Two-section vertical layout */
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: #FFFFFF;
+    
+    /* Remove default padding */
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+    
+    /* Strong rounded corners */
+    border-radius: 28px;
+    overflow: hidden;
+    
+    /* Ensure card maintains its height */
+    min-height: 592px;
+    width: 592;
+    height: 592px;
+}
+
+/* TOP SECTION - Text Area (40% height) */
+.card-openai .card-content {
+    /* Dark green solid background */
+    background-color: #12351F;
+    
+    /* Fixed height: 40% of card */
+    height: 45%;
+    min-height: 0;
+    flex: 0 0 40%; /* Fixed 40% */
+    
+    /* Padding: 6-8% of card dimensions */
+    padding: 48px;
+    padding-bottom: 24px;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+/* OpenAI Heading - Large 3-line text */
+.card-heading-openai {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin: 0;
+    color: #E68BF6; /* Light magenta/pink */
+    font-style: normal;
+}
+
+/* Italic styling for <em>OpenAI</em> */
+.card-openai .card-heading em {
+    color: #E68BF6; /* Same magenta color */
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* BOTTOM SECTION - Image Area (60% height) */
+.card-openai .card-image-full {
+    /* Purple gradient background */
+    background: linear-gradient(180deg, #6A1B9A 0%, #B66BFC 100%);
+    
+    /* Fixed height: 60% of card */
+    height: 60%;
+    min-height: 0;
+    flex: 0 0 60%; /* Fixed 60% */
+    width: 592px;
+    /* Layout */
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0;
+    max-width: 100%;
+    
+    /* Styling */
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.card-openai .card-image-full img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* ========================================
+   8. BUTTON STYLES
+======================================== */
+
+/* Base Button Style */
+.card-btn {
+    /* Layout */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    
+    /* Spacing */
+    padding: 14px 28px;
+    margin-top: 8px;
+    
+    /* Typography */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    
+    /* Visual */
+    border-radius: 40px;
+    
+    /* Animation */
+    transition: all 0.3s ease;
+}
+
+.card-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Light Button (for dark backgrounds) */
+.btn-light {
+    background-color: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-light:hover {
+    background-color: #F0F0F0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Button (for light backgrounds) */
+.btn-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   9. RESPONSIVE DESIGN
+======================================== */
+
+/* Large Desktop (1600px and below) */
+@media screen and (max-width: 1600px) {
+    .services-cards-container {
+        padding: 0 150px;
+        gap: 24px;
+    }
+    
+    .service-card {
+        padding: 44px;
+        padding-bottom: 0;
+        min-height: 560px;
+    }
+    
+    .card-heading {
+        font-size: 28px;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: 560px;
+        min-height: 560px;
+    }
+    
+    .card-openai .card-content {
+        padding: 44px;
+        padding-bottom: 28px;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 42px;
+    }
+}
+
+/* Desktop (1400px and below) */
+@media screen and (max-width: 1400px) {
+    .services-cards-container {
+        padding: 0 100px;
+    }
+    
+    .service-card {
+        padding: 40px;
+        padding-bottom: 0;
+        min-height: 520px;
+    }
+    
+    .card-heading {
+        font-size: 26px;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: 520px;
+        min-height: 520px;
+    }
+    
+    .card-openai .card-content {
+        padding: 40px;
+        padding-bottom: 24px;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 38px;
+    }
+}
+
+/* Laptop (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .services-cards-container {
+        padding: 0 60px;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 36px;
+        padding-bottom: 0;
+        min-height: 480px;
+    }
+    
+    .card-heading {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 15px;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: 480px;
+        min-height: 480px;
+    }
+    
+    .card-openai .card-content {
+        padding: 36px;
+        padding-bottom: 20px;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 34px;
+    }
+}
+
+/* Tablet (900px and below) */
+@media screen and (max-width: 900px) {
+    .services-cards {
+        padding: 80px 0;
+    }
+    
+    .services-cards-container {
+        padding: 0 40px;
+        grid-template-columns: 1fr; /* Single column */
+        gap: 32px;
+    }
+    
+    .service-card {
+        min-height: auto;
+        padding: 40px;
+        padding-bottom: 0;
+    }
+    
+    .card-heading {
+        font-size: 28px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .card-openai .card-content {
+        padding: 40px;
+        padding-bottom: 24px;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 38px;
+    }
+    
+    .card-openai .card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 300px;
+    }
+}
+
+/* Mobile (768px and below) */
+@media screen and (max-width: 768px) {
+    .services-cards {
+        padding: 60px 0;
+    }
+    
+    .services-cards-container {
+        padding: 0 30px;
+        gap: 24px;
+    }
+    
+    .service-card {
+        padding: 32px;
+        padding-bottom: 0;
+    }
+    
+    .card-heading {
+        font-size: 24px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+    }
+    
+    .card-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+    
+    .social-icon {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: auto;
+        min-height: 450px;
+    }
+    
+    .card-openai .card-content {
+        padding: 32px;
+        padding-bottom: 20px;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 32px;
+    }
+    
+    .card-openai .card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .services-cards-container {
+        padding: 0 20px;
+    }
+    
+    .service-card {
+        padding: 24px;
+        padding-bottom: 0;
+    }
+    
+    .card-heading {
+        font-size: 22px;
+    }
+    
+    /* Card 3 adjustments */
+    .card-openai {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .card-openai .card-content {
+        padding: 24px;
+        padding-bottom: 16px;
+        flex: 0 0 auto;
+        height: auto;
+    }
+    
+    .card-openai .card-heading {
+        font-size: 28px;
+    }
+    
+    .card-openai .card-image-full {
+        flex: 1;
+        height: auto;
+        min-height: 220px;
+    }
+}

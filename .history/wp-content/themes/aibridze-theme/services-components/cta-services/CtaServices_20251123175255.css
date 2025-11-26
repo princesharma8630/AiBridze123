@@ -1,0 +1,341 @@
+/* ================================================
+   CTA SECTION - Ready to make AI your strategic advantage
+   Layout: Left content + Right image with gradient
+   CLASS NAMES: All have "-services" suffix
+   BACKGROUND: Image as background with gradient overlay
+   ================================================ */
+
+/* Section Wrapper */
+.cta-services-section {
+    background: #000000;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.cta-services-container {
+    width: 1920px;
+    max-width: calc(100% - 96px);
+    
+    position: relative;
+}
+
+/* CTA Box */
+.cta-services-box {
+    width: 100%;
+    min-height: 301px;
+    
+    /* Background Image with Gradient Overlay */
+    background-image: 
+        url('../../assets/service-page-image/eye.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: ;
+    
+    border: 1px solid #0063FF;
+    border-radius: 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    padding: 64px;
+    gap: 48px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blue glow effect */
+.cta-services-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 150, 255, 0.3) 0%, transparent 70%);
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+/* ================================================
+   LEFT CONTENT AREA
+   ================================================ */
+
+.cta-services-content {
+    max-width: 674px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Text Wrapper */
+.cta-services-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Main Heading */
+.cta-services-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Subheading */
+.cta-services-subheading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* Button */
+.cta-services-button {
+    align-self: flex-start;
+    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    
+    color: #000000;
+    background: #90EEFB;
+    
+    border: none;
+    border-radius: 50px;
+    padding: 16px 32px;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-services-button:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(144, 238, 251, 0.4);
+}
+
+.cta-services-button:active {
+    transform: translateY(0);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .cta-services-container {
+        width: 1600px;
+    }
+    
+    .cta-services-box {
+        padding: 56px 60px;
+        min-height: 280px;
+    }
+    
+    .cta-services-content {
+        max-width: 600px;
+        gap: 40px;
+    }
+    
+    .cta-services-heading {
+        font-size: 32px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .cta-services-container {
+        width: 1400px;
+    }
+    
+    .cta-services-box {
+        padding: 48px 56px;
+        min-height: 260px;
+        gap: 40px;
+    }
+    
+    .cta-services-content {
+        max-width: 550px;
+        gap: 36px;
+    }
+    
+    .cta-services-heading {
+        font-size: 30px;
+    }
+    
+    .cta-services-subheading {
+        font-size: 15px;
+    }
+    
+    .cta-services-button {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .cta-services-section {
+        padding: 80px 0;
+    }
+    
+    .cta-services-container {
+        width: 100%;
+        max-width: 1200px;
+    }
+    
+    .cta-services-box {
+        padding: 48px;
+        min-height: 240px;
+        gap: 32px;
+    }
+    
+    .cta-services-content {
+        max-width: 500px;
+        gap: 32px;
+    }
+    
+    .cta-services-heading {
+        font-size: 28px;
+    }
+}
+
+/* Tablet (900px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .cta-services-container {
+        max-width: calc(100% - 64px);
+    }
+    
+    .cta-services-box {
+        padding: 40px;
+        min-height: 220px;
+        gap: 28px;
+        background-position: center right;
+    }
+    
+    .cta-services-heading {
+        font-size: 26px;
+    }
+}
+
+/* Mobile Landscape (768px - 900px) */
+@media screen and (max-width: 900px) {
+    .cta-services-section {
+        padding: 60px 0;
+    }
+    
+    .cta-services-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 32px;
+        min-height: auto;
+        gap: 32px;
+        background-position: center center;
+        background-image: 
+            linear-gradient(180deg, 
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 50, 150, 0.7) 100%
+            ),
+            url('../../assets/service-page-image/eye.png');
+    }
+    
+    .cta-services-content {
+        max-width: 100%;
+        gap: 28px;
+        align-items: center;
+    }
+    
+    .cta-services-heading {
+        font-size: 24px;
+    }
+    
+    .cta-services-subheading {
+        font-size: 14px;
+    }
+    
+    .cta-services-button {
+        align-self: center;
+        padding: 14px 28px;
+    }
+}
+
+/* Mobile Portrait (below 768px) */
+@media screen and (max-width: 768px) {
+    .cta-services-container {
+        max-width: calc(100% - 32px);
+    }
+    
+    .cta-services-box {
+        padding: 32px 24px;
+        gap: 28px;
+    }
+    
+    .cta-services-content {
+        gap: 24px;
+    }
+    
+    .cta-services-heading {
+        font-size: 22px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .cta-services-section {
+        padding: 50px 0;
+    }
+    
+    .cta-services-container {
+        max-width: calc(100% - 16px);
+    }
+    
+    .cta-services-box {
+        padding: 28px 20px;
+        gap: 24px;
+    }
+    
+    .cta-services-heading {
+        font-size: 20px;
+    }
+    
+    .cta-services-subheading {
+        font-size: 13px;
+    }
+    
+    .cta-services-button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (below 375px) */
+@media screen and (max-width: 375px) {
+    .cta-services-heading {
+        font-size: 18px;
+    }
+    
+    .cta-services-button {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}

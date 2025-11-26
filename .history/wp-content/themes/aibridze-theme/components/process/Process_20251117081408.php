@@ -13,7 +13,7 @@
             <!-- Card 1: Discover & Strategize -->
             <div class="process-card">
                 <div class="card-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/process/discover-icon.png" alt="Discover & Strategize" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/process/discover-icon.png" alt="Discover & Strategize" />
                 </div>
                 <div class="card-content">
                     <span class="card-step">STEP 01</span>
@@ -25,7 +25,7 @@
             <!-- Card 2: Design & Architect -->
             <div class="process-card">
                 <div class="card-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/process/design-icon.png" alt="Design & Architect" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/process/design-icon.png" alt="Design & Architect" />
                 </div>
                 <div class="card-content">
                     <span class="card-step">STEP 02</span>
@@ -37,7 +37,7 @@
             <!-- Card 3: Test & Optimize -->
             <div class="process-card">
                 <div class="card-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/process/test-icon.png" alt="Test & Optimize" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/process/test-icon.png" alt="Test & Optimize" />
                 </div>
                 <div class="card-content">
                     <span class="card-step">STEP 03</span>
@@ -49,7 +49,7 @@
             <!-- Card 4: Develop & Integrate -->
             <div class="process-card">
                 <div class="card-icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/process/develop-icon.png" alt="Develop & Integrate" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/process/develop-icon.png" alt="Develop & Integrate" />
                 </div>
                 <div class="card-content">
                     <span class="card-step">STEP 04</span>

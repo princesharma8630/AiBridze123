@@ -26,7 +26,7 @@
             <!-- Large Featured Article (Left) -->
             <article class="article-card article-featured">
                 <div class="article-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/articles/featured-article.png" alt="Mobile App Development with AI" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/articles/featured-article.png" alt="Mobile App Development with AI" />
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -49,7 +49,7 @@
                 <!-- Article 1 -->
                 <article class="article-card article-small">
                     <div class="article-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/articles/article-1.png" alt="AI Article" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/articles/article-1.png" alt="AI Article" />
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -69,7 +69,7 @@
                 <!-- Article 2 -->
                 <article class="article-card article-small">
                     <div class="article-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/articles/article-2.png" alt="AI Article" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/articles/article-2.png" alt="AI Article" />
                     </div>
                     <div class="article-content">
                         <div class="article-meta">
@@ -89,7 +89,7 @@
                 <!-- Article 3 -->
                 <article class="article-card article-small">
                     <div class="article-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assests/images/articles/article-3.png" alt="AI Article" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/articles/article-3.png" alt="AI Article" />
                     </div>
                     <div class="article-content">
                         <div class="article-meta">

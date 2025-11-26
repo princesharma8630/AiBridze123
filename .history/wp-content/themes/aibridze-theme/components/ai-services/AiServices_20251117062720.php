@@ -33,7 +33,7 @@
                 
                 <!-- Background Image -->
                 <div class="card-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/ai-services/robot-megaphone.png" alt="AI Marketing" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ai-services/robot-megaphone.png" alt="AI Marketing" />
                 </div>
             </div>
             
@@ -49,7 +49,7 @@
                 
                 <!-- Background Image -->
                 <div class="card-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assests/images/services/brain.png" alt="AI Integration" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/brain.png" alt="AI Integration" />
                 </div>
             </div>
             

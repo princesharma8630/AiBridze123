@@ -1,0 +1,470 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* * KEY TECHNOLOGIES COMPONENT * * Figma Base (1920px): * - Container: Full width * - Padding: 75px (top/bottom), 164px (left/right) * - Layout: 2 columns (Left: Content, Right: Image) * - Background: Black */
+
+/* Key Technologies Section */
+.key-technologies-section {
+  background: #000000;
+  padding: 75px 164px;
+  overflow: hidden;
+}
+
+/* Container */
+.key-technologies-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* ======================================== LEFT SIDE - CONTENT ======================================== */
+.key-tech-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 680px;
+}
+
+/* Main Title */
+.key-tech-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+.key-tech-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Technology Items */
+.tech-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Single Tech Item - SIMPLE BOX, NO BORDER RADIUS */
+.tech-item {
+  background: #FFFFFF;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 0; /* Simple box - no rounded corners */
+  transition: all 0.3s ease;
+  border-radius: 12;
+}
+
+.tech-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 20px rgba(144, 238, 251, 0.2);
+}
+
+/* Tech Number */
+.tech-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #90EEFB;
+  flex-shrink: 0;
+}
+
+/* Tech Text */
+.tech-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Bottom Description */
+.key-tech-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* ======================================== RIGHT SIDE - IMAGE ======================================== */
+.key-tech-right {
+  flex: 0 0 auto;
+  width: 520px;
+  height: 520px;
+  position: relative;
+}
+
+.tech-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================== RESPONSIVE DESIGN - MATHEMATICAL SCALING (Desktop to Tablet) ======================================== */
+
+/* 1600px - Scale: 0.833 */
+@media screen and (max-width: 1600px) {
+  .key-technologies-section {
+    padding: 63px 137px;
+  }
+  .key-technologies-container {
+    gap: 67px;
+  }
+  .key-tech-left {
+    max-width: 567px;
+    gap: 27px;
+  }
+  .key-tech-title {
+    font-size: 40px;
+  }
+  .key-tech-subtitle {
+    font-size: 17px;
+  }
+  .tech-items {
+    gap: 13px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 13px 20px;
+    gap: 13px;
+  }
+  .tech-number {
+    font-size: 13px;
+  }
+  .tech-text {
+    font-size: 13px;
+  }
+  .key-tech-description {
+    font-size: 13px;
+  }
+  .key-tech-right {
+    width: 433px;
+    height: 433px;
+  }
+  .tech-image {
+    border-radius: 20px;
+  }
+}
+
+/* 1400px - Scale: 0.729 */
+@media screen and (max-width: 1400px) {
+  .key-technologies-section {
+    padding: 55px 120px;
+  }
+  .key-technologies-container {
+    gap: 58px;
+  }
+  .key-tech-left {
+    max-width: 496px;
+    gap: 23px;
+  }
+  .key-tech-title {
+    font-size: 35px;
+  }
+  .key-tech-subtitle {
+    font-size: 15px;
+  }
+  .tech-items {
+    gap: 12px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 12px 17px;
+    gap: 12px;
+  }
+  .tech-number {
+    font-size: 12px;
+  }
+  .tech-text {
+    font-size: 12px;
+  }
+  .key-tech-description {
+    font-size: 12px;
+  }
+  .key-tech-right {
+    width: 379px;
+    height: 379px;
+  }
+  .tech-image {
+    border-radius: 17px;
+  }
+}
+
+/* 1200px - Scale: 0.625 */
+@media screen and (max-width: 1200px) {
+  .key-technologies-section {
+    padding: 47px 103px;
+  }
+  .key-technologies-container {
+    gap: 50px;
+  }
+  .key-tech-left {
+    max-width: 425px;
+    gap: 20px;
+  }
+  .key-tech-title {
+    font-size: 30px;
+  }
+  .key-tech-subtitle {
+    font-size: 13px;
+  }
+  .tech-items {
+    gap: 10px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  .tech-number {
+    font-size: 10px;
+  }
+  .tech-text {
+    font-size: 10px;
+  }
+  .key-tech-description {
+    font-size: 10px;
+  }
+  .key-tech-right {
+    width: 325px;
+    height: 325px;
+  }
+  .tech-image {
+    border-radius: 15px;
+  }
+}
+
+/* ======================================== OPTIMIZED RESPONSIVE DESIGN (Tablet to Mobile) - Better UX ======================================== */
+
+/* 1024px - Stack layout starts */
+@media screen and (max-width: 1024px) {
+  .key-technologies-section {
+    padding: 50px 40px;
+  }
+  .key-technologies-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .key-tech-left {
+    max-width: 100%;
+    width: 100%;
+  }
+  .key-tech-right {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* 900px - Tablet */
+@media screen and (max-width: 900px) {
+  .key-technologies-section {
+    padding: 45px 32px;
+  }
+  .key-technologies-container {
+    gap: 40px;
+  }
+  .key-tech-left {
+    gap: 24px;
+  }
+  .key-tech-title {
+    font-size: 32px;
+  }
+  .key-tech-subtitle {
+    font-size: 16px;
+  }
+  .tech-items {
+    gap: 12px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 14px 20px;
+    gap: 12px;
+  }
+  .tech-number {
+    font-size: 14px;
+  }
+  .tech-text {
+    font-size: 14px;
+  }
+  .key-tech-description {
+    font-size: 14px;
+  }
+}
+
+/* 768px - Mobile Landscape */
+@media screen and (max-width: 768px) {
+  .key-technologies-section {
+    padding: 40px 24px;
+  }
+  .key-technologies-container {
+    gap: 35px;
+  }
+  .key-tech-left {
+    gap: 20px;
+  }
+  .key-tech-title {
+    font-size: 28px;
+  }
+  .key-tech-subtitle {
+    font-size: 15px;
+  }
+  .tech-items {
+    gap: 12px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 13px 18px;
+    gap: 12px;
+  }
+  .tech-number {
+    font-size: 13px;
+  }
+  .tech-text {
+    font-size: 13px;
+  }
+  .key-tech-description {
+    font-size: 13px;
+  }
+  .key-tech-right {
+    max-width: 400px;
+  }
+}
+
+/* 640px - Mobile Portrait */
+@media screen and (max-width: 640px) {
+  .key-technologies-section {
+    padding: 35px 20px;
+  }
+  .key-technologies-container {
+    gap: 30px;
+  }
+  .key-tech-left {
+    gap: 18px;
+  }
+  .key-tech-title {
+    font-size: 24px;
+  }
+  .key-tech-subtitle {
+    font-size: 14px;
+  }
+  .tech-items {
+    gap: 10px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .tech-number {
+    font-size: 12px;
+  }
+  .tech-text {
+    font-size: 12px;
+  }
+  .key-tech-description {
+    font-size: 12px;
+  }
+  .key-tech-right {
+    max-width: 350px;
+  }
+}
+
+/* 480px - Small Mobile */
+@media screen and (max-width: 480px) {
+  .key-technologies-section {
+    padding: 30px 16px;
+  }
+  .key-technologies-container {
+    gap: 28px;
+  }
+  .key-tech-left {
+    gap: 16px;
+  }
+  .key-tech-title {
+    font-size: 22px;
+  }
+  .key-tech-subtitle {
+    font-size: 13px;
+  }
+  .tech-items {
+    gap: 10px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .tech-number {
+    font-size: 11px;
+  }
+  .tech-text {
+    font-size: 11px;
+  }
+  .key-tech-description {
+    font-size: 11px;
+  }
+  .key-tech-right {
+    max-width: 300px;
+  }
+  .tech-image {
+    border-radius: 16px;
+  }
+}
+
+/* 375px - iPhone Standard */
+@media screen and (max-width: 375px) {
+  .key-technologies-section {
+    padding: 28px 16px;
+  }
+  .key-tech-title {
+    font-size: 20px;
+  }
+  .key-tech-subtitle {
+    font-size: 12px;
+  }
+  .tech-item {
+    border-radius: 0; /* Keep simple box */
+    padding: 10px 14px;
+  }
+  .tech-number {
+    font-size: 10px;
+  }
+  .tech-text {
+    font-size: 10px;
+  }
+  .key-tech-description {
+    font-size: 10px;
+  }
+}
+
+/* ======================================== EXTRA OPTIMIZATIONS ======================================== */
+
+/* Smooth animations */
+.tech-item {
+  transition: all 0.3s ease;
+}
+
+/* Performance optimization */
+.tech-item {
+  will-change: transform;
+}

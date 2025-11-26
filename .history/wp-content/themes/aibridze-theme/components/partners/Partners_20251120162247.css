@@ -1,0 +1,210 @@
+/* ===========================
+   PARTNERS SECTION STYLES
+   =========================== */
+
+.partners-section {
+    background-color:;
+    width: 100%;
+    padding: 75px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.partners-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* Heading Styles */
+.partners-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+/* Logos Container with Marquee Effect */
+.partners-logos {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    width: max-content;
+    overflow: visible;
+    position: relative;
+    animation: marquee 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.partners-logos:hover {
+    animation-play-state: paused;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Individual Logo Container */
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 244.7px;
+    height: 100px;
+    border-radius: 12.12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover img {
+    opacity: 1;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Large Desktop (1600px and below) */
+@media screen and (max-width: 1600px) {
+    .partners-container {
+        padding: 0 150px;
+    }
+}
+
+/* Desktop (1400px and below) */
+@media screen and (max-width: 1400px) {
+    .partners-container {
+        padding: 0 100px;
+    }
+    
+    .partners-logos {
+        gap: 40px;
+    }
+}
+
+/* Laptop (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .partners-container {
+        padding: 0 60px;
+    }
+    
+    .partners-section {
+        padding: 60px 0;
+    }
+    
+    .partners-logos {
+        gap: 36px;
+        animation: marquee 25s linear infinite;
+    }
+}
+
+/* Tablet (900px and below) */
+@media screen and (max-width: 900px) {
+    .partners-container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+    
+    .partners-heading {
+        font-size: 18px;
+    }
+    
+    .partners-logos {
+        gap: 32px;
+        animation: marquee 20s linear infinite;
+    }
+    
+    .partner-logo {
+        min-width: 160px;
+        height: 80px;
+    }
+}
+
+/* Mobile (768px and below) */
+@media screen and (max-width: 768px) {
+    .partners-section {
+        padding: 50px 0;
+    }
+    
+    .partners-container {
+        padding: 0 30px;
+        gap: 32px;
+    }
+    
+    .partners-heading {
+        font-size: 16px;
+    }
+    
+    .partners-logos {
+        gap: 28px;
+        animation: marquee 18s linear infinite;
+    }
+    
+    .partner-logo {
+        min-width: 140px;
+        height: 70px;
+        padding: 15px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .partners-section {
+        padding: 40px 0;
+    }
+    
+    .partners-container {
+        padding: 0 20px;
+        gap: 28px;
+    }
+    
+    .partners-heading {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+    }
+    
+    .partners-logos {
+        gap: 24px;
+        animation: marquee 15s linear infinite;
+    }
+    
+    .partner-logo {
+        min-width: 120px;
+        height: 60px;
+        padding: 12px;
+    }
+}

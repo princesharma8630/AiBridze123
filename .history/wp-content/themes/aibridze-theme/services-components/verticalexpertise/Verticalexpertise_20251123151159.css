@@ -1,0 +1,518 @@
+/* ================================================
+   STRATEGIC VERTICAL EXPERTISE SECTION
+   Layout: Two-column (Left Menu + Right Content)
+   Interactive: Click items to show descriptions
+   ================================================ */
+
+/* Section Wrapper */
+.vertical-expertise-section-evs {
+    background: #000000;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+/* Main Container */
+.vertical-expertise-container-evs {
+    width: 1920px;
+    max-width: calc(100% - 96px);
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    
+    position: relative;
+}
+
+/* ================================================
+   HEADER SECTION
+   ================================================ */
+
+.vertical-expertise-header-evs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Section Label */
+.vertical-expertise-label-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:#FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* Section Heading */
+.vertical-expertise-heading-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 147%;
+    color: #FFFFFF;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+/* Section Subheading */
+.vertical-expertise-subheading-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ================================================
+   TWO-COLUMN LAYOUT
+   Left: Industry List | Right: Description Panel
+   ================================================ */
+
+.vertical-expertise-content-evs {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+/* ================================================
+   LEFT COLUMN - Industry List
+   ================================================ */
+
+.vertical-expertise-left-evs {
+    width: 784px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Industry Item */
+.industry-item-evs {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #353535;
+    border-bottom: none;
+    padding: 36px 24px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.industry-item-evs:first-child {
+    border-radius: 16px 16px 0 0;
+}
+
+.industry-item-evs:last-child {
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid #353535;
+}
+
+/* Hover State */
+.industry-item-evs:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 198, 255, 0.3);
+}
+
+/* Active/Selected State */
+.industry-item-evs.active-evs {
+    background: rgba(0, 198, 255, 0.08);
+    border-color: #00C6FF;
+    border-right: 3px solid #00C6FF;
+}
+
+.industry-item-evs.active-evs .industry-number-evs {
+    color: #00C6FF;
+}
+
+.industry-item-evs.active-evs .industry-name-evs {
+    color: #FFFFFF;
+}
+
+/* Industry Number */
+.industry-number-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color:#90EEFB;
+    min-width: 32px;
+    transition: color 0.3s ease;
+}
+
+/* Industry Name */
+.industry-name-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size:28px;
+    font-weight: 600;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #999999;
+    transition: color 0.3s ease;
+}
+
+/* ================================================
+   RIGHT COLUMN - Description Panel
+   ================================================ */
+
+.vertical-expertise-right-evs {
+    flex: 1;
+    
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 66%, #60A5FA 80%, #DBEAFE 25%, #FFFFFF 10%);
+    
+    border-radius: 16px;
+    padding: 48px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient Overlay Effect */
+.vertical-expertise-right-evs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        transparent 50%
+    );
+    pointer-events: none;
+}
+
+/* Description Content */
+.description-content-evs {
+    position: relative;
+    z-index: 1;
+}
+
+/* Description Title */
+.description-title-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+/* Description Text */
+.description-text-evs {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 42px;
+    color:#FFFFFF;
+    font-weight: 600;
+    line-height: 147%;
+    margin: 0;
+}
+
+/* Hide inactive descriptions */
+.description-content-evs {
+    display: none;
+}
+
+.description-content-evs.active-evs {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .vertical-expertise-container-evs {
+        width: 1600px;
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 44px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 700px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 40px;
+    }
+    
+    .description-title-evs {
+        font-size: 28px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .vertical-expertise-container-evs {
+        width: 1400px;
+        gap: 60px;
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 40px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 650px;
+    }
+    
+    .industry-item-evs {
+        padding: 32px 24px;
+    }
+    
+    .industry-name-evs {
+        font-size: 24px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 36px;
+    }
+    
+    .description-title-evs {
+        font-size: 26px;
+    }
+    
+    .description-text-evs {
+        font-size: 38px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .vertical-expertise-section-evs {
+        padding: 80px 0;
+    }
+    
+    .vertical-expertise-container-evs {
+        width: 100%;
+        max-width: 1200px;
+        gap: 50px;
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 36px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 580px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 36px;
+    }
+}
+
+/* Tablet (900px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .vertical-expertise-container-evs {
+        max-width: calc(100% - 64px);
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 32px;
+    }
+    
+    .industry-item-evs {
+        padding: 28px 20px;
+    }
+    
+    .industry-name-evs {
+        font-size: 20px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 480px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 32px;
+    }
+    
+    .description-title-evs {
+        font-size: 24px;
+    }
+    
+    .description-text-evs {
+        font-size: 32px;
+    }
+}
+
+/* Mobile Landscape (768px - 900px) */
+@media screen and (max-width: 900px) {
+    .vertical-expertise-section-evs {
+        padding: 60px 0;
+    }
+    
+    .vertical-expertise-container-evs {
+        gap: 40px;
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 28px;
+    }
+    
+    .industry-item-evs {
+        padding: 24px 16px;
+    }
+    
+    .industry-number-evs {
+        font-size: 14px;
+        min-width: 28px;
+    }
+    
+    .industry-name-evs {
+        font-size: 18px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 400px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 28px;
+    }
+    
+    .description-title-evs {
+        font-size: 22px;
+    }
+    
+    .description-text-evs {
+        font-size: 28px;
+    }
+}
+
+/* Mobile Portrait (below 768px) - SINGLE COLUMN STARTS HERE */
+@media screen and (max-width: 768px) {
+    .vertical-expertise-container-evs {
+        max-width: calc(100% - 32px);
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 26px;
+    }
+    
+    .vertical-expertise-subheading-evs {
+        font-size: 14px;
+    }
+    
+    /* CHANGE TO SINGLE COLUMN */
+    .vertical-expertise-content-evs {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .vertical-expertise-left-evs {
+        width: 100%;
+    }
+    
+    .industry-item-evs {
+        padding: 20px 16px;
+    }
+    
+    .industry-name-evs {
+        font-size: 16px;
+    }
+    
+    .vertical-expertise-right-evs {
+        width: 100%;
+        padding: 24px;
+        min-height: 300px;
+    }
+    
+    .description-title-evs {
+        font-size: 20px;
+    }
+    
+    .description-text-evs {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .vertical-expertise-section-evs {
+        padding: 50px 0;
+    }
+    
+    .vertical-expertise-container-evs {
+        max-width: calc(100% - 16px);
+        gap: 32px;
+    }
+    
+    .vertical-expertise-heading-evs {
+        font-size: 24px;
+    }
+    
+    .industry-item-evs {
+        padding: 18px 14px;
+    }
+    
+    .industry-number-evs {
+        font-size: 13px;
+        min-width: 24px;
+    }
+    
+    .industry-name-evs {
+        font-size: 14px;
+    }
+    
+    .vertical-expertise-right-evs {
+        padding: 20px;
+        min-height: 280px;
+    }
+    
+    .description-title-evs {
+        font-size: 18px;
+    }
+    
+    .description-text-evs {
+        font-size: 20px;
+    }
+}
+
+/* Extra Small Mobile (below 375px) */
+@media screen and (max-width: 375px) {
+    .vertical-expertise-heading-evs {
+        font-size: 22px;
+    }
+    
+    .description-title-evs {
+        font-size: 17px;
+    }
+    
+    .description-text-evs {
+        font-size: 18px;
+    }
+}

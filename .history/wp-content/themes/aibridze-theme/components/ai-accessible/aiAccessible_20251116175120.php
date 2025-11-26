@@ -20,7 +20,7 @@ Design System: Black backgrounds, white text, cyan accents (
 #90EEFB)
 Completed Sections: Navbar, Hero, Partners, Industries, Portfolio Banner
 Standards: Plus Jakarta Sans font, responsive breakpoints, hover effects
-File Naming: assests folder (intentional typo to keep), lowercase for PHP components
+File Naming: assets folder (intentional typo to keep), lowercase for PHP components
 🎯 I'm Ready to Create:
 What I need from you to get started:
 
@@ -160,7 +160,7 @@ php
 
 Create folder structure and add images:
 ```
-assests/images/partners/
+assets/images/partners/
 ├── metriks.png
 ├── quo-legal.png
 ├── mnmize.png
@@ -182,7 +182,7 @@ assests/images/partners/
    ┣ 📜 AiAccessible.css
    ┗ 📜 AiAccessible.js
 
-📦 assests/
+📦 assets/
  ┗ 📂 images/
    ┗ 📂 partners/
      ┣ 📜 metriks.png
@@ -417,7 +417,7 @@ Copy the updated AiAccessible.css (second artifact above)
 Keep the AiAccessible.js from before (no changes needed)
 The functions.php and front-page.php code remains the same!
 🖼️ Logo Files Needed:
-Place these in assests/images/partners/:
+Place these in assets/images/partners/:
 
 metriks.png
 quo-legal.png
@@ -456,22 +456,22 @@ Let me know if you need any adjustments! 🚀
         <!-- Partner Logos -->
         <div class="ai-accessible-logos">
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/metriks.png" alt="Metriks Data Center" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/metriks.png" alt="Metriks Data Center" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/quo-legal.png" alt="QUO Legal Firm" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/quo-legal.png" alt="QUO Legal Firm" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/mnmize.png" alt="M'N'MIZE Interior" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/mnmize.png" alt="M'N'MIZE Interior" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/nd2.png" alt="ND2 Nordyne Defense Dynamics" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/metriks.png" alt="Metriks Data Center" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/metriks.png" alt="Metriks Data Center" />
             </div>
             <div class="logo-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assests/images/partners/quo-legal.png" alt="QUO Legal Firm" />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/quo-legal.png" alt="QUO Legal Firm" />
             </div>
         </div>
 
