@@ -1,0 +1,340 @@
+/* ================================================
+   HIPAA COMPLIANCE CTA BANNER
+   Left: Text + Button | Right: Image
+   ================================================ */
+
+.industries-hipaa-cta-section {
+    background: #000000;
+    width: 100%;
+    padding: 75px 0;
+    position: relative;
+}
+
+.industries-hipaa-cta-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    
+}
+
+/* ================================================
+   CTA CARD
+   ================================================ */
+
+.industries-hipaa-cta-card {
+    width: 100%;
+    max-width: 1824px;
+    min-height: 283px; /* Figma exact */
+    
+    background: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    
+    display: grid;
+    grid-template-columns: 825px 1fr; /* Left: 825px, Right: remaining */
+    gap: 0;
+    overflow: hidden;
+    
+    transition: all 0.3s ease;
+}
+
+.industries-hipaa-cta-card:hover {
+    border-color: rgba(144, 238, 251, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================================
+   LEFT SIDE - Content
+   ================================================ */
+
+.hipaa-cta-content {
+    padding: 48px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px; /* Figma exact gap */
+    justify-content: center;
+}
+
+.hipaa-cta-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.hipaa-cta-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.hipaa-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: fit-content;
+    padding: 14px 28px;
+    
+    background: #90EEFB;
+    border: none;
+    border-radius: 40px;
+    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    
+    transition: all 0.3s ease;
+}
+
+.hipaa-cta-button:hover {
+    background: #00C6FF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(144, 238, 251, 0.4);
+}
+
+/* ================================================
+   RIGHT SIDE - Image
+   ================================================ */
+
+.hipaa-cta-image {
+    width: 100%;
+    height: 100%;
+    max-height: 283px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hipaa-cta-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industries-hipaa-cta-card {
+        grid-template-columns: 700px 1fr;
+    }
+    
+    .hipaa-cta-content {
+        padding: 42px 56px;
+        gap: 36px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 28px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .industries-hipaa-cta-section {
+        padding: 60px 0;
+    }
+    
+    .industries-hipaa-cta-container {
+        padding: 0 40px;
+    }
+    
+    .industries-hipaa-cta-card {
+        grid-template-columns: 600px 1fr;
+        min-height: 260px;
+    }
+    
+    .hipaa-cta-content {
+        padding: 36px 48px;
+        gap: 32px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 26px;
+    }
+    
+    .hipaa-cta-description {
+        font-size: 15px;
+    }
+    
+    .hipaa-cta-image {
+        min-height: 260px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industries-hipaa-cta-card {
+        grid-template-columns: 500px 1fr;
+        min-height: 240px;
+    }
+    
+    .hipaa-cta-content {
+        padding: 32px 40px;
+        gap: 28px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 24px;
+    }
+    
+    .hipaa-cta-image {
+        min-height: 240px;
+    }
+}
+
+/* Tablet (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industries-hipaa-cta-section {
+        padding: 50px 0;
+    }
+    
+    .industries-hipaa-cta-container {
+        padding: 0 32px;
+    }
+    
+    .industries-hipaa-cta-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .hipaa-cta-content {
+        padding: 40px 32px;
+        gap: 24px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 28px;
+    }
+    
+    .hipaa-cta-description {
+        font-size: 15px;
+    }
+    
+    .hipaa-cta-image {
+        min-height: 300px;
+        order: -1; /* Image on top */
+    }
+    
+    .hipaa-cta-button {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .industries-hipaa-cta-section {
+        padding: 40px 0;
+    }
+    
+    .industries-hipaa-cta-container {
+        padding: 0 24px;
+    }
+    
+    .hipaa-cta-content {
+        padding: 32px 24px;
+        gap: 20px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 24px;
+    }
+    
+    .hipaa-cta-description {
+        font-size: 14px;
+    }
+    
+    .hipaa-cta-image {
+        min-height: 250px;
+    }
+    
+    .hipaa-cta-button {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industries-hipaa-cta-section {
+        padding: 35px 0;
+    }
+    
+    .industries-hipaa-cta-container {
+        padding: 0 16px;
+    }
+    
+    .hipaa-cta-content {
+        padding: 28px 20px;
+        gap: 18px;
+    }
+    
+    .hipaa-cta-heading {
+        font-size: 22px;
+    }
+    
+    .hipaa-cta-description {
+        font-size: 13px;
+        line-height: 155%;
+    }
+    
+    .hipaa-cta-image {
+        min-height: 200px;
+    }
+    
+    .hipaa-cta-button {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .industries-hipaa-cta-card,
+    .hipaa-cta-button {
+        transition: none;
+    }
+    
+    .industries-hipaa-cta-card:hover,
+    .hipaa-cta-button:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industries-hipaa-cta-section {
+        padding: 20px 0;
+    }
+    
+    .industries-hipaa-cta-container {
+        padding: 0 20px;
+    }
+    
+    .industries-hipaa-cta-card {
+        grid-template-columns: 1fr;
+        border: 1px solid #000;
+    }
+    
+    .hipaa-cta-image {
+        display: none;
+    }
+}

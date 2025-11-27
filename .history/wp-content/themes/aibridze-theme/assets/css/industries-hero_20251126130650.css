@@ -1,0 +1,521 @@
+/* ================================================
+   INDUSTRY HERO SECTION
+   Healthcare App Development Hero with Video Background
+   Following AiBridze Design System
+   ================================================ */
+
+/* ================================================
+   SECTION WRAPPER
+   ================================================ */
+
+.industry-hero-section {
+    background: #000933; /* Fallback if video doesn't load */
+    width: 100%;
+    min-height: 100vh;
+    margin-top: -84px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0 100px 0;
+}
+
+/* ================================================
+   VIDEO BACKGROUND
+   ================================================ */
+
+.industry-hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.industry-hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.6; /* Adjust video visibility */
+}
+
+/* Video Overlay - Blue Gradient */
+.industry-hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(
+     180deg,
+      rgba(0, 0, 0, 0) 0%,
+       rgba(0, 0, 0, 0.75) 45.53%,
+        #000000 100%
+
+    );
+   
+    z-index: 1;
+}
+
+/* ================================================
+   CONTAINER
+   ================================================ */
+
+.industry-hero-container {
+    width: 1920px;
+    max-width: calc(100% - 96px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================================================
+   HERO CONTENT
+   ================================================ */
+
+.industry-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Main Heading */
+.industry-hero-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 10%;
+    color: #FFFFFF;
+    margin: 0;
+    max-width: 1200px;
+    
+    /* Animation */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtitle */
+.industry-hero-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    max-width: 900px;
+    
+    /* Animation */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+/* ================================================
+   FEATURE CARDS GRID
+   ================================================ */
+
+.industry-hero-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    
+    /* Animation */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+/* Individual Feature Card */
+.industry-hero-feature-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Hover Glow Effect */
+.industry-hero-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #90EEFB, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.industry-hero-feature-card:hover {
+    border-color: rgba(144, 238, 251, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 99, 255, 0.3);
+}
+
+.industry-hero-feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Feature Card Title */
+.feature-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Feature Card Description */
+.feature-card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ================================================
+   CTA BUTTON
+   ================================================ */
+
+.industry-hero-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Animation */
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.btn-industry-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    
+    color: #000000;
+    background: #90EEFB;
+    
+    border: none;
+    border-radius: 50px;
+    padding: 16px 40px;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(144, 238, 251, 0.3);
+}
+
+.btn-industry-hero:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(144, 238, 251, 0.5);
+}
+
+.btn-industry-hero:active {
+    transform: translateY(0);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industry-hero-container {
+        width: 1600px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 52px;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 19px;
+    }
+    
+    .industry-hero-features {
+        gap: 20px;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 30px 24px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .industry-hero-container {
+        width: 1400px;
+        gap: 56px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 48px;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .industry-hero-features {
+        gap: 18px;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 28px 22px;
+    }
+    
+    .feature-card-title {
+        font-size: 13px;
+    }
+    
+    .feature-card-description {
+        font-size: 13px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industry-hero-section {
+        padding: 100px 0 80px 0;
+    }
+    
+    .industry-hero-container {
+        width: 100%;
+        max-width: 1200px;
+        gap: 48px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 44px;
+    }
+    
+    .industry-hero-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 28px 24px;
+    }
+}
+
+/* Tablet (900px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industry-hero-section {
+        padding: 80px 0 60px 0;
+        min-height: auto;
+    }
+    
+    .industry-hero-container {
+        max-width: calc(100% - 64px);
+        gap: 40px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 40px;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 17px;
+    }
+    
+    .industry-hero-features {
+        gap: 16px;
+    }
+}
+
+/* Mobile Landscape (768px - 900px) */
+@media screen and (max-width: 900px) {
+    .industry-hero-section {
+        padding: 60px 0 50px 0;
+    }
+    
+    .industry-hero-container {
+        max-width: calc(100% - 48px);
+        gap: 36px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 36px;
+        line-height: 135%;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .industry-hero-features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 24px 20px;
+    }
+    
+    .btn-industry-hero {
+        padding: 14px 36px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Portrait (below 768px) */
+@media screen and (max-width: 768px) {
+    .industry-hero-container {
+        max-width: calc(100% - 32px);
+        gap: 32px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 32px;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 15px;
+        line-height: 165%;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 22px 18px;
+    }
+    
+    .feature-card-title {
+        font-size: 12px;
+    }
+    
+    .feature-card-description {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industry-hero-section {
+        padding: 50px 0 40px 0;
+    }
+    
+    .industry-hero-container {
+        max-width: calc(100% - 24px);
+        gap: 28px;
+    }
+    
+    .industry-hero-heading {
+        font-size: 28px;
+        line-height: 135%;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .industry-hero-feature-card {
+        padding: 20px 16px;
+        gap: 12px;
+    }
+    
+    .btn-industry-hero {
+        padding: 14px 32px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Extra Small Mobile (below 375px) */
+@media screen and (max-width: 375px) {
+    .industry-hero-heading {
+        font-size: 24px;
+    }
+    
+    .industry-hero-subtitle {
+        font-size: 13px;
+    }
+    
+    .feature-card-title {
+        font-size: 11px;
+    }
+    
+    .feature-card-description {
+        font-size: 12px;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .industry-hero-heading,
+    .industry-hero-subtitle,
+    .industry-hero-features,
+    .industry-hero-cta {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .industry-hero-feature-card {
+        transition: none;
+    }
+    
+    .industry-hero-feature-card:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industry-hero-video-wrapper {
+        display: none;
+    }
+    
+    .industry-hero-section {
+        background: #000933;
+        min-height: auto;
+        padding: 40px 0;
+    }
+}

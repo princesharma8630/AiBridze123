@@ -1,0 +1,336 @@
+/* ================================================
+   INTEGRATION WITH POPULAR TOOLS SECTION
+   Solid blue background + 6 integration icons
+   ================================================ */
+
+.industries-integration-section {
+    background: rgba(1, 68, 254, 1); /* Figma exact blue */
+    width: 100%;
+    padding: 75px 0;
+    position: relative;
+}
+
+.industries-integration-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+/* ================================================
+   HEADING
+   ================================================ */
+
+.industries-integration-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    max-width: 1099px; /* Figma width */
+}
+
+/* ================================================
+   INTEGRATION ICONS GRID
+   ================================================ */
+
+.industries-integration-icons {
+    display: grid;
+    grid-template-columns: repeat(6, 245px); /* 6 boxes at 245px each */
+    gap: 24px; /* Figma exact gap */
+    width: fit-content;
+    max-width: 1590px; /* Figma container width */
+}
+
+/* ================================================
+   ICON BOX
+   ================================================ */
+
+.integration-icon-box {
+    width: 245px;
+    height: 245px;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    
+    padding: 24px;
+    box-sizing: border-box;
+    
+    transition: all 0.3s ease;
+}
+
+.integration-icon-box:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Image */
+.integration-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    transition: all 0.3s ease;
+}
+
+.integration-icon-box:hover .integration-icon {
+    transform: scale(1.1);
+}
+
+/* Label */
+.integration-label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industries-integration-heading {
+        font-size: 48px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(6, 220px);
+        gap: 20px;
+    }
+    
+    .integration-icon-box {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .integration-icon {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .industries-integration-section {
+        padding: 60px 0;
+    }
+    
+    .industries-integration-container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+    
+    .industries-integration-heading {
+        font-size: 44px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(6, 200px);
+        gap: 18px;
+    }
+    
+    .integration-icon-box {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+    }
+    
+    .integration-icon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .integration-label {
+        font-size: 15px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industries-integration-container {
+        gap: 36px;
+    }
+    
+    .industries-integration-heading {
+        font-size: 36px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 16px;
+        max-width: 800px;
+    }
+    
+    .integration-icon-box {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .integration-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* Tablet (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industries-integration-section {
+        padding: 50px 0;
+    }
+    
+    .industries-integration-container {
+        padding: 0 32px;
+        gap: 32px;
+    }
+    
+    .industries-integration-heading {
+        font-size: 32px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 16px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .integration-icon-box {
+        height: 160px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .industries-integration-section {
+        padding: 40px 0;
+    }
+    
+    .industries-integration-container {
+        padding: 0 24px;
+        gap: 28px;
+    }
+    
+    .industries-integration-heading {
+        font-size: 28px;
+        line-height: 140%;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 16px;
+    }
+    
+    .integration-icon-box {
+        height: 150px;
+        padding: 16px;
+    }
+    
+    .integration-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .integration-label {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industries-integration-section {
+        padding: 35px 0;
+    }
+    
+    .industries-integration-container {
+        padding: 0 16px;
+        gap: 24px;
+    }
+    
+    .industries-integration-heading {
+        font-size: 24px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .integration-icon-box {
+        height: 130px;
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .integration-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .integration-label {
+        font-size: 13px;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .integration-icon-box,
+    .integration-icon {
+        transition: none;
+    }
+    
+    .integration-icon-box:hover {
+        transform: none;
+    }
+    
+    .integration-icon-box:hover .integration-icon {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industries-integration-section {
+        padding: 20px 0;
+        background: #0144FE;
+    }
+    
+    .industries-integration-container {
+        padding: 0 20px;
+    }
+    
+    .industries-integration-icons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .integration-icon-box {
+        height: auto;
+        padding: 12px;
+    }
+}

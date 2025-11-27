@@ -1,0 +1,457 @@
+/* ================================================
+   TECHNICAL SECURITY FRAMEWORK SECTION
+   Black background + left image box with gradient
+   ================================================ */
+
+.industries-security-section {
+    background: #000000; /* BLACK background for entire section */
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================================================
+   CONTAINER
+   ================================================ */
+
+.industries-security-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: 400px 1fr; /* Left fixed, right flexible */
+    gap: 80px;
+    align-items: start;
+}
+
+/* ================================================
+   LEFT SIDE - Heading + Image
+   ================================================ */
+
+.security-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: radial-gradient(128.03% 128.03% at 50.06% 128.03%, #FFFFFF 32.46%, #0145FF 66.62%, #000000 100%);
+   
+}
+
+.security-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.security-image-wrapper {
+    width: 100%;
+    -width: 346px;
+    
+    /* RADIAL GRADIENT - Only on image box! */
+    border-radius: 16px;
+    padding: 40px 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.security-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ================================================
+   RIGHT SIDE - Security Features Container
+   ================================================ */
+
+.security-right {
+    width: 100%;
+    max-width: 1015px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 32px;
+    
+    box-sizing: border-box;
+}
+
+/* ================================================
+   SECURITY ITEM (Row with 2 columns)
+   ================================================ */
+
+.security-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 48px;
+    
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Remove border from last item */
+.security-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Left Column: Security Layer */
+.security-layer {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-layer-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 147%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Right Column: Implementation */
+.security-implementation {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-impl-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industries-security-container {
+        grid-template-columns: 380px 1fr;
+        gap: 70px;
+    }
+    
+    .security-heading {
+        font-size: 46px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 320px;
+        padding: 36px 18px;
+    }
+    
+    .security-right {
+        max-width: 950px;
+        gap: 42px;
+        padding: 30px;
+    }
+    
+    .security-item {
+        gap: 42px;
+    }
+}
+
+/* Desktop 1400px (User's viewport) */
+@media screen and (max-width: 1600px) {
+    .industries-security-section {
+        padding: 70px 0;
+    }
+    
+    .industries-security-container {
+        grid-template-columns: 350px 1fr;
+        gap: 60px;
+        padding: 0 40px;
+    }
+    
+    .security-heading {
+        font-size: 42px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 300px;
+        padding: 34px 16px;
+    }
+    
+    .security-right {
+        max-width: 900px;
+        gap: 38px;
+        padding: 28px;
+    }
+    
+    .security-item {
+        gap: 38px;
+        padding-bottom: 22px;
+    }
+    
+    .security-layer-title {
+        font-size: 17px;
+    }
+    
+    .security-impl-text {
+        font-size: 15px;
+    }
+}
+
+/* Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industries-security-section {
+        padding: 60px 0;
+    }
+    
+    .industries-security-container {
+        grid-template-columns: 320px 1fr;
+        gap: 50px;
+    }
+    
+    .security-heading {
+        font-size: 38px;
+    }
+    
+    .security-left {
+        gap: 28px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 280px;
+        padding: 30px 14px;
+    }
+    
+    .security-right {
+        max-width: 850px;
+        gap: 34px;
+        padding: 26px;
+    }
+    
+    .security-item {
+        gap: 34px;
+        padding-bottom: 20px;
+    }
+    
+    .security-layer-title {
+        font-size: 16px;
+    }
+    
+    .security-impl-text {
+        font-size: 14px;
+    }
+}
+
+/* Small Laptop (1000px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industries-security-section {
+        padding: 50px 0;
+    }
+    
+    .industries-security-container {
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+        padding: 0 32px;
+    }
+    
+    .security-heading {
+        font-size: 34px;
+    }
+    
+    .security-left {
+        gap: 24px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 250px;
+        padding: 28px 12px;
+    }
+    
+    .security-right {
+        max-width: 780px;
+        gap: 30px;
+        padding: 24px;
+    }
+    
+    .security-item {
+        gap: 30px;
+        padding-bottom: 18px;
+    }
+}
+
+/* Tablet (768px - 1000px) */
+@media screen and (max-width: 1000px) {
+    .industries-security-container {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 40px;
+    }
+    
+    .security-heading {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .security-left {
+        align-items: center;
+    }
+    
+    .security-image-wrapper {
+        max-width: 280px;
+        padding: 30px 14px;
+    }
+    
+    .security-right {
+        max-width: 100%;
+        gap: 28px;
+    }
+    
+    .security-item {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+    
+    .security-layer-title {
+        font-size: 17px;
+    }
+    
+    .security-impl-text {
+        font-size: 15px;
+        line-height: 155%;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .industries-security-section {
+        padding: 40px 0;
+    }
+    
+    .industries-security-container {
+        gap: 32px;
+        padding: 0 24px;
+    }
+    
+    .security-heading {
+        font-size: 28px;
+    }
+    
+    .security-left {
+        gap: 20px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 240px;
+        padding: 26px 12px;
+    }
+    
+    .security-right {
+        gap: 24px;
+        padding: 20px;
+    }
+    
+    .security-item {
+        gap: 10px;
+        padding-bottom: 16px;
+    }
+    
+    .security-layer-title {
+        font-size: 16px;
+    }
+    
+    .security-impl-text {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industries-security-section {
+        padding: 35px 0;
+    }
+    
+    .industries-security-container {
+        gap: 28px;
+        padding: 0 16px;
+    }
+    
+    .security-heading {
+        font-size: 24px;
+    }
+    
+    .security-left {
+        gap: 16px;
+    }
+    
+    .security-image-wrapper {
+        max-width: 200px;
+        padding: 22px 10px;
+    }
+    
+    .security-right {
+        gap: 20px;
+        padding: 16px;
+    }
+    
+    .security-item {
+        gap: 8px;
+        padding-bottom: 14px;
+    }
+    
+    .security-layer-title {
+        font-size: 15px;
+    }
+    
+    .security-impl-text {
+        font-size: 13px;
+        line-height: 150%;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industries-security-section {
+        padding: 20px 0;
+        background: #0145FF;
+    }
+    
+    .industries-security-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .security-right {
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .security-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}

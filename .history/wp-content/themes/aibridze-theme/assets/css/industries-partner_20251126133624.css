@@ -1,0 +1,65 @@
+<!-- Partner Logos Marquee Section -->
+<section class="industries-partner-logos-section">
+    <div class="industries-partner-logos-container">
+        <div class="industries-partner-logos-marquee">
+            <div class="industries-partner-logos-track">
+                
+                <!-- Logo 1 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-1.png" alt="HITECH">
+                </div>
+                
+                <!-- Logo 2 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-2.png" alt="Certify">
+                </div>
+                
+                <!-- Logo 3 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-3.png" alt="HL7">
+                </div>
+                
+                <!-- Logo 4 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-4.png" alt="Partner 4">
+                </div>
+                
+                <!-- Logo 5 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-5.png" alt="Partner 5">
+                </div>
+                
+                <!-- Logo 6 -->
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-6.png" alt="Partner 6">
+                </div>
+                
+                <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-1.png" alt="HITECH">
+                </div>
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-2.png" alt="Certify">
+                </div>
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-3.png" alt="HL7">
+                </div>
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-4.png" alt="Partner 4">
+                </div>
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-5.png" alt="Partner 5">
+                </div>
+                
+                <div class="industries-partner-logo-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/industry/partners/logo-6.png" alt="Partner 6">
+                </div>
+                
+            </div>
+        </div>
+    </div>

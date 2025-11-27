@@ -1,0 +1,432 @@
+/* ================================================
+   WHY CHOOSE AIBRIDZE SECTION
+   Radial gradient + decorative logo + benefits grid
+   ================================================ */
+
+.industries-why-choose-section {
+    background: radial-gradient(69.13% 69.13% at 24.95% 69.13%, #3F72FF 0%, #0044FF 100%);
+    width: 100%;
+    padding: 75px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================================================
+   BACKGROUND LOGO DECORATION
+   ================================================ */
+
+.why-choose-bg-logo {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    left: -100px;
+    bottom: -200px;
+    
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgdmlld0JveD0iMCAwIDgwMCA4MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wIDgwMEMwIDYwMCA0MDAgNDAwIDYwMCA0MDBMNDAwIDIwMEMzMDAgMjAwIDE1MCAzNTAgMTUwIDQ1MEw0MDAgNzAwQzMwMCA3NTAgMTUwIDcwMCAwIDgwMFoiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz4KPHBhdGggZD0iTTYwMCAwQzcwMCAxMDAgNzAwIDMwMCA2MDAgNDAwTDgwMCA2MDBDODA1IDcwMCA2NTAgODAwIDYwMCA4MDBMNDAwIDYwMEM0MDAgNTAwIDUwMCA0MDAgNjAwIDBaIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIi8+Cjwvc3ZnPgo=');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Alternative: Use actual logo image */
+/* Uncomment if you have the logo file */
+/*
+.why-choose-bg-logo {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    left: -100px;
+    bottom: -200px;
+    
+    background-image: url('../../Indutries/aibridze-logo-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+*/
+
+/* ================================================
+   CONTAINER
+   ================================================ */
+
+.industries-why-choose-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    
+    display: grid;
+    grid-template-columns: 553px 1fr; /* Left fixed, right flexible */
+    gap: 164px;
+    align-items: start;
+    
+    position: relative;
+    z-index: 1;
+}
+
+/* ================================================
+   LEFT SIDE - Heading + Description
+   ================================================ */
+
+.why-choose-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.why-choose-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 46px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 147%;
+    
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.why-choose-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 147%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+}
+
+/* ================================================
+   RIGHT SIDE - Benefits Grid
+   ================================================ */
+
+.why-choose-right {
+    display: grid;
+    grid-template-columns: repeat(2, 437px); /* 2 columns at 437px each */
+    gap: 24px;
+    width: fit-content;
+}
+
+/* Column */
+.why-choose-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ================================================
+   BENEFIT ITEM
+   ================================================ */
+
+.why-choose-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    
+    min-height: 105px;
+    
+    transition: all 0.3s ease;
+}
+
+.why-choose-benefit:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(4px);
+}
+
+/* Checkmark Icon */
+.benefit-checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    color: #90EEFB; /* Cyan accent */
+    margin-top: 2px; /* Align with text */
+}
+
+/* Benefit Text */
+.benefit-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industries-why-choose-container {
+        gap: 120px;
+    }
+    
+    .why-choose-heading {
+        font-size: 44px;
+    }
+    
+    .why-choose-description {
+        font-size: 18px;
+    }
+    
+    .why-choose-right {
+        grid-template-columns: repeat(2, 400px);
+        gap: 20px;
+    }
+    
+    .why-choose-benefit {
+        min-height: 95px;
+        padding: 18px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .industries-why-choose-section {
+        padding: 60px 0;
+    }
+    
+    .industries-why-choose-container {
+        grid-template-columns: 480px 1fr;
+        gap: 80px;
+        padding: 0 40px;
+    }
+    
+    .why-choose-heading {
+        font-size: 40px;
+    }
+    
+    .why-choose-description {
+        font-size: 17px;
+    }
+    
+    .why-choose-right {
+        grid-template-columns: repeat(2, 360px);
+        gap: 18px;
+    }
+    
+    .why-choose-benefit {
+        min-height: 90px;
+        padding: 16px;
+    }
+    
+    .benefit-text {
+        font-size: 15px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industries-why-choose-container {
+        grid-template-columns: 420px 1fr;
+        gap: 60px;
+    }
+    
+    .why-choose-heading {
+        font-size: 36px;
+    }
+    
+    .why-choose-description {
+        font-size: 16px;
+    }
+    
+    .why-choose-right {
+        grid-template-columns: repeat(2, 1fr); /* Flexible columns */
+        gap: 16px;
+    }
+    
+    .why-choose-benefit {
+        min-height: auto;
+    }
+    
+    .why-choose-bg-logo {
+        width: 600px;
+        height: 600px;
+        left: -150px;
+        bottom: -150px;
+    }
+}
+
+/* Tablet (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industries-why-choose-section {
+        padding: 50px 0;
+    }
+    
+    .industries-why-choose-container {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 40px;
+        padding: 0 32px;
+    }
+    
+    .why-choose-heading {
+        font-size: 32px;
+    }
+    
+    .why-choose-description {
+        font-size: 16px;
+        line-height: 150%;
+    }
+    
+    .why-choose-right {
+        grid-template-columns: 1fr; /* Single column on tablet */
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .why-choose-column {
+        gap: 12px;
+    }
+    
+    .why-choose-benefit {
+        padding: 16px;
+    }
+    
+    .why-choose-bg-logo {
+        width: 500px;
+        height: 500px;
+        left: -100px;
+        bottom: -100px;
+        opacity: 0.4;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .industries-why-choose-section {
+        padding: 40px 0;
+    }
+    
+    .industries-why-choose-container {
+        gap: 32px;
+        padding: 0 24px;
+    }
+    
+    .why-choose-heading {
+        font-size: 28px;
+    }
+    
+    .why-choose-description {
+        font-size: 15px;
+        line-height: 155%;
+    }
+    
+    .why-choose-benefit {
+        padding: 14px;
+        gap: 10px;
+    }
+    
+    .benefit-checkmark {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+    }
+    
+    .benefit-text {
+        font-size: 14px;
+        line-height: 155%;
+    }
+    
+    .why-choose-bg-logo {
+        width: 400px;
+        height: 400px;
+        left: -120px;
+        bottom: -80px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industries-why-choose-section {
+        padding: 35px 0;
+    }
+    
+    .industries-why-choose-container {
+        gap: 28px;
+        padding: 0 16px;
+    }
+    
+    .why-choose-heading {
+        font-size: 24px;
+    }
+    
+    .why-choose-description {
+        font-size: 14px;
+    }
+    
+    .why-choose-benefit {
+        padding: 12px;
+        gap: 8px;
+        min-height: auto;
+    }
+    
+    .benefit-checkmark {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+    }
+    
+    .benefit-text {
+        font-size: 13px;
+    }
+    
+    .why-choose-bg-logo {
+        width: 300px;
+        height: 300px;
+        left: -100px;
+        bottom: -60px;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .why-choose-benefit {
+        transition: none;
+    }
+    
+    .why-choose-benefit:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industries-why-choose-section {
+        padding: 20px 0;
+        background: #0044FF;
+    }
+    
+    .why-choose-bg-logo {
+        display: none;
+    }
+    
+    .industries-why-choose-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .why-choose-right {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,316 @@
+/* ================================================
+   HEALTHCARE COMPLIANCE & SECURITY SECTION
+   Heading + 4 horizontal compliance cards
+   ================================================ */
+
+.industries-compliance-section {
+    background: #000000;
+    width: 100%;
+    padding: 75px 0;
+    position: relative;
+}
+
+.industries-compliance-container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 75px; /* Gap between header and cards */
+}
+
+/* ================================================
+   HEADER - Heading & Description
+   ================================================ */
+
+.industries-compliance-header {
+    width: 100%;
+    max-width: 1824px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.industries-compliance-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.industries-compliance-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: 100%;
+}
+
+/* ================================================
+   CARDS CONTAINER
+   ================================================ */
+
+.industries-compliance-cards {
+    width: 100%;
+    max-width: 1824px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 24px; /* Figma exact gap */
+}
+
+/* ================================================
+   COMPLIANCE CARD
+   ================================================ */
+
+.industries-compliance-card {
+    background: rgba(255, 255, 255, 0.07); /* Figma exact */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Figma exact */
+    
+    min-height: 341px;
+    
+    transition: all 0.3s ease;
+}
+
+.industries-compliance-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(144, 238, 251, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Number */
+.compliance-card-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+/* Card Title */
+.compliance-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Card Description */
+.compliance-card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Large Desktop (1600px - 1800px) */
+@media screen and (max-width: 1800px) {
+    .industries-compliance-heading {
+        font-size: 44px;
+    }
+    
+    .industries-compliance-cards {
+        gap: 20px;
+    }
+}
+
+/* Laptop (1400px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .industries-compliance-section {
+        padding: 60px 0;
+    }
+    
+    .industries-compliance-container {
+        gap: 60px;
+        padding: 0 40px;
+    }
+    
+    .industries-compliance-heading {
+        font-size: 40px;
+    }
+    
+    .industries-compliance-cards {
+        gap: 18px;
+    }
+    
+    .industries-compliance-card {
+        padding: 28px;
+    }
+}
+
+/* Small Laptop (1200px - 1400px) */
+@media screen and (max-width: 1400px) {
+    .industries-compliance-container {
+        gap: 50px;
+        padding: 0 32px;
+    }
+    
+    .industries-compliance-heading {
+        font-size: 36px;
+    }
+    
+    .industries-compliance-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 16px;
+    }
+    
+    .industries-compliance-card {
+        padding: 24px;
+        min-height: auto;
+    }
+}
+
+/* Tablet (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .industries-compliance-section {
+        padding: 50px 0;
+    }
+    
+    .industries-compliance-container {
+        gap: 40px;
+        padding: 0 24px;
+    }
+    
+    .industries-compliance-heading {
+        font-size: 32px;
+    }
+    
+    .industries-compliance-description {
+        font-size: 15px;
+    }
+    
+    .industries-compliance-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 16px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .industries-compliance-section {
+        padding: 40px 0;
+    }
+    
+    .industries-compliance-container {
+        gap: 36px;
+        padding: 0 20px;
+    }
+    
+    .industries-compliance-heading {
+        font-size: 28px;
+    }
+    
+    .industries-compliance-description {
+        font-size: 14px;
+    }
+    
+    .industries-compliance-cards {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 16px;
+    }
+    
+    .industries-compliance-card {
+        padding: 20px;
+    }
+    
+    .compliance-card-title {
+        font-size: 14px;
+    }
+    
+    .compliance-card-description {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile (below 480px) */
+@media screen and (max-width: 480px) {
+    .industries-compliance-section {
+        padding: 35px 0;
+    }
+    
+    .industries-compliance-container {
+        gap: 32px;
+        padding: 0 16px;
+    }
+    
+    .industries-compliance-heading {
+        font-size: 24px;
+    }
+    
+    .industries-compliance-description {
+        font-size: 13px;
+    }
+    
+    .industries-compliance-card {
+        padding: 18px;
+        gap: 8px;
+    }
+    
+    .compliance-card-number {
+        font-size: 12px;
+    }
+    
+    .compliance-card-title {
+        font-size: 13px;
+    }
+    
+    .compliance-card-description {
+        font-size: 12px;
+        line-height: 155%;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .industries-compliance-card {
+        transition: none;
+    }
+    
+    .industries-compliance-card:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .industries-compliance-section {
+        padding: 20px 0;
+    }
+    
+    .industries-compliance-container {
+        padding: 0 20px;
+    }
+    
+    .industries-compliance-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

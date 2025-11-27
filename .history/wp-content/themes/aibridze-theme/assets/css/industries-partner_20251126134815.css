@@ -1,0 +1,128 @@
+/* ================================================
+   PARTNER LOGOS MARQUEE SECTION
+   ================================================ */
+
+.industries-partner-logos-section {
+    background: #000000;
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.industries-partner-logos-container {
+    width: 100%;
+    max-width: 2244px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Marquee Wrapper with Edge Fade */
+.industries-partner-logos-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* Animated Track */
+.industries-partner-logos-track {
+    display: flex;
+    gap: 24px;
+    width: fit-content;
+    animation: marqueeScroll 40s linear infinite;
+    will-change: transform;
+}
+
+/* Pause on Hover */
+.industries-partner-logos-marquee:hover .industries-partner-logos-track {
+    animation-play-state: paused;
+}
+
+/* Animation */
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Logo Box - Figma Exact */
+.industries-partner-logo-item {
+    width: 300px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.industries-partner-logo-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+/* Logo Image */
+.industries-partner-logo-item img {
+    max-width: 00%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.industries-partner-logo-item:hover img {
+    opacity: 1;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
+@media screen and (max-width: 1600px) {
+    .industries-partner-logos-track { gap: 20px; }
+    .industries-partner-logo-item { width: 280px; height: 110px; }
+}
+
+@media screen and (max-width: 1400px) {
+    .industries-partner-logos-section { padding: 60px 0; }
+    .industries-partner-logos-track { gap: 18px; animation: marqueeScroll 35s linear infinite; }
+    .industries-partner-logo-item { width: 260px; height: 100px; }
+}
+
+@media screen and (max-width: 1200px) {
+    .industries-partner-logos-track { gap: 16px; animation: marqueeScroll 30s linear infinite; }
+    .industries-partner-logo-item { width: 240px; height: 95px; }
+}
+
+@media screen and (max-width: 900px) {
+    .industries-partner-logos-section { padding: 40px 0; }
+    .industries-partner-logos-marquee { mask-image: none; -webkit-mask-image: none; }
+    .industries-partner-logos-track { gap: 12px; animation: marqueeScroll 25s linear infinite; }
+    .industries-partner-logo-item { width: 200px; height: 85px; border-radius: 12px; }
+}
+
+@media screen and (max-width: 768px) {
+    .industries-partner-logos-track { gap: 10px; animation: marqueeScroll 22s linear infinite; }
+    .industries-partner-logo-item { width: 180px; height: 80px; }
+}
+
+@media screen and (max-width: 480px) {
+    .industries-partner-logos-section { padding: 30px 0; }
+    .industries-partner-logos-track { gap: 8px; animation: marqueeScroll 20s linear infinite; }
+    .industries-partner-logo-item { width: 160px; height: 75px; border-radius: 10px; }
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    .industries-partner-logos-track { animation: none; }
+    .industries-partner-logo-item { transition: none; }
+}
